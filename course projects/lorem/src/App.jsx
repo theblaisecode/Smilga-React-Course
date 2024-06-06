@@ -6,12 +6,10 @@ import Paragraph from "./Paragraph";
 function App() {
   const [paragraph, setParagraph] = useState(1);
   const [textData, setTextData] = useState([]);
-  console.log(textData);
 
   const getNumOfPara = (e) => {
     const { value } = e.target;
     setParagraph(value);
-    console.log(value);
   };
 
   const generate = (e) => {
