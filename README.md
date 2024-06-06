@@ -11,15 +11,17 @@ Hands-on React: Create 25+ Projects. Includes Axios, Router 6, Query 5, Redux To
 - **Data Handling:** Utilize Axios and redux-toolkit for efficient data management.
 - **Project-Based Learning:** Build over 25 real-world projects including a Birthday Reminder, E-Commerce Site, Quiz App, and a GitHub Users Explorer.
 
-## 🔶 Curriculum
+## 🔶 Curriculum 
 <br/>
 
-| # Day |                                                                       Topics                                                                        |                     Status                     |
+| # Section |                                                                       Topics                                                                        |                     Status                     |
 | ----- | :-------------------------------------------------------------------------------------------------------------------------------------------------: |------------------------------------------------|
-| 01    |                                                              [Build a React Info Site]                                                              |                   Completed                    |
-| 02    |                                                          [Build an AirBnb Experience Clone]                                                         |                   Completed                    |
-| 03    |                                                              [Build a Meme Generator]                                                               |                  In Progress                   |
-| 04    |                                                         [Build a notes app and Tenzies game]                                                        |                                       |
+| 01    |                                                                        Introduction                                                                 |                   Completed                    |
+| 02    |                                                                      Dev Environment                                                                |                   Completed                    |
+| 03    |                                                                     React Fundamentals                                                              |                   Completed                    |
+| 04    |                                                                   Backroads Application                                                             |                   Completed                    |
+| 05    |                                                                           VITE                                                                      |                   Completed                    |
+| 06    |                                                              React Hooks and Advanced Topics                                                        |                  In Progress                   |
 
 <br/>
 
