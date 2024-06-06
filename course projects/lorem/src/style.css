@@ -1,0 +1,118 @@
+:root {
+  --bg: #333;
+  --textColor: #ffffff;
+  --primary: #87ae73;
+  --input: #87ae7367;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%; /* 1rem = 10px */
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.6rem;
+  font-family: "Roboto", sans-serif;
+  background: var(--bg);
+  color: var(--textColor);
+}
+
+#root {
+  width: 35vw;
+  margin: 10rem auto;
+}
+
+main {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+  justify-content: center;
+  align-items: center;
+}
+
+h4 {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 2.5rem;
+  letter-spacing: 0.1rem;
+  font-weight: 400;
+}
+
+form {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+label {
+  font-size: 2rem;
+  line-height: 2rem;
+  letter-spacing: 0.1rem;
+}
+
+input {
+  background: var(--input);
+  padding: 0.5rem 1rem;
+  font-size: 2rem;
+  outline: none;
+  border: none;
+  border-radius: 0.5rem;
+  width: 7rem;
+  color: var(--textColor);
+}
+
+button {
+  padding: 1rem 1.2rem;
+  font-size: 1.33rem;
+  letter-spacing: 0.1rem;
+  border-radius: 0.5rem;
+  color: var(--textColor);
+  background: var(--primary);
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.paragraphs {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.paragraphs p {
+  line-height: 3rem;
+}
+
+/* Mobile */
+@media screen and (max-width: 550px), screen and (max-height: 550px) {
+  #root {
+    width: 95vw;
+    margin: 5rem auto;
+  }
+
+  .paragraphs {
+    gap: 3rem;
+  }
+
+  .paragraphs p {
+    line-height: 2.5rem;
+  }
+}
+
+/* Tablet */
+@media (min-width: 551px) and (max-width: 768px) {
+  #root {
+    width: 78vw;
+    margin: 5rem auto;
+  }
+}
