@@ -1,4 +1,4 @@
-# React 18 Tutorial and Projects Course - John Smilga
+# React 18 Tutorial and Projects - John Smilga
 Hands-on React: Create 25+ Projects. Includes Axios, Router 6, Query 5, Redux Toolkit
 
 
@@ -36,6 +36,7 @@ Hands-on React: Create 25+ Projects. Includes Axios, Router 6, Query 5, Redux To
 | 18        |                                                                      GitHub Users                                                                   |                                       |
 | 19        |                                                                   E-Commerce Project                                                                |                                       |
 | 20        |                                                        Customize Comfy Sloth and Setup Airtable                                                     |                                       |
+| 21        |                                                                          Bonus                                                                      |                                       |
 
 <br/>
 
