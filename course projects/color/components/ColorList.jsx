@@ -1,4 +1,4 @@
-function ColorList({ color }) {
+function ColorList({ list }) {
   return <section className="colors"></section>;
 }
 
