@@ -95,3 +95,7 @@ button {
   justify-content: center;
   align-items: center;
 }
+
+.eachColor p {
+  font-size: 1.4rem;
+}
