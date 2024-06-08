@@ -1,10 +1,10 @@
 import { useState } from "react";
 
 function Form() {
+  const [list, setList] = useState([])
   const [color, setColor] = useState({
     shade: "#87ae73",
-    colorShade: "",
-    colorCode: ""
+    colorShade: ""
   });
 
   console.log(color)
@@ -15,22 +15,28 @@ function Form() {
     })
   };
 
+  const generatePalette = (e) => {
+    e.preventDefault()
+    setList(color)
+    console.log(color.colorShade)
+  }
+
   return (
-    <form action="">
+    <form action="" onSubmit={generatePalette}>
       <h4>Generate Palette</h4>
       <input
         type="color"
         name="colorShade"
         id="colorShade"
-        value={color.shade || color.colorShade || color.colorCode}
+        value={color.shade || color.colorShade}
         onChange={changeColor}
       />
 
       <input
         type="text"
-        name="colorCode"
-        id="colorCode"
-        value={color.colorCode || color.colorShade}
+        name="colorShade"
+        id="colorShade"
+        value={color.colorShade}
         placeholder={color.shade}
         onChange={changeColor}
       />

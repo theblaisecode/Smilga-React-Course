@@ -1,3 +1,4 @@
+import ColorList from "../components/ColorList";
 import Form from "../components/Form";
 
 function App() {
@@ -5,6 +6,7 @@ function App() {
     <>
       <h1>Hello World!</h1>
       <Form/>
+      <ColorList/>
     </>
   );
 }

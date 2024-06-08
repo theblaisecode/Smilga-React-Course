@@ -1,10 +1,5 @@
-
-function ColorList({}) {
-  return (
-    <section className="colors">
-
-    </section>
-  )
+function ColorList({ color }) {
+  return <section className="colors"></section>;
 }
 
-export default ColorList
+export default ColorList;
