@@ -99,3 +99,29 @@ button {
 .eachColor p {
   font-size: 1.4rem;
 }
+
+@media screen and (max-width: 550px), screen and (max-height: 550px) {
+  #root {
+    width: 95vw;
+  }
+
+  form {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  input[type="color"] {
+    width: 5rem;
+    height: 4rem;
+  }
+
+  input[type="text"] {
+    padding: 1rem;
+    font-size: 1.2rem;
+  }
+
+  button {
+    font-size: 1.3rem;
+    padding: 1rem;
+  }
+}
