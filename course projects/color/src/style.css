@@ -73,7 +73,7 @@ input[type="text"] {
   outline: none;
 }
 
-button {
+form button {
   border: none;
   outline: none;
   color: #fff;
@@ -97,6 +97,9 @@ button {
   gap: 0.5rem;
   justify-content: center;
   align-items: center;
+  border: none;
+  outline: none;
+  cursor: pointer;
 }
 
 .eachColor p {

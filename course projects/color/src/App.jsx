@@ -21,6 +21,17 @@ function App() {
     setAllColors(new Values(color.colorShade).all(5));
   };
 
+  const copyToClipboard = (hexString) => {
+    navigator.clipboard
+      .writeText(hexString)
+      .then(() => {
+        console.log("Color copied to clipboard:", hexString);
+      })
+      .catch((err) => {
+        console.error("Failed to copy color to clipboard:", err);
+      });
+  };
+
   return (
     <main>
       <Form
@@ -33,9 +44,10 @@ function App() {
         {allColors.map((eachColor, index) => {
           console.log(eachColor);
           return (
-            <div
+            <button
               className="eachColor"
               key={index}
+              onClick={() => copyToClipboard(eachColor.hexString())}
               style={{
                 background: eachColor.hexString(),
                 color: eachColor.type === "shade" ? "white" : "black",
@@ -44,7 +56,7 @@ function App() {
               <p>
                 {eachColor.type} {eachColor.weight}%
               </p>
-            </div>
+            </button>
           );
         })}
       </div>
