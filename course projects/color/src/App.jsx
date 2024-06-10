@@ -1,5 +1,5 @@
 import { useState } from "react";
-import ColorList from "../components/ColorList";
+import { ToastContainer, toast } from "react-toastify";
 import Form from "../components/Form";
 import Values from "values.js";
 
@@ -9,6 +9,7 @@ function App() {
     shade: "#87ae73",
     colorShade: "",
   });
+  const [isError, setIsError] = useState(false);
 
   const changeColor = (e) => {
     setColor({
@@ -18,7 +19,16 @@ function App() {
 
   const generatePalette = (e) => {
     e.preventDefault();
-    setAllColors(new Values(color.colorShade).all(5));
+
+    try {
+      setAllColors(new Values(color.colorShade).all(5));
+      setIsError(false);
+    } catch (error) {
+      setIsError(true);
+      toast.error("Please enter a color value", {
+        position: "top-center",
+      });
+    }
   };
 
   const copyToClipboard = (hexString) => {
@@ -40,9 +50,10 @@ function App() {
         changeColor={changeColor}
       />
 
+      <ToastContainer />
+
       <div className="palette">
         {allColors.map((eachColor, index) => {
-          console.log(eachColor);
           return (
             <button
               className="eachColor"
