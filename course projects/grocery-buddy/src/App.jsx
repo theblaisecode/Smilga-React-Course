@@ -21,12 +21,16 @@ function App() {
       return [...prevList, isGrocery.groceryItem];
     });
   };
+  
 
   console.log(isList);
 
   const deleteItem = (index) => {
-    setIsList(isPrevList => isPrevList.filter(item => item.id !== index))
-  }
+    console.log(index);
+    setIsList((isPrevList) => isPrevList.filter((item, remove) => {
+      return remove !== index
+    }));
+  };
 
   return (
     <main>

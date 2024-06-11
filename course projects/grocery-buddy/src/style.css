@@ -4,7 +4,18 @@
   box-sizing: border-box;
 }
 
+html {
+  font-size: 62.5% /* 1rem = 10px */;
+}
+
 body {
   background: #333;
   color: #fff;
+}
+
+.isDone {
+  letter-spacing: .1rem;
+}
+.line {
+  text-decoration: line-through;
 }
