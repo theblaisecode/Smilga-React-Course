@@ -11,7 +11,7 @@ function App() {
     "Mangoes",
     "Chongqing City",
     "The Moon",
-    "Pet goat"
+    "Pet goat",
   ]);
   const [isGrocery, setIsGrocery] = useState({
     groceryItem: "",
@@ -40,6 +40,8 @@ function App() {
     toast.success("Item added to the list!", {
       position: "top-center",
     });
+
+    setIsGrocery({ groceryItem: "" });
   };
 
   console.log(isList);
@@ -52,7 +54,7 @@ function App() {
       })
     );
 
-    toast.warn("Item Deleted", {
+    toast.info("Item Deleted", {
       position: "top-center",
     });
   };
