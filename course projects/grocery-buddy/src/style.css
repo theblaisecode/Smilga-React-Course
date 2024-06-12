@@ -103,6 +103,12 @@ form button {
   padding: 0.7rem 2rem;
   letter-spacing: 0.1rem;
   border-radius: 0 0.5rem 0.5rem 0;
+  transition: 0.4s;
+}
+
+form button:hover {
+  background: var(--sec);
+  transition: all 0.4s;
 }
 
 .groceryList {
@@ -127,6 +133,13 @@ input[type="checkbox"] {
 
 .isDone {
   letter-spacing: 0.1rem;
+  cursor: pointer;
+  transition: .4s;
+}
+
+.isDone:hover {
+  color: var(--primary);
+  transition: all .4s;
 }
 
 .line {
@@ -142,6 +155,12 @@ input[type="checkbox"] {
   padding: 0.3rem 0.7rem;
   border-radius: 0.3rem;
   background: var(--sec);
+  transition: 0.4s;
+}
+
+.groceryList button:hover {
+  background: var(--primary);
+  transition: all 0.4s;
 }
 
 @media screen and (max-width: 567px), screen and (max-height: 567px) {
