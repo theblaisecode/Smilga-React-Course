@@ -5,13 +5,13 @@ import GroceryList from "./components/GroceryList";
 
 function App() {
   const [isList, setIsList] = useState([
-    "Tomatoe",
+    "Pet goat",
     "Tesla",
     "Japanese Visa",
     "Mangoes",
     "Chongqing City",
+    "Tomatoe",
     "The Moon",
-    "Pet goat",
   ]);
   const [isGrocery, setIsGrocery] = useState({
     groceryItem: "",
