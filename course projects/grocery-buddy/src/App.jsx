@@ -9,8 +9,9 @@ function App() {
     "Tesla",
     "Japanese Visa",
     "Mangoes",
-    "entire chongqing city",
+    "Chongqing City",
     "The Moon",
+    "Pet goat"
   ]);
   const [isGrocery, setIsGrocery] = useState({
     groceryItem: "",
@@ -50,6 +51,10 @@ function App() {
         return remove !== index;
       })
     );
+
+    toast.warn("Item Deleted", {
+      position: "top-center",
+    });
   };
 
   return (
@@ -60,13 +65,13 @@ function App() {
         submitForm={submitForm}
       />
 
-      <ToastContainer />
-
       {isList.length === 0 ? (
         <h2>No Items Added</h2>
       ) : (
         <GroceryList isList={isList} deleteItem={deleteItem} />
       )}
+
+      <ToastContainer />
     </main>
   );
 }

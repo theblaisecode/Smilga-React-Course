@@ -1,7 +1,7 @@
 function Form({ isGrocery, getDetails, submitForm }) {
   return (
     <form action="" onSubmit={submitForm}>
-      <h4>Grocery Bud</h4>
+      <h4>Shopping List</h4>
       <div>
         <input
           type="text"
