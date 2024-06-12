@@ -144,7 +144,7 @@ input[type="checkbox"] {
   background: var(--sec);
 }
 
-@media screen and (max-width: 550px), screen and (max-height: 550px) {
+@media screen and (max-width: 567px), screen and (max-height: 567px) {
   #root {
     width: 95vw;
     margin: 15rem 0;
@@ -167,7 +167,7 @@ input[type="checkbox"] {
   }
 }
 
-@media (min-width: 551px) and (max-width: 900px) {
+@media (min-width: 568px) and (max-width: 900px) {
   #root {
     width: 70vw;
   }
@@ -176,6 +176,7 @@ input[type="checkbox"] {
     font-size: 3rem;
   }
 
-  
-
+  form input {
+    width: 70%;
+  }
 }
