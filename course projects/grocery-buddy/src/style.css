@@ -1,3 +1,10 @@
+:root {
+  --bg: #212121;
+  --primary: #87ae83;
+  --textColor: #fff;
+  --card: #171717;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -9,13 +16,121 @@ html {
 }
 
 body {
-  background: #333;
-  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.6rem;
+  font-family: "Roboto", sans-serif;
+  background: var(--bg);
+  color: var(--textColor);
+}
+
+#root {
+  width: 30vw;
+}
+
+main,
+form,
+form div,
+.groceryList,
+.listItem {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  background: var(--card);
+  padding: 3.2rem;
+  gap: 3.2rem;
+}
+
+h2 {
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 400;
+}
+
+form {
+  width: 100%;
+  gap: 2.4rem;
+  justify-content: center;
+  align-items: center;
+}
+
+form div {
+  flex-direction: row;
+  justify-content: center;
+}
+
+h4 {
+  font-size: 2.5rem;
+  line-height: 2.5rem;
+  letter-spacing: 0.1rem;
+  text-align: center;
+}
+
+form input {
+  border: 0.2rem solid var(--primary);
+  border-right: none;
+  outline: none;
+  border-radius: 0.5rem 0rem 0 0.5rem;
+  padding: 0 1rem;
+  caret-color: var(--primary);
+}
+
+form input:focus {
+  border: 0.2rem solid var(--primary);
+  border-right: none;
+  border-radius: 0.5rem 0rem 0 0.5rem;
+}
+
+button {
+  border: none;
+  outline: none;
+  background: var(--primary);
+  color: var(--textColor);
+  cursor: pointer;
+}
+
+form button {
+  font-size: 1.3rem;
+  padding: 0.7rem 2rem;
+  letter-spacing: 0.1rem;
+  border-radius: 0 0.5rem 0.5rem 0;
+}
+
+.groceryList {
+  gap: 2rem;
+}
+
+.listItem div {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.listItem {
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+input[type="checkbox"] {
+  accent-color: #87ae73;
 }
 
 .isDone {
-  letter-spacing: .1rem;
+  letter-spacing: 0.1rem;
 }
+
 .line {
   text-decoration: line-through;
+}
+
+.groceryList button {
+  font-size: 1.2rem;
+  line-height: 1.3rem;
+  letter-spacing: 0.1rem;
+  text-align: center;
+  padding: 0.3rem 0.7rem;
+  border-radius: 0.3rem;
 }
