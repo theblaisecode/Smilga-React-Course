@@ -169,7 +169,7 @@ input[type="checkbox"] {
 
 @media (min-width: 568px) and (max-width: 900px) {
   #root {
-    width: 70vw;
+    width: 75vw;
   }
 
   h4 {
@@ -178,5 +178,21 @@ input[type="checkbox"] {
 
   form input {
     width: 70%;
+  }
+}
+
+@media (min-width: 901px) and (max-width: 1439px) {
+  #root {
+    width: 50vw;
+  }
+
+  form input {
+    width: 75%;
+  }
+}
+
+@media (min-width: 1440px) and (max-width: 1877px) {
+  form input {
+    width: 72%;
   }
 }
