@@ -1,8 +1,23 @@
-# React + Vite
+# Grocery Buddy
+A simple responsive shopping list built using React JS & Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Live Website - https://theblaisecode.github.io/Grocery-Buddy
+<br/>
 
-Currently, two official plugins are available:
+## 🔶 Result
+![shopping list](https://github.com/theblaisecode/Grocery-Buddy/assets/89015653/da7a6fdd-ef2a-4ea9-b3b7-4ead990285e6)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+<br/>
+
+## 🔶 Tech Stack
+- React JS
+- Vite
+- React-Toastify - https://fkhadra.github.io/react-toastify/introduction
+
+<br/>
+
+## 🔶 Authors
+- GitHub - [@theblaisecode](https://github.com/theblaisecode)
+- Twitter - [@theblaisecode](https://twitter.com/theblaisecode)
+- LinkedIn - [@theblaisecode](https://www.linkedin.com/in/theblaisecode)
+- Portfolio - [theblaisecode.netlify.app](https://theblaisecode.netlify.app/)

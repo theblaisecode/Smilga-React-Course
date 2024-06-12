@@ -1,17 +1,4 @@
-import { useState } from "react";
-
-function GroceryList({ isList, deleteItem }) {
-  const [isChecked, setIsChecked] = useState({});
-
-  function checkedBox(index) {
-    console.log(index);
-    setIsChecked((prevChecked) => ({
-      ...prevChecked,
-      [index]: !prevChecked[index],
-    }));
-  }
-  console.log(isChecked);
-
+function GroceryList({ isList, deleteItem, isChecked, checkedBox }) {
   return (
     <div className="groceryList">
       {isList.map((item, index) => {

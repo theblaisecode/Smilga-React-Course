@@ -13,15 +13,26 @@ function App() {
     "Tomatoe",
     "The Moon",
   ]);
+
   const [isGrocery, setIsGrocery] = useState({
     groceryItem: "",
   });
+
+  const [isChecked, setIsChecked] = useState({});
 
   const getDetails = (e) => {
     setIsGrocery({
       [e.target.name]: e.target.value,
     });
   };
+
+  function checkedBox(index) {
+    console.log(index);
+    setIsChecked((prevChecked) => ({
+      ...prevChecked,
+      [index]: !prevChecked[index],
+    }));
+  }
 
   const submitForm = (e) => {
     e.preventDefault();
@@ -47,12 +58,21 @@ function App() {
   console.log(isList);
 
   const deleteItem = (index) => {
-    console.log(index);
     setIsList((isPrevList) =>
-      isPrevList.filter((item, remove) => {
-        return remove !== index;
-      })
+      isPrevList.filter((item, remove) => remove !== index)
     );
+
+    setIsChecked((prevChecked) => {
+      const newChecked = {};
+      for (let i = 0; i < isList.length; i++) {
+        if (i < index) {
+          newChecked[i] = prevChecked[i];
+        } else if (i > index) {
+          newChecked[i - 1] = prevChecked[i];
+        }
+      }
+      return newChecked;
+    });
 
     toast.info("Item Deleted", {
       position: "top-center",
@@ -70,7 +90,12 @@ function App() {
       {isList.length === 0 ? (
         <h2>No Items Added</h2>
       ) : (
-        <GroceryList isList={isList} deleteItem={deleteItem} />
+        <GroceryList
+          isList={isList}
+          deleteItem={deleteItem}
+          isChecked={isChecked}
+          checkedBox={checkedBox}
+        />
       )}
 
       <ToastContainer />
