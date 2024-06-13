@@ -1,7 +1,8 @@
 # Grocery Buddy
-A simple responsive shopping list built using React JS & Vite
+A simple responsive shopping list built using React JS & Vite.
 
 Live Website - https://theblaisecode.github.io/Grocery-Buddy
+
 <br/>
 
 ## 🔶 Result
