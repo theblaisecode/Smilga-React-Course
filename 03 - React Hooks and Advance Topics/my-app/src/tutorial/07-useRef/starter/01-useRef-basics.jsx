@@ -6,6 +6,10 @@ const UseRefBasics = () => {
   const isMounted = useRef(false);
 
   useEffect(() => {
+    refContainer.current.focus();
+  });
+
+  useEffect(() => {
     // console.log(refContainer);
     // console.log(refContainer.current);
 
@@ -13,7 +17,7 @@ const UseRefBasics = () => {
       isMounted.current = true;
       return;
     }
-    
+
     console.log("re-render");
   }, [value]);
 
