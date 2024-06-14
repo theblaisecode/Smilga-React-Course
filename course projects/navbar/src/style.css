@@ -1,7 +1,7 @@
 :root {
-  --bg: #212121;
-  --primary: #87ae73;
-  --sec: #587748;
+  --bg: #171717;
+  --primary: #212121;
+  --sec: #87ae72;
   --textColor: #fff;
   --card: #171717;
   --accent: #646363;
@@ -18,11 +18,14 @@ html {
 }
 
 body {
-  /* display: flex;
-  justify-content: center;
-  align-items: center; */
   font-size: 1.6rem;
   font-family: "Roboto", sans-serif;
   background: var(--bg);
   color: var(--textColor);
+}
+
+a {
+  color: var(--textColor);
+  text-decoration: none;
+  cursor: pointer;
 }
