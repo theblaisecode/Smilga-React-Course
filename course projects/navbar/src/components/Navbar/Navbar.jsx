@@ -4,10 +4,8 @@ import { links, social } from "../../data";
 import "./NavbarStyle.css";
 
 function Navbar() {
-  const [showLink, setShowLink] = useState(false);
-
   const [isMobile, setIsMobile] = useState(false);
-
+  const [activeLink, setActiveLink] = useState(links[0].url);
   const home = links[0].url;
 
   return (
@@ -24,7 +22,10 @@ function Navbar() {
                 const { id, url, text, aria } = pages;
                 return (
                   <li key={id}>
-                    <a className="active" href={url} aria-label={aria}>
+                    <a
+                      className={activeLink === url ? " active" : ""}
+                      href={url}
+                      aria-label={aria}>
                       {text}
                     </a>
                   </li>
