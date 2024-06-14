@@ -6,13 +6,12 @@ import "./NavbarStyle.css";
 function Navbar() {
   const [isMobile, setIsMobile] = useState(false);
   const [activeLink, setActiveLink] = useState(links[0].url);
-  const home = links[0].url;
 
   return (
     <nav>
       <div className="container">
         <div className="navContent">
-          <a href={home} className="logo" aria-label={links.aria}>
+          <a href={activeLink} className="logo" aria-label={links.aria}>
             <img src={logo} alt="TheblaiseCode Logo" />
           </a>
 
