@@ -2184,7 +2184,6 @@ Challenge
 - create three components and nest them in such way :
 
 - Navbar.jsx
-
   - NavLinks.jsx (nested in Navbar)
     - UserContainer.jsx (nested in NavLinks)
 

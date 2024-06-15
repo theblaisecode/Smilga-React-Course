@@ -13,4 +13,5 @@ const ToggleExample = () => {
     </div>
   );
 };
+
 export default ToggleExample;
