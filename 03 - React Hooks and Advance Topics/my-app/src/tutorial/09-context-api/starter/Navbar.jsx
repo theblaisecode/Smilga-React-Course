@@ -16,7 +16,7 @@ const Navbar = () => {
   return (
     <ButtonContext.Provider value={{ isUser, logout }}>
       <nav className="navbar">
-        <h5>CONTEXT API</h5>
+        <h4>CONTEXT API</h4>
         <NavLinks isUser={isUser} logout={logout} />
       </nav>
     </ButtonContext.Provider>
