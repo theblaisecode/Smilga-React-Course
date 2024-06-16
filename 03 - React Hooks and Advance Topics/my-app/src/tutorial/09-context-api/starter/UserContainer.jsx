@@ -1,15 +1,14 @@
-import { useContext } from "react";
-import { ButtonContext } from "./Navbar";
+import { useCustomContext } from "./Navbar";
 
 const UserContainer = () => {
-  const { isUser, logout } = useContext(ButtonContext);
+  const { isUser, logout } = useCustomContext();
 
   return (
     <div className="user-container">
       {isUser ? (
         <>
           <p>Hello There, {isUser.name.toUpperCase()}</p>
-          
+
           <button type="button" className="btn" onClick={logout}>
             logout
           </button>

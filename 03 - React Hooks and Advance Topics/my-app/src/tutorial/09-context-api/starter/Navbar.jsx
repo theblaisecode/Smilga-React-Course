@@ -1,7 +1,10 @@
 import { createContext, useState } from "react";
 import NavLinks from "./NavLinks";
+import { useContext } from "react";
 
 export const ButtonContext = createContext();
+
+export const useCustomContext = () => useContext(ButtonContext);
 
 const Navbar = () => {
   const [isUser, setIsUser] = useState({ name: "Blaise" });
