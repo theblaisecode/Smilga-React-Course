@@ -1,9 +1,9 @@
 import { createContext, useState } from "react";
 import NavLinks from "./NavLinks";
 
-export const NavbarContext = createContext();
+export const ButtonContext = createContext();
 
-function Navbar() {
+const Navbar = () => {
   const [isUser, setIsUser] = useState({ name: "Blaise" });
 
   const logout = () => {
@@ -11,13 +11,13 @@ function Navbar() {
   };
 
   return (
-    <NavbarContext.Provider value={{isUser, logout}}>
+    <ButtonContext.Provider value={{ isUser, logout }}>
       <nav className="navbar">
         <h5>CONTEXT API</h5>
         <NavLinks isUser={isUser} logout={logout} />
       </nav>
-    </NavbarContext.Provider>
+    </ButtonContext.Provider>
   );
-}
+};
 
 export default Navbar;

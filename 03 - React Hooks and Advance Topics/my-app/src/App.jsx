@@ -68,7 +68,7 @@ function App() {
       {/* <UseRefBasics /> */}
       {/* <ToggleExample /> */}
       {/* <FetchData /> */}
-      <Navbar/>
+      <Navbar />
     </div>
   );
 }
