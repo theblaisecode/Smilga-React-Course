@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { links } from "../data";
+import "./Navbar.css"
 
 function Navbar() {
   const [isMobile, setIsMobile] = useState(false);
