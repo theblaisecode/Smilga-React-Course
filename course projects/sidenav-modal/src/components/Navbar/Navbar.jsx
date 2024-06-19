@@ -1,15 +1,8 @@
-import { useState } from "react";
 import { links, social } from "../../data";
 import logo from "../../img/TheBlaiseCodewhite.png";
 import "./Navbar.css";
 
-function Navbar() {
-  const [isMobile, setIsMobile] = useState(false);
-
-  function switchMobile() {
-    setIsMobile((prevIsMobile) => !prevIsMobile);
-  }
-
+function Navbar({ isMobile, switchMobile }) {
   return (
     <nav>
       <div className="container">
@@ -28,9 +21,7 @@ function Navbar() {
           <div className="allLinks">
             <ul className="pages">
               {links.map((pages) => {
-                console.log(pages);
                 const { id, url, text, aria, icon } = pages;
-                console.log(icon, text);
 
                 return (
                   <li key={id}>

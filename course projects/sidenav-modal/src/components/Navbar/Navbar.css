@@ -7,11 +7,10 @@ nav {
   width: 80vw;
 }
 
-button {
+nav button {
   background: none;
   border: none;
   outline: none;
-  cursor: pointer;
 }
 
 i {
@@ -20,11 +19,11 @@ i {
 
 .navContent {
   background: var(--primary);
-  position: absolute;
+  position: fixed;
   top: 0;
   left: -100%;
   padding: 3rem 0;
-  height: 100vh;
+  height: 100%;
   width: 40rem;
   transition: 0.4s;
 }

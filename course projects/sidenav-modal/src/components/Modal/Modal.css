@@ -1,0 +1,98 @@
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.modal button {
+  background: var(--sec);
+  color: var(--textColor);
+  border: none;
+  outline: none;
+  padding: 1rem 2rem;
+  border-radius: 0.4rem;
+  transition: 0.4s;
+}
+
+.modal button:hover {
+  background: var(--accent);
+  transition: all 0.4s;
+}
+
+.modalContent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #87ae7338;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s, visibility 0.4s;
+}
+
+.modalContent.active {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.4s, visibility 0.4s;
+}
+
+.modalCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem;
+  width: 60rem;
+  background: var(--primary);
+  border-radius: 3rem;
+  position: relative;
+}
+
+.modalCard button {
+  background: none;
+  color: var(--textColor);
+  border: none;
+  outline: none;
+  padding: 3rem;
+  border-radius: 0.4rem;
+  transition: 0.4s;
+  position: absolute; /* Added to position button relative to modalCard */
+  top: 1rem; /* Position button 1rem from the top */
+  right: 1rem; /* Position button 1rem from the right */
+  display: flex;
+  justify-content: flex-end;
+}
+
+.modalCard button:hover {
+  background: none;
+}
+
+.modalCard button i {
+  color: var(--sec);
+  transition: 0.4s;
+}
+
+.modalCard button i:hover {
+  color: var(--textColor);
+  transition: all 0.4s;
+}
+
+.modalInfo {
+  margin-top: 5rem;
+  text-align: center;
+}
+
+.modalInfo h4 {
+  font-size: 2.5rem;
+}
+
+.modalInfo p {
+  padding: 3rem 0;
+  line-height: 2.2rem;
+  letter-spacing: .1rem;
+}
