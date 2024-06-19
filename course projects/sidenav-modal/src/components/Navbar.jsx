@@ -30,10 +30,16 @@ function Navbar() {
           <i
             className={
               !isMobile
-                ? "fa-solid fa-bars fa-lg"
-                : "fa-solid fa-xmark fa-lg active"
+                ? "fa-solid fa-bars"
+                : "fa-solid fa-xmark active"
             }></i>
         </button>
+
+        <div className="navContent">
+          <div className="logo">
+            <img src={} alt="" />
+          </div>
+        </div>
       </div>
     </nav>
   );

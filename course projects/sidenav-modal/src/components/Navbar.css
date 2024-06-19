@@ -1,0 +1,20 @@
+nav {
+  padding: 3rem;
+}
+
+.container {
+  margin: auto;
+  width: 80vw;
+}
+
+button {
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+i {
+  color: var(--sec);
+  
+}
