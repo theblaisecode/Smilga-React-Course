@@ -51,3 +51,25 @@ main {
   align-items: center;
   background: var(--grey-100);
 }
+
+@media screen and (max-width: 610px), screen and (max-height: 610px) {
+  .navContent {
+    width: 35rem;
+  }
+
+  .modalCard {
+    width: 55rem;
+  }
+}
+
+@media screen and (max-width: 470px) {
+  .modalCard {
+    width: 40rem;
+  }
+}
+
+@media (min-width: 471px) and (max-width: 545px) {
+  .modalCard {
+    width: 45rem;
+  }
+}
