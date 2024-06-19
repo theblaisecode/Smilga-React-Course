@@ -1,0 +1,102 @@
+nav {
+  padding: 3rem;
+}
+
+.container {
+  margin: auto;
+  width: 80vw;
+}
+
+button {
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+i {
+  color: var(--sec);
+}
+
+.navContent {
+  background: var(--primary);
+  position: absolute;
+  top: 0;
+  left: -100%;
+  padding: 3rem 0;
+  height: 100vh;
+  width: 40rem;
+  transition: 0.4s;
+}
+
+.navContent.active {
+  display: block;
+  top: 0;
+  left: 0;
+  transition: all 0.4s;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 3rem;
+}
+
+.logo img {
+  width: 55%;
+}
+
+.allLinks {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 95%;
+}
+
+.pages {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 5rem;
+}
+
+.pages li {
+  display: block;
+  width: 100%;
+}
+
+.pages a {
+  color: var(--textColor);
+  text-transform: capitalize;
+  font-size: 2rem;
+  letter-spacing: 0.1rem;
+  line-height: 2rem;
+  transition: 0.4s;
+  display: flex;
+  gap: 2rem;
+  padding: 2rem 3rem;
+}
+
+.pages a:hover {
+  background: var(--sec);
+  transition: all 0.4s;
+}
+
+.socials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+}
+
+.socials a {
+  display: flex;
+  color: var(--sec);
+  font-size: 2.5rem;
+  transition: 0.4s;
+}
+
+.socials a:hover {
+  color: var(--textColor);
+}

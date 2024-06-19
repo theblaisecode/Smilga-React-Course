@@ -22,3 +22,12 @@ body {
   background: var(--bg);
   color: var(--textColor);
 }
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
