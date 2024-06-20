@@ -1,8 +1,23 @@
-# React + Vite
+# React Side-Nav and Modal Pop-Up
+A simple responsive Side-Nav and Modal pop-up built using React JS & Vite.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Live Website - https://theblaisecode.github.io/React-Side-Nav-and-Modal
 
-Currently, two official plugins are available:
+<br/>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🔶 Result
+![sidenav and modal](https://github.com/theblaisecode/React-Side-Nav-and-Modal/assets/89015653/e6d649d8-c0dc-496e-8797-bab5482886e6)
+
+<br/>
+
+## 🔶 Tech Stack
+- React JS
+- Vite
+
+<br/>
+
+## 🔶 Authors
+- GitHub - [@theblaisecode](https://github.com/theblaisecode)
+- Twitter - [@theblaisecode](https://twitter.com/theblaisecode)
+- LinkedIn - [@theblaisecode](https://www.linkedin.com/in/theblaisecode)
+- Portfolio - [theblaisecode.netlify.app](https://theblaisecode.netlify.app/)
