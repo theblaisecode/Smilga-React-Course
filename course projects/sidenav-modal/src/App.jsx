@@ -1,19 +1,17 @@
 import { useState } from "react";
 import Navbar from "./components/Navbar/Navbar";
 import Modal from "./components/Modal/Modal";
+import { useGlobalContext } from "./components/GlobalContext";
 
 function App() {
-  const [isMobile, setIsMobile] = useState(false);
-  const [isModal, setIsModal] = useState(false);
-
-  function switchMobile() {
-    setIsMobile((prevIsMobile) => !prevIsMobile);
-  }
-
-  function toggleModal() {
-    setIsModal((prevIsModal) => !prevIsModal);
-  }
-
+  const {
+    isMobile,
+    setIsMobile,
+    isModal,
+    setIsModal,
+    switchMobile,
+    toggleModal,
+  } = useGlobalContext();
   return (
     <>
       <aside>
