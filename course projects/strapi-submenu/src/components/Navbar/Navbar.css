@@ -79,6 +79,9 @@ button.open i {
   grid-template-columns: repeat(2, 1fr);
   gap: 0.5rem;
   list-style: none;
+}
+
+.menuLinksUl {
   display: none;
 }
 
