@@ -1,4 +1,3 @@
-import { useState } from "react";
 import Navbar from "./components/Navbar/Navbar";
 import Modal from "./components/Modal/Modal";
 import { useGlobalContext } from "./components/GlobalContext";

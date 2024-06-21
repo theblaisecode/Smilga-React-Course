@@ -1,10 +1,11 @@
-function App() {
+import Navbar from "./components/Navbar/Navbar";
 
+function App() {
   return (
     <>
-      <h1>Olla!</h1>
+      <Navbar />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
