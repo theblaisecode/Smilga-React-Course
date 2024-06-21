@@ -1,7 +1,7 @@
 import sublinks from "../../data";
 import "./Navbar.css";
 
-function Navbar({ isMobile, openCloseMenu }) {
+function Navbar({ isMobile, openCloseMenu, isShowSubMenu }) {
   return (
     <nav>
       <div className="container">
@@ -10,40 +10,37 @@ function Navbar({ isMobile, openCloseMenu }) {
             <a href="">strapi</a>
           </div>
 
-          <button onClick={() => openCloseMenu()}>
-            <i className="fa-solid fa-bars fa-xl"></i>
-          </button>
+          {isMobile && (
+            <button onClick={() => openCloseMenu()} className="open">
+              <i className="fa-solid fa-bars fa-xl"></i>
+            </button>
+          )}
 
-          <div className="allLinks">
-            <ul className={isMobile ? "menuLinks active" : "menuLinks"}>
-              {sublinks.map((pageLinks) => {
-                const { page, pageId, links } = pageLinks;
-                return (
-                  <li key={pageId} onMouseEnter={() => openCloseMenu}>
-                    {page}
-                  </li>
-                );
-              })}
-            </ul>
-
-            <ul className={isMobile ? "subMenu active" : "subMenu"}>
-              <button onClick={() => openCloseMenu()}>
+          <div className={isShowSubMenu ? "allLinks active" : "allLinks"}>
+            <div className={isMobile ? "subMenu active" : "subMenu"}>
+              <button onClick={() => openCloseMenu()} className="close">
                 <i className="fa-solid fa-xmark fa-xl"></i>
               </button>
 
-              {sublinks.map((subMenuItems) => {
-                return subMenuItems.links.map((eachSubMenuLink) => {
-                  const { id, label, icon, url } = eachSubMenuLink;
-                  return (
-                    <li key={id}>
-                      <a href={url}>
-                        {icon} {label}
-                      </a>
-                    </li>
-                  );
-                });
-              })}
-            </ul>
+              <div className={!isMobile ? "pc" : "mobile"}>
+                <ul className={!isMobile ? "menuLinks" : "subMenuLinks"}>
+                  {sublinks.map((subMenuItems) => (
+                    <article key={subMenuItems.pageId} className="menuItem">
+                      <h3>{subMenuItems.page}</h3>
+                      <ul className="menuLinksUl">
+                        {subMenuItems.links.map((eachSubMenuLink) => (
+                          <li key={eachSubMenuLink.id}>
+                            <a href={eachSubMenuLink.url}>
+                              {eachSubMenuLink.icon} {eachSubMenuLink.label}
+                            </a>
+                          </li>
+                        ))}
+                      </ul>
+                    </article>
+                  ))}
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
       </div>

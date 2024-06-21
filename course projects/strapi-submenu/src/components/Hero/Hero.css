@@ -1,0 +1,32 @@
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
+
+h1 {
+  font-size: 5rem;
+  line-height: 5rem;
+  letter-spacing: 0.1rem;
+  text-align: left;
+}
+
+p {
+  margin-top: 2rem;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  text-align: left;
+}
+
+@media (min-width: 992px) {
+  h1 {
+    font-size: 8rem;
+    line-height: 10rem;
+    text-align: center;
+  }
+
+  p {
+    text-align: center;
+  }
+}

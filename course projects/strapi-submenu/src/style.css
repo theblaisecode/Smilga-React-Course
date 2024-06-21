@@ -26,7 +26,7 @@ body {
 
 .container {
   margin: auto;
-  width: 80vw;
+  width: 60vw;
 }
 
 button,
@@ -35,4 +35,10 @@ a {
   border: none;
   text-decoration: none;
   cursor: pointer;
+}
+
+@media screen and (max-width: 991px) {
+  .container {
+    width: 80vw;
+  }
 }
