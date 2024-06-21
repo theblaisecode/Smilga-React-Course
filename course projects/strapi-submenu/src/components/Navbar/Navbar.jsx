@@ -17,7 +17,6 @@ function Navbar({ isMobile, openCloseMenu }) {
           <div className="allLinks">
             <ul className={isMobile ? "menuLinks active" : "menuLinks"}>
               {sublinks.map((pageLinks) => {
-                console.log(pageLinks);
                 const { page, pageId, links } = pageLinks;
                 return (
                   <li key={pageId} onMouseEnter={() => openCloseMenu}>
@@ -28,6 +27,10 @@ function Navbar({ isMobile, openCloseMenu }) {
             </ul>
 
             <ul className={isMobile ? "subMenu active" : "subMenu"}>
+              <button onClick={() => openCloseMenu()}>
+                <i className="fa-solid fa-xmark fa-xl"></i>
+              </button>
+
               {sublinks.map((subMenuItems) => {
                 return subMenuItems.links.map((eachSubMenuLink) => {
                   const { id, label, icon, url } = eachSubMenuLink;
