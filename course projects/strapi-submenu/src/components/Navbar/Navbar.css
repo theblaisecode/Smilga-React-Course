@@ -118,7 +118,13 @@ button.close i {
   font-size: 2.5rem;
 }
 
-@media (max-width: 991px) {
+@media screen and (max-width: 500px) {
+  .allLinks {
+    padding: 4rem 2rem;
+  }
+}
+
+@media screen and (max-width: 991px) {
   .mobile {
     display: block;
   }
@@ -183,7 +189,7 @@ button.close i {
     position: fixed;
     top: 9%;
     left: 32%;
-    width: 40%;
+    width: 45%;
     background: var(--textLight);
     padding: 3.2rem;
   }
