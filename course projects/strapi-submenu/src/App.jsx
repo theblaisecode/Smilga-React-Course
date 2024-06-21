@@ -2,10 +2,10 @@ import { useGlobalContext } from "./GlobalContext";
 import Navbar from "./components/Navbar/Navbar";
 
 function App() {
-  const {isMobile, setIsMobile, openCloseSidebar} = useGlobalContext()
+  const {isMobile, setIsMobile, openCloseMenu} = useGlobalContext()
   return (
     <>
-      <Navbar isMobile={isMobile} openCloseSidebar={openCloseSidebar} />
+      <Navbar isMobile={isMobile} openCloseMenu={openCloseMenu} />
     </>
   );
 }

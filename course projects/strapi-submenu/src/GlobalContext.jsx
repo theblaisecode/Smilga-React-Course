@@ -9,11 +9,11 @@ export const useGlobalContext = () => {
 function GlobalContext({ children }) {
   const [isMobile, setIsMobile] = useState(false);
 
-  function openCloseSidebar() {
+  function openCloseMenu() {
     setIsMobile((prevIsMobile) => !prevIsMobile);
   }
   return (
-    <AppContext.Provider value={{isMobile, setIsMobile, openCloseSidebar}}>
+    <AppContext.Provider value={{isMobile, setIsMobile, openCloseMenu}}>
       {children}
     </AppContext.Provider>
   );
