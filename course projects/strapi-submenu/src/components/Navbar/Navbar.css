@@ -181,9 +181,9 @@ button.close i {
   .menuLinksUl:hover {
     display: grid;
     position: fixed;
-    top: 10%;
-    left: 20%;
-    width: 60%;
+    top: 9%;
+    left: 32%;
+    width: 40%;
     background: var(--textLight);
     padding: 3.2rem;
   }
