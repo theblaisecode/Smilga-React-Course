@@ -177,22 +177,14 @@ button.close i {
     position: relative;
   }
 
-  /* Initially hide the submenu */
-  .menuLinksUl {
-    display: none;
-    position: absolute; /* Position submenu relative to the parent */
-    top: 100%; /* Position below the parent */
-    left: 0; /* Align to the left of the parent */
-    width: 100%; /* Full width of the parent */
-    background: var(--textLight); /* Background color */
-    padding: 3.2rem; /* Padding for spacing */
-  }
-
-  /* Display submenu when hovering over the parent menu item */
   .menuItem:hover .menuLinksUl,
-  /* Ensure submenu stays open when hovering over itself */
   .menuLinksUl:hover {
     display: grid;
+    position: fixed;
+    top: 10%;
+    left: 20%;
+    width: 60%;
+    background: var(--textLight);
+    padding: 3.2rem;
   }
 }
-
