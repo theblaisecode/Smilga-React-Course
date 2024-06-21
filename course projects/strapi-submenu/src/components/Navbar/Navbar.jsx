@@ -11,18 +11,19 @@ function Navbar({ isMobile, openCloseSidebar }) {
           </div>
 
           <button onClick={() => openCloseSidebar()}>
-            <i className="fa-solid fa-xmark fa-xl"></i>
+            <i className="fa-solid fa-bars fa-xl"></i>
           </button>
 
           <div className="allLinks">
             <ul className={isMobile ? "menuLinks active" : "menuLinks"}>
               {sublinks.map((pageLinks) => {
                 console.log(pageLinks);
-                // return (
-                //   <li>
-                //     <a href=""></a>
-                //   </li>
-                // );
+                const {page, pageId, links} = pageLinks
+                return (
+                  <li key={pageId}>
+                    {page}
+                  </li>
+                );
               })}
             </ul>
           </div>

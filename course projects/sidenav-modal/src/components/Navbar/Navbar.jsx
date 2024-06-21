@@ -7,7 +7,7 @@ function Navbar({ isMobile, switchMobile }) {
     <nav>
       <div className="container">
         <button onClick={() => switchMobile()}>
-          <i className={"fa-solid fa-bars fa-xl"}></i>
+          <i className="fa-solid fa-bars fa-xl"></i>
         </button>
 
         <div className={isMobile ? "navContent active" : "navContent"}>
