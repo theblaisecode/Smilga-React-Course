@@ -1,0 +1,22 @@
+import { createContext, useContext, useState } from "react";
+
+const AppContext = createContext();
+
+export const useGlobalContext = () => {
+  return useContext(AppContext);
+};
+
+function GlobalContext({ children }) {
+  const [isMobile, setIsMobile] = useState(false);
+
+  function openCloseSidebar() {
+    setIsMobile((prevIsMobile) => !prevIsMobile);
+  }
+  return (
+    <AppContext.Provider value={{isMobile, setIsMobile, openCloseSidebar}}>
+      {children}
+    </AppContext.Provider>
+  );
+}
+
+export default GlobalContext;
