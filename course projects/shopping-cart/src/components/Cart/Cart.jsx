@@ -1,5 +1,6 @@
 import { IoIosArrowUp, IoIosArrowDown } from "react-icons/io";
 import cartItems from "../../data";
+import "./Cart.css"
 
 function Cart() {
   return (
