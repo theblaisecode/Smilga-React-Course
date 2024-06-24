@@ -1,3 +1,133 @@
+.shoppingCart {
+  margin: 3rem 0;
+}
+
 .cartContent {
   color: var(--textDark);
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.bagItems,
+.bagItems .itemDetails {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.bagItems {
+  gap: 3rem;
+}
+
+.bagItems li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bagItems img {
+  width: 8rem;
+  object-fit: cover;
+}
+
+.bagItems .info {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.bagItems .itemDetails {
+  gap: 0.8rem;
+}
+
+.bagItems .itemDetails .title {
+  font-size: 2.4rem;
+  line-height: 2.4rem;
+  letter-spacing: 0.2rem;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.bagItems .itemDetails button,
+.bagItems .amount button {
+  display: inline-block;
+  background: none;
+  outline: none;
+  border: none;
+  color: var(--primary);
+  text-align: left;
+  width: fit-content;
+  transition: 0.4s;
+}
+
+.bagItems .itemDetails button:hover,
+.bagItems .amount svg:hover {
+  color: var(--hover);
+  transition: all 0.4s;
+}
+
+.bagItems .amount {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.bagItems .amount svg {
+  color: var(--primary);
+  font-size: 2rem;
+  font-weight: 900;
+  transition: 0.4s;
+}
+
+footer {
+  margin-top: 8rem;
+  border-top: 0.2rem solid var(--primary);
+  color: var(--textDark);
+}
+
+.footerContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.footerContent .total {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 1.6rem 0;
+  font-size: 2rem;
+  line-height: 2rem;
+  letter-spacing: 0.1rem;
+}
+
+.footerContent .total .bagAmount {
+  background: var(--primary);
+  color: var(--textLight);
+  padding: 0.5rem 0.8rem;
+  border-radius: 0.5rem;
+}
+
+.footerContent button {
+  border: none;
+  outline: none;
+  background: var(--accent);
+  color: var(--primary);
+  font-size: 1.3rem;
+  text-align: center;
+  padding: 0.6rem 1.2rem;
+  border-radius: 0.5rem;
+  transition: 0.4s;
+}
+
+.footerContent button:hover {
+  color: var(--textLight);
+  background: var(--hover);
+  transition: all 0.4s;
 }

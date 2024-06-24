@@ -1,9 +1,10 @@
 :root {
-  --bg: #F8FAFC;
-  --primary: #645CFF;
-  --accent: #A29DFF;
+  --bg: #f8fafc;
+  --primary: #645cff;
+  --accent: #a29dff;
   --textLight: #ffffff;
-  --textDark: #0F172A;
+  --textDark: #0f172a;
+  --hover: #4741be;
 }
 
 * {
@@ -26,7 +27,25 @@ body {
   align-items: center;
 }
 
-a {
+a,
+button {
   cursor: pointer;
   text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+.container {
+  margin: auto;
+  width: 40vw;
+}
+
+
+
+@media screen and (max-width: 990px) {
+  .container {
+    width: 80vw;
+  }
 }
