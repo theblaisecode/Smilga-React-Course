@@ -1,0 +1,49 @@
+nav {
+  background: var(--primary);
+  padding: 2.4rem;
+}
+
+.container {
+  margin: auto;
+  width: 40vw;
+}
+
+.navContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo a {
+  color: var(--textLight);
+  font-size: 3.2rem;
+  line-height: 3.2rem;
+  letter-spacing: 0.1rem;
+}
+
+.cart {
+  position: relative;
+}
+
+.cart span {
+  content: "";
+  width: 2.2rem;
+  height: 2.2rem;
+  border-radius: 50%;
+  display: inline-block;
+  background: var(--accent);
+  color: var(--textLight);
+  position: absolute;
+  right: -35%;
+  top: -29%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.cart svg {
+  color: var(--textLight);
+  font-size: 3rem;
+}
