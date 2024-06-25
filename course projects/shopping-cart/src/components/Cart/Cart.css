@@ -24,7 +24,7 @@
 
 .bagItems .empty {
   text-align: center;
-  color: var(--accent);
+  color: #6474a7;
 }
 
 .bagItems li {
