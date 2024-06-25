@@ -39,12 +39,16 @@ li {
 
 .container {
   margin: auto;
-  width: 40vw;
+  width: 60vw;
 }
 
+@media screen and (max-width: 768px) {
+  .container {
+    width: 90vw;
+  }
+}
 
-
-@media screen and (max-width: 990px) {
+@media (min-width: 769px) and (max-width: 1024px) {
   .container {
     width: 80vw;
   }
