@@ -1,7 +1,6 @@
 import { CLEAR_LIST, RESET_LIST, REMOVE_ITEM } from "./actions";
 import { data } from "../../../data";
 
-
 const reducer = (state, action) => {
   if (action.type === CLEAR_LIST) {
     return { ...state, people: [] };
@@ -13,9 +12,8 @@ const reducer = (state, action) => {
       people: state.people.filter((person) => person.id !== action.payload.id),
     };
   }
-  // return state
+
   throw new Error(`No matiching "${action.type}" - action type`);
 };
 
-
-export default reducer
+export default reducer;
