@@ -39,7 +39,7 @@ li {
 
 .container {
   margin: auto;
-  width: 60vw;
+  width: 55vw;
 }
 
 @media screen and (max-width: 768px) {
