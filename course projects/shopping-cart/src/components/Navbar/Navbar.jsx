@@ -1,11 +1,11 @@
 import { FaCartPlus } from "react-icons/fa";
 import "./Navbar.css";
-import { useState } from "react";
-import cartItems from "../../data";
+import { useGlobalContext } from "../../Reducer/GlobalContext";
 
 function Navbar() {
-  const [isCart, setIsCart] = useState(cartItems);
-  
+  const { isCart } = useGlobalContext();
+  const totalItems = isCart.reduce((acc, curr) => acc + curr.amount, 0);
+
   return (
     <nav>
       <div className="container">
@@ -15,7 +15,7 @@ function Navbar() {
           </div>
 
           <div className="cart">
-            <span className="cartItems">{isCart.length}</span>
+            <span className="cartItems">{totalItems}</span>
             <FaCartPlus />
           </div>
         </div>

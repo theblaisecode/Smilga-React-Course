@@ -22,6 +22,11 @@
   gap: 3rem;
 }
 
+.bagItems .empty {
+  text-align: center;
+  color: var(--accent);
+}
+
 .bagItems li {
   display: flex;
   justify-content: space-between;

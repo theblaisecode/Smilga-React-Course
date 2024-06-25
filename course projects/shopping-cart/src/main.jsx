@@ -4,6 +4,7 @@ import "./style.css";
 import GlobalContext from "./Reducer/GlobalContext.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  
+  <GlobalContext>
     <App />
+  </GlobalContext>
 );

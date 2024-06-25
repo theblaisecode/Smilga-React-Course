@@ -3,7 +3,17 @@ import Cart from "./components/Cart/Cart";
 import Navbar from "./components/Navbar/Navbar";
 
 function App() {
-  // const {isCart, setIsCart} = useGlobalContext()
+  // const {
+  //   isCart,
+  //   setIsCart,
+  //   removeItem,
+  //   clearCart,
+  //   state,
+  //   dispatch,
+  //   reducer,
+  //   defaultState,
+  // } = useGlobalContext();
+
   return (
     <main>
       <Navbar />
