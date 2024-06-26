@@ -5,7 +5,6 @@ import reducer from "./reducer";
 
 const defaultState = {
   people: data,
-  
   isLoading: false,
 };
 
