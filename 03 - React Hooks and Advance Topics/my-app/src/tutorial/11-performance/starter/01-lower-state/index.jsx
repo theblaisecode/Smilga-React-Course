@@ -14,7 +14,7 @@ const LowerState = () => {
         style={{ marginBottom: "1rem" }}>
         count {count}
       </button>
-
+  
       <List people={people} />
     </section>
   );
