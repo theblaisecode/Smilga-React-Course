@@ -9,4 +9,5 @@ const List = ({ people }) => {
     </div>
   );
 };
+
 export default List;

@@ -5,4 +5,5 @@ const Person = ({ name }) => {
     </div>
   );
 };
+
 export default Person;

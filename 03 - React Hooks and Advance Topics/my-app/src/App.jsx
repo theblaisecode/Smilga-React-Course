@@ -34,7 +34,8 @@
 // import Navbar from "./tutorial/09-context-api/starter/Navbar";
 // import ReducerBasics from "./tutorial/10-useReducer/starter/01-useReducer";
 // import LowerState from "./tutorial/11-performance/starter/01-lower-state";
-import LowerStateChallenge from "./tutorial/11-performance/starter/02-lower-state-challenge";
+// import LowerStateChallenge from "./tutorial/11-performance/starter/02-lower-state-challenge";
+import LowerState from "./tutorial/11-performance/starter/03-hooks";
 
 function App() {
   return (
@@ -74,7 +75,8 @@ function App() {
       {/* <Navbar /> */}
       {/* <ReducerBasics /> */}
       {/* <LowerState /> */}
-      <LowerStateChallenge />
+      {/* <LowerStateChallenge /> */}
+      <LowerState />
     </div>
   );
 }
