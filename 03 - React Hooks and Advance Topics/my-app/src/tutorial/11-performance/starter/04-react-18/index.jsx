@@ -1,5 +1,5 @@
-import { useState, useTransition } from "react";
-import SlowComponent from "./SlowComponent";
+import { Suspense, lazy, useState, useTransition } from "react";
+const SlowComponent = lazy(() => import("./SlowComponent"));
 
 const LatestReact = () => {
   const [text, setText] = useState("");
@@ -54,7 +54,11 @@ const LatestReact = () => {
         toggle
       </button>
 
-      {show && <SlowComponent />}
+      {show && (
+        <Suspense fallback={<h4>Loading...</h4>}>
+          <SlowComponent />
+        </Suspense>
+      )}
     </section>
   );
 };
