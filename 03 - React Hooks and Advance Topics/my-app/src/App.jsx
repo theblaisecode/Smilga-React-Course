@@ -36,6 +36,8 @@
 // import LowerState from "./tutorial/11-performance/starter/01-lower-state";
 // import LowerStateChallenge from "./tutorial/11-performance/starter/02-lower-state-challenge";
 import LowerState from "./tutorial/11-performance/starter/03-hooks";
+// import GetUserData from "./tutorial/11-performance/starter/03-hooks/UseCallBack Common use case";
+// import LatestReact from "./tutorial/11-performance/starter/04-react-18";
 
 function App() {
   return (
@@ -77,6 +79,8 @@ function App() {
       {/* <LowerState /> */}
       {/* <LowerStateChallenge /> */}
       <LowerState />
+      {/* <GetUserData /> */}
+      {/* <LatestReact/> */}
     </div>
   );
 }
