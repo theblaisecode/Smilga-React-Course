@@ -7,6 +7,7 @@ const LatestReact = () => {
 
   const handleChange = (e) => {
     setText(e.target.value);
+    
 
     startTransition(() => {
       // slow down CPU
