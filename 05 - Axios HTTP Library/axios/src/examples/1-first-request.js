@@ -1,21 +1,21 @@
 import { useEffect } from "react";
 import axios from "axios";
 
-const url = "https://course-api.com/react-store-products";
+const url = "/react-store-products";
 
 const FirstRequest = () => {
-  const fetchData = async () => {
+  async function getData() {
     try {
-      const response = await axios.get(url);
-      const data = response.data;
+      const res = await axios.get(url);
+      const data = res.data;
       console.log(data);
     } catch (error) {
       console.log(error.response);
     }
-  };
+  }
 
   useEffect(() => {
-    fetchData();
+    getData();
   }, []);
 
   return <h2 className="text-center">First Request</h2>;
