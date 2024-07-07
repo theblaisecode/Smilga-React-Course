@@ -23,6 +23,10 @@ authInterFetch.interceptors.response.use(
   },
   (error) => {
     console.log(error.response);
+    if (error.response.status === 404) {
+      // do something
+      console.log("Not Found");
+    }
     return Promise.reject(error);
   }
 );
