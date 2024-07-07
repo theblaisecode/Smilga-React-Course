@@ -36,4 +36,5 @@ const Headers = () => {
     </section>
   );
 };
+
 export default Headers;
