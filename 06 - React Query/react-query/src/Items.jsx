@@ -2,17 +2,25 @@ import SingleItem from "./SingleItem";
 import { useQuery } from "@tanstack/react-query";
 import customInstance from "./utils";
 
-const Items = ({ items }) => {
-  const result = useQuery({
+const Items = () => {
+  const { isLoading, data } = useQuery({
     queryKey: ["tasks"],
     queryFn: () => customInstance.get("/"),
   });
-  
-  console.log(result);
+
+  console.log(data);
+
+  if (isLoading) {
+    return (
+      <p style={{ marginTop: "4rem", textAlign: "center", fontWeight: "bold" }}>
+        Your Tasks Are Loading...
+      </p>
+    );
+  }
 
   return (
     <div className="items">
-      {items.map((item) => {
+      {data.data.taskList.map((item) => {
         return <SingleItem key={item.id} item={item} />;
       })}
     </div>
