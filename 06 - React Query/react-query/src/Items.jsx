@@ -5,7 +5,7 @@ import customInstance from "./utils";
 const Items = () => {
   const { isLoading, data, isError, error } = useQuery({
     queryKey: ["banana"],
-    queryFn: () => customInstance.get("/"),
+    queryFn: () => customInstance.get("/something"),
   });
 
   console.log(data);
@@ -25,6 +25,17 @@ const Items = () => {
       </p>
     );
   }
+
+  console.log(error);
+
+  // if (error) {
+  //   return (
+  //     <p style={{ marginTop: "4rem", textAlign: "center", fontWeight: "bold" }}>
+  //       {/* {error.message} */}
+  //       {error.response.data}
+  //     </p>
+  //   );
+  // }
 
   return (
     <div className="items">
