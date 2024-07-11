@@ -1,6 +1,8 @@
 import { useMutation } from "@tanstack/react-query";
 import { useState } from "react";
 import customInstance from "./utils";
+import { toast } from "react-toastify";
+
 
 const Form = () => {
   const [newItemName, setNewItemName] = useState("");
@@ -9,10 +11,10 @@ const Form = () => {
     mutationFn: (taskList) => {
       customInstance.post("/", { title: taskList });
     },
-    onSuccess: () => {
-
+    onSuccess: () => {},
+    onError: (error) => {
+      toast.error(error.response.data.msg);
     },
-    onError: (error) => {console.log(error)},
   });
 
   // console.log(result);
