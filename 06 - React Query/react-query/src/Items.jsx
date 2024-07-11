@@ -5,7 +5,7 @@ import customInstance from "./utils";
 const Items = () => {
   const { isLoading, data, isError, error } = useQuery({
     queryKey: ["banana"],
-    queryFn: () => customInstance.get("/something"),
+    queryFn: () => customInstance.get("/"),
   });
 
   console.log(data);
