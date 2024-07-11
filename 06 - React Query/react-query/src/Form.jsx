@@ -5,14 +5,14 @@ import customInstance from "./utils";
 const Form = () => {
   const [newItemName, setNewItemName] = useState("");
 
-  const {
-    mutate: crrateTask,
-    isLoading,
-    isError,
-  } = useMutation({
-    mutationFn: () => {
-      customInstance.post("/", { title: "Some title" });
+  const { mutate: createTask, isLoading } = useMutation({
+    mutationFn: (taskList) => {
+      customInstance.post("/", { title: taskList });
     },
+    onSuccess: () => {
+
+    },
+    onError: (error) => {console.log(error)},
   });
 
   // console.log(result);
@@ -20,7 +20,7 @@ const Form = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    crrateTask()
+    createTask(newItemName);
   };
 
   return (
