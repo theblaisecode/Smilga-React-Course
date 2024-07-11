@@ -3,8 +3,8 @@ import { useQuery } from "@tanstack/react-query";
 import customInstance from "./utils";
 
 const Items = () => {
-  const { isLoading, data } = useQuery({
-    queryKey: ["tasks"],
+  const { isLoading, data, isError, error } = useQuery({
+    queryKey: ["banana"],
     queryFn: () => customInstance.get("/"),
   });
 
@@ -14,6 +14,14 @@ const Items = () => {
     return (
       <p style={{ marginTop: "4rem", textAlign: "center", fontWeight: "bold" }}>
         Your Tasks Are Loading...
+      </p>
+    );
+  }
+
+  if (isError) {
+    return (
+      <p style={{ marginTop: "4rem", textAlign: "center", fontWeight: "bold" }}>
+        There was an Error...
       </p>
     );
   }
