@@ -26,7 +26,7 @@ const Items = () => {
     );
   }
 
-  console.log(error);
+  // console.log(error);
 
   // if (error) {
   //   return (
