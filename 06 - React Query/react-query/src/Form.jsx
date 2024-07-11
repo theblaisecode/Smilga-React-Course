@@ -8,16 +8,12 @@ const Form = () => {
 
   const { mutate: createTask, isLoading } = useMutation({
     mutationFn: (taskList) => {
-      return customInstance.post("/", { title: taskList }); // Add return statement
+      return customInstance.post("/", { title: taskList });
     },
     onSuccess: () => {},
     onError: (error) => {
-      console.log(error); // Add this line to log the error
-      if (error.response && error.response.data && error.response.data.msg) {
-        toast.error(error.response.data.msg);
-      } else {
-        toast.error("An unexpected error occurred.");
-      }
+      console.log(error);
+      toast.error(error.response.data.msg);
     },
   });
 
