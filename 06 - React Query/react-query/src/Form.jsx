@@ -3,40 +3,39 @@ import { useState } from "react";
 import customInstance from "./utils";
 import { toast } from "react-toastify";
 
-
 const Form = () => {
   const [newItemName, setNewItemName] = useState("");
 
   const { mutate: createTask, isLoading } = useMutation({
     mutationFn: (taskList) => {
-      customInstance.post("/", { title: taskList });
+      return customInstance.post("/", { title: taskList }); // Add return statement
     },
     onSuccess: () => {},
     onError: (error) => {
-      toast.error(error.response.data.msg);
+      console.log(error); // Add this line to log the error
+      if (error.response && error.response.data && error.response.data.msg) {
+        toast.error(error.response.data.msg);
+      } else {
+        toast.error("An unexpected error occurred.");
+      }
     },
   });
 
-  // console.log(result);
-
   const handleSubmit = (e) => {
     e.preventDefault();
-
     createTask(newItemName);
   };
 
   return (
     <form onSubmit={handleSubmit}>
       <h4>task bud</h4>
-
       <div className="form-control">
         <input
-          type="text "
+          type="text"
           className="form-input"
           value={newItemName}
           onChange={(event) => setNewItemName(event.target.value)}
         />
-
         <button type="submit" className="btn" disabled={isLoading}>
           add task
         </button>
