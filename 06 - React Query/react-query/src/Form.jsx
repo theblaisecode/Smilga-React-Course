@@ -1,16 +1,21 @@
-import { useMutation } from "@tanstack/react-query";
+import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { useState } from "react";
 import customInstance from "./utils";
 import { toast } from "react-toastify";
 
 const Form = () => {
   const [newItemName, setNewItemName] = useState("");
+  const queryClient = useQueryClient();
 
   const { mutate: createTask, isLoading } = useMutation({
     mutationFn: (taskList) => {
       return customInstance.post("/", { title: taskList });
     },
-    onSuccess: () => {},
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ["banana"] });
+      toast.success('Success! Task Added')
+      setNewItemName('')
+    },
     onError: (error) => {
       console.log(error);
       toast.error(error.response.data.msg);
