@@ -1,10 +1,26 @@
+import { useMutation } from "@tanstack/react-query";
 import { useState } from "react";
+import customInstance from "./utils";
 
 const Form = () => {
   const [newItemName, setNewItemName] = useState("");
 
+  const {
+    mutate: crrateTask,
+    isLoading,
+    isError,
+  } = useMutation({
+    mutationFn: () => {
+      customInstance.post("/", { title: "Some title" });
+    },
+  });
+
+  // console.log(result);
+
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    crrateTask()
   };
 
   return (
@@ -19,7 +35,7 @@ const Form = () => {
           onChange={(event) => setNewItemName(event.target.value)}
         />
 
-        <button type="submit" className="btn">
+        <button type="submit" className="btn" disabled={isLoading}>
           add task
         </button>
       </div>

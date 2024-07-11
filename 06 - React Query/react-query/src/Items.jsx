@@ -8,7 +8,7 @@ const Items = () => {
     queryFn: () => customInstance.get("/"),
   });
 
-  console.log(data);
+  // console.log(data);
 
   if (isLoading) {
     return (
