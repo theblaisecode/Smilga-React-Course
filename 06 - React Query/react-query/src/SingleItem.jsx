@@ -1,9 +1,8 @@
-import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { useEditTask, useDeleteTask } from "./reactQueryAndCustomHooks";
 
 const SingleItem = ({ item }) => {
   const { editTask } = useEditTask();
-  const { deleteTask } = useDeleteTask();
+  const { deleteTask, deleteTaskLoading } = useDeleteTask();
 
   return (
     <div className="single-item">
@@ -24,9 +23,8 @@ const SingleItem = ({ item }) => {
       <button
         className="btn remove-btn"
         type="button"
-        onClick={() =>
-          deleteTask({ taskId: item.id, isLoading: !item.isLoading })
-        }>
+        disabled={deleteTaskLoading}
+        onClick={() => deleteTask({ taskId: item.id })}>
         delete
       </button>
     </div>
