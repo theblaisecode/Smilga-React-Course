@@ -1,6 +1,5 @@
-import { useQuery } from "@tanstack/react-query";
 import { useState } from "react";
-import { useMutation, useQueryClient } from "@tanstack/react-query";
+import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
 import { toast } from "react-toastify";
 import customInstance from "./utils";
 
