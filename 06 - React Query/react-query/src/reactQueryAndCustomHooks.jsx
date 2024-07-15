@@ -1,4 +1,5 @@
 import { useQuery } from "@tanstack/react-query";
+import { useState } from "react";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { toast } from "react-toastify";
 import customInstance from "./utils";
@@ -11,6 +12,29 @@ export const useFetchTasks = () => {
   return { isLoading, isError, data };
 };
 
+export const useCreateTask = () => {
+  const [newItemName, setNewItemName] = useState("");
+
+  const queryClient = useQueryClient();
+
+  const { mutate: createTask, isLoading } = useMutation({
+    mutationFn: (taskList) => {
+      return customInstance.post("/", { title: taskList });
+    },
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ["banana"] });
+      toast.success("Success! Task Added");
+      setNewItemName("");
+    },
+    onError: (error) => {
+      console.log(error);
+      toast.error(error.response.data.msg);
+    },
+  });
+
+  return { createTask, isLoading, setNewItemName, newItemName };
+};
+
 export const useEditTask = () => {
   const queryClient = useQueryClient();
   const { mutate: editTask } = useMutation({
@@ -19,7 +43,7 @@ export const useEditTask = () => {
     },
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ["banana"] });
-      toast.info("Task Completed");
+      toast.info("Task Status Updated");
     },
   });
 
