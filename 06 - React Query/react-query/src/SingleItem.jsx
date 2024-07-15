@@ -1,5 +1,6 @@
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import customInstance from "./utils";
+import { toast } from "react-toastify";
 
 const SingleItem = ({ item }) => {
   const queryClient = useQueryClient();
@@ -9,6 +10,17 @@ const SingleItem = ({ item }) => {
     },
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ["banana"] });
+      toast.info("Task Completed");
+    },
+  });
+
+  const { mutate: deleteTask, isLoading } = useMutation({
+    mutationFn: ({ taskId }) => {
+      return customInstance.delete(`${taskId}`);
+    },
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ["banana"] });
+      toast.warning("Task Deleted");
     },
   });
 
@@ -31,7 +43,7 @@ const SingleItem = ({ item }) => {
       <button
         className="btn remove-btn"
         type="button"
-        onClick={() => console.log("delete task")}>
+        onClick={() => deleteTask({ taskId: item.id, isLoading: !item.isLoading })}>
         delete
       </button>
     </div>
