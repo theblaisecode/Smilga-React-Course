@@ -52,7 +52,7 @@ export const useEditTask = () => {
 
 export const useDeleteTask = () => {
   const queryClient = useQueryClient();
-  const { mutate: deleteTask, isLoading } = useMutation({
+  const { mutate: deleteTask, isLoading: deleteTaskLoading } = useMutation({
     mutationFn: ({ taskId }) => {
       return customInstance.delete(`${taskId}`);
     },
@@ -62,5 +62,5 @@ export const useDeleteTask = () => {
     },
   });
 
-  return { deleteTask };
+  return { deleteTask, deleteTaskLoading };
 };
