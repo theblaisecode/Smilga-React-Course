@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./Form.css";
 
 function Form() {
   const [formInput, setFormInput] = useState({
@@ -17,20 +18,22 @@ function Form() {
   return (
     <section className="form">
       <div className="container">
-        <h1>Unsplash Image Gen</h1>
+        <div className="formContent">
+          <h1>Unsplash Image Gen</h1>
 
-        <form onSubmit={searchImage}>
-          <input
-            type="text"
-            name="searchName"
-            value={formInput.searchName}
-            id="searchName"
-            placeholder=""
-            onChange={formText}
-          />
+          <form onSubmit={searchImage}>
+            <input
+              type="text"
+              name="searchName"
+              value={formInput.searchName}
+              id="searchName"
+              placeholder=""
+              onChange={formText}
+            />
 
-          <button type="submit">Search</button>
-        </form>
+            <button type="submit">Search</button>
+          </form>
+        </div>
       </div>
     </section>
   );
