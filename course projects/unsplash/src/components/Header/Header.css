@@ -1,0 +1,27 @@
+header {
+  padding: 2rem;
+  background: rgb(0, 0, 0);
+}
+
+.headerContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  width: 6%;
+}
+
+.logo img {
+  width: 100%;
+}
+
+.theme button {
+  background: none;
+  border: none;
+  outline: none;
+  color: var(--highlight);
+  font-size: 2rem;
+  cursor: pointer;
+}

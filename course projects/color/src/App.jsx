@@ -5,6 +5,7 @@ import Values from "values.js";
 
 function App() {
   const [allColors, setAllColors] = useState(new Values("#87ae73").all(5));
+  
   const [color, setColor] = useState({
     shade: "#87ae73",
     colorShade: "",

@@ -1,7 +1,7 @@
 :root {
   --bg: #333;
   --light: #fff;
-  --highlight: #87ae73;
+  --highlight: #8db27a;
   --accent: #cfcfcf;
 }
 
@@ -9,4 +9,23 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%; /* 1rem = 10px */
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.6rem;
+  font-family: "Roboto", sans-serif;
+  background: var(--bg);
+  color: var(--highlight);
+}
+
+.container {
+  margin: 0 auto;
+  width: 85%;
 }
