@@ -17,6 +17,7 @@ const SingleItem = ({ item }) => {
           textTransform: "capitalize",
           textDecoration: item.isDone && "line-through",
         }}>
+          
         {item.title}
       </p>
 
