@@ -13,8 +13,6 @@ function GlobalContext({ children }) {
     setIsDarkMode((prevIsDarkMode) => !prevIsDarkMode);
   }
 
-  console.log(isDarkMode);
-
   return (
     <ChangeTheme.Provider value={{ isDarkMode, toggleTheme }}>
       {children}

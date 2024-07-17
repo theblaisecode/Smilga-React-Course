@@ -5,11 +5,12 @@ import { useGlobalContext } from "./components/GlobalContext";
 
 function App() {
   const { isDarkMode, toggleTheme } = useGlobalContext();
+
   return (
     <>
       <Header isDarkMode={isDarkMode} toggleTheme={toggleTheme} />
-      <Form />
-      <Gallery />
+      <Form isDarkMode={isDarkMode} />
+      <Gallery isDarkMode={isDarkMode} />
     </>
   );
 }

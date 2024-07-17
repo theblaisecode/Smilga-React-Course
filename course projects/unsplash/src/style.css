@@ -17,14 +17,17 @@ html {
 }
 
 body {
+  font-size: 1.6rem;
+  font-family: "Roboto", sans-serif;
+  color: var(--highlight);
+}
+
+/* #root {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1.6rem;
-  font-family: "Roboto", sans-serif;
-  background: var(--bg);
-  color: var(--highlight);
-}
+  flex-direction: column;
+} */
 
 .container {
   margin: 0 auto;

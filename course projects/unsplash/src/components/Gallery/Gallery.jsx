@@ -2,7 +2,7 @@ import { useState } from "react";
 import imgPlacholder from "../../img/placeholderImg.png";
 import "./Gallery.css";
 
-function Gallery() {
+function Gallery({ isDarkMode }) {
   const [galLength, setGalLength] = useState([
     { img: imgPlacholder },
     { img: imgPlacholder },
@@ -17,7 +17,9 @@ function Gallery() {
   ]);
 
   return (
-    <section className="gallery">
+    <section
+      className="gallery"
+      style={{ backgroundColor: isDarkMode ? "#333" : "#fff" }}>
       <div className="container">
         <div className="galleryContent">
           {galLength.map((item, index) => {
