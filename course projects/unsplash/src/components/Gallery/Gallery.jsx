@@ -2,6 +2,8 @@ import { useState } from "react";
 import imgPlacholder from "../../img/placeholderImg.png";
 import "./Gallery.css";
 import { useQuery } from "@tanstack/react-query";
+import unsplashCustomInstance from "../baseUrl";
+
 
 function Gallery({ isDarkMode }) {
   const [galLength, setGalLength] = useState([
@@ -17,7 +19,11 @@ function Gallery({ isDarkMode }) {
     { img: imgPlacholder },
   ]);
 
-  const getImages = useQuery()
+  const result = useQuery({
+    queryKey: ["unSplashImages"],
+    queryFn: unsplashCustomInstance.get("/"),
+  });
+  console.log(result);
 
   return (
     <section
