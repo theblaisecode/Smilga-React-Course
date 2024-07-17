@@ -21,7 +21,6 @@ function Gallery() {
       <div className="container">
         <div className="galleryContent">
           {galLength.map((item, index) => {
-            console.log(item);
             return (
               <div key={index} className="imgPreview">
                 <img src={item.img} />;

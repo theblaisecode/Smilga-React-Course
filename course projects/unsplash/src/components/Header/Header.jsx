@@ -1,18 +1,11 @@
 import { FaSun } from "react-icons/fa6";
 import { FaMoon } from "react-icons/fa6";
 import logo from "../../img/logo.png";
-import { useState } from "react";
 import "./Header.css";
 
-export default function Header() {
-  const [isDarkMode, setIsDarkMode] = useState(true);
-
-  function toggleTheme() {
-    setIsDarkMode((prevIsDarkMode) => !prevIsDarkMode);
-  }
-
+export default function Header({ isDarkMode, toggleTheme }) {
   return (
-    <header>
+    <header style={{ backgroundColor: isDarkMode ? "#333" : "#fff" }}>
       <div className="container">
         <div className="headerContent">
           <div className="logo">
