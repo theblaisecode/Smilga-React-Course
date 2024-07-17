@@ -1,6 +1,7 @@
 import { useState } from "react";
 import imgPlacholder from "../../img/placeholderImg.png";
 import "./Gallery.css";
+import { useQuery } from "@tanstack/react-query";
 
 function Gallery({ isDarkMode }) {
   const [galLength, setGalLength] = useState([
@@ -15,6 +16,8 @@ function Gallery({ isDarkMode }) {
     { img: imgPlacholder },
     { img: imgPlacholder },
   ]);
+
+  const getImages = useQuery()
 
   return (
     <section

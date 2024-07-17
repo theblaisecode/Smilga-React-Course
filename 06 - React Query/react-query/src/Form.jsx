@@ -12,6 +12,7 @@ const Form = () => {
   return (
     <form onSubmit={handleSubmit}>
       <h4>task bud</h4>
+
       <div className="form-control">
         <input
           type="text"
@@ -19,6 +20,7 @@ const Form = () => {
           value={newItemName}
           onChange={(event) => setNewItemName(event.target.value)}
         />
+
         <button type="submit" className="btn" disabled={isLoading}>
           add task
         </button>
