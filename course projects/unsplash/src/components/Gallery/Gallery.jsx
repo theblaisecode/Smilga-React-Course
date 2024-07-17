@@ -20,11 +20,17 @@ function Gallery({ isDarkMode, searchQuery }) {
       <section
         className="gallery"
         style={{
-          height: "50vh",
+          height: "65.9vh",
           backgroundColor: isDarkMode ? "#333" : "#fff",
         }}>
         <div className="container">
-          <div className="galleryContent">
+          <div
+            className="galleryContent"
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+            }}>
             <span className="loader"></span>
           </div>
         </div>
@@ -37,12 +43,30 @@ function Gallery({ isDarkMode, searchQuery }) {
       <section
         className="gallery"
         style={{
-          height: "50vh",
+          height: "65.9vh",
           backgroundColor: isDarkMode ? "#333" : "#fff",
         }}>
         <div className="container">
-          <div className="galleryContent">
-            <span className="error">Error: {error.message}</span>;
+          <div
+            className="galleryContent"
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              flexDirection: "column",
+            }}>
+            <span className="error"></span>
+
+            <div className="errorMessage">
+              <h2>Error</h2>
+              <p
+                className="errorText"
+                style={{
+                  color: isDarkMode ? "#fff" : "#333",
+                }}>
+                {error.message}
+              </p>
+            </div>
           </div>
         </div>
       </section>

@@ -8,16 +8,9 @@
 .galleryContent {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  /* grid-template-rows: repeat(4, 1fr); */
   gap: 3rem;
   padding: 0 8rem;
 }
-/* 
-.galleryContent .imgPreview {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-} */
 
 .galleryContent img {
   object-fit: cover;
@@ -56,6 +49,7 @@
   grid-area: 3 / 2 / 5 / 4;
 }
 
+/* Loading Spinner */
 .loader {
   position: relative;
   width: 100px;
@@ -106,5 +100,101 @@
   100% {
     background-position: 100% 0;
     transform: translate(65px, -50%);
+  }
+}
+
+/* Error Message */
+.error {
+  position: relative;
+  width: 15rem;
+  display: flex;
+  justify-content: space-between;
+  pointer-events: none;
+  user-select: none;
+  background: transparent;
+  margin-top: -5rem;
+}
+
+.error::after,
+.error::before {
+  content: "";
+  display: inline-block;
+  width: 5rem;
+  background-color: #e6e6e6;
+  background-image: radial-gradient(circle 14px, #87ae73 100%, transparent 0);
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  animation: eyeMove 10s infinite, blink 10s infinite;
+  position: relative;
+  top: -5rem;
+}
+
+.errorMessage {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.errorMessage h2 {
+  font-size: 3rem;
+  text-transform: uppercase;
+}
+
+.errorMessage p {
+  padding: 1rem 0;
+  font-size: 1.8rem;
+}
+
+@keyframes eyeMove {
+  0%,
+  10% {
+    background-position: 0px 0px;
+  }
+  13%,
+  40% {
+    background-position: -15px 0px;
+  }
+  43%,
+  70% {
+    background-position: 15px 0px;
+  }
+  73%,
+  90% {
+    background-position: 0px 15px;
+  }
+  93%,
+  100% {
+    background-position: 0px 0px;
+  }
+}
+
+@keyframes blink {
+  0%,
+  10%,
+  12%,
+  20%,
+  22%,
+  40%,
+  42%,
+  60%,
+  62%,
+  70%,
+  72%,
+  90%,
+  92%,
+  98%,
+  100% {
+    height: 48px;
+  }
+  11%,
+  21%,
+  41%,
+  61%,
+  71%,
+  91%,
+  99% {
+    height: 18px;
   }
 }

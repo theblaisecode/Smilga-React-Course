@@ -20,14 +20,8 @@ body {
   font-size: 1.6rem;
   font-family: "Roboto", sans-serif;
   color: var(--highlight);
+  background: var(--bg);
 }
-
-/* #root {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-} */
 
 .container {
   margin: 0 auto;
