@@ -1,20 +1,20 @@
 import { useState } from "react";
 import "./Form.css";
 
-function Form({ isDarkMode }) {
+function Form({ isDarkMode, onSearch }) {
   const [formInput, setFormInput] = useState({
     searchName: "",
   });
 
   function formText(e) {
     setFormInput({ [e.target.name]: e.target.value });
-    console.log(formInput);
   }
 
   function searchImage(e) {
     e.preventDefault();
+    onSearch(formInput.searchName);
 
-    console.log("first");
+    console.log("Searching for:", formInput.searchName);
   }
 
   return (
@@ -31,7 +31,7 @@ function Form({ isDarkMode }) {
               name="searchName"
               value={formInput.searchName}
               id="searchName"
-              placeholder="Quokka"
+              placeholder="Possum"
               onChange={formText}
               style={{ color: isDarkMode ? "#fff" : "#333" }}
             />

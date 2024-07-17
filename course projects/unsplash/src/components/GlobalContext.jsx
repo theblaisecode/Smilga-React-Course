@@ -8,13 +8,19 @@ export const useGlobalContext = () => {
 
 function GlobalContext({ children }) {
   const [isDarkMode, setIsDarkMode] = useState(true);
+  const [searchQuery, setSearchQuery] = useState("possum");
 
   function toggleTheme() {
     setIsDarkMode((prevIsDarkMode) => !prevIsDarkMode);
   }
 
+  function searchNewImages(query) {
+    setSearchQuery(query);
+  }
+
   return (
-    <ChangeTheme.Provider value={{ isDarkMode, toggleTheme }}>
+    <ChangeTheme.Provider
+      value={{ isDarkMode, toggleTheme, searchQuery, searchNewImages }}>
       {children}
     </ChangeTheme.Provider>
   );
