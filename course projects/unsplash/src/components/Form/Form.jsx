@@ -31,7 +31,7 @@ function Form({ isDarkMode }) {
               name="searchName"
               value={formInput.searchName}
               id="searchName"
-              placeholder="quokka"
+              placeholder="Quokka"
               onChange={formText}
               style={{ color: isDarkMode ? "#fff" : "#333" }}
             />
