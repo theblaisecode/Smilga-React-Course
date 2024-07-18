@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./Form.css";
+import { toast } from "react-toastify";
 
 function Form({ isDarkMode, onSearch }) {
   const [formInput, setFormInput] = useState({
@@ -12,9 +13,13 @@ function Form({ isDarkMode, onSearch }) {
 
   function searchImage(e) {
     e.preventDefault();
-    onSearch(formInput.searchName);
 
-    console.log("Searching for:", formInput.searchName);
+    if (formInput.searchName === "") {
+      toast.error("Form can not be empty");
+      return;
+    }
+    onSearch(formInput.searchName);
+    setFormInput({ searchName: "" });
   }
 
   return (

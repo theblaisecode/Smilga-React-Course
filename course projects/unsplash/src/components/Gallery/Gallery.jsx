@@ -13,8 +13,6 @@ function Gallery({ isDarkMode, searchQuery }) {
       }),
   });
 
-  console.log(data);
-
   if (isLoading) {
     return (
       <section
