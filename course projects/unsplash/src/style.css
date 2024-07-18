@@ -27,3 +27,12 @@ body {
   margin: 0 auto;
   width: 75%;
 }
+
+/******************************************
+/* Mobile
+/*******************************************/
+@media screen and (max-width: 579px) and (min-height: 579px) {
+  .container {
+    width: 95%;
+  }
+}

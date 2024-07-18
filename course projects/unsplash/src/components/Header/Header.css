@@ -24,3 +24,18 @@ header {
   font-size: 2rem;
   cursor: pointer;
 }
+
+/******************************************
+/* Mobile
+/*******************************************/
+@media screen and (max-width: 579px) and (min-height: 579px) {
+  .logo {
+    width: 10%;
+  }
+}
+
+/******************************************
+/* Tablet
+/*******************************************/
+@media (min-width: 580px) and (max-width: 899px) {
+}

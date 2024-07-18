@@ -47,3 +47,32 @@ form button {
   border-top-right-radius: 0.5rem;
   border-bottom-right-radius: 0.5rem;
 }
+
+/******************************************
+/* Mobile
+/*******************************************/
+@media screen and (max-width: 579px) and (min-height: 579px) {
+  section.form .formContent {
+    padding: 0 2rem 2rem 2rem;
+    gap: 2rem;
+  }
+
+  section.form h1 {
+    font-size: 3rem;
+    line-height: 5rem;
+  }
+
+  form {
+    width: 90%;
+  }
+
+  form button {
+    padding: 1.1rem 1.5rem;
+  }
+}
+
+/******************************************
+/* Tablet
+/*******************************************/
+@media (min-width: 580px) and (max-width: 899px) {
+}
