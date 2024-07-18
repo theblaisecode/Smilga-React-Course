@@ -9,7 +9,7 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 3rem;
-  padding: 0 8rem;
+  padding: 0 6rem;
 }
 
 .galleryContent img {
@@ -203,16 +203,50 @@
 /* Mobile
 /*******************************************/
 @media screen and (max-width: 579px) and (min-height: 579px) {
+  .gallery {
+    padding: 0 2rem;
+  }
+
   .galleryContent {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    gap: 3rem;
-    padding: 0 8rem;
+    padding: 0 2rem;
+  }
+
+  .galleryContent .imgPreview:nth-child(1),
+  .galleryContent .imgPreview:nth-child(2),
+  .galleryContent .imgPreview:nth-child(3),
+  .galleryContent .imgPreview:nth-child(4),
+  .galleryContent .imgPreview:nth-child(5),
+  .galleryContent .imgPreview:nth-child(6),
+  .galleryContent .imgPreview:nth-child(7),
+  .galleryContent .imgPreview:nth-child(8),
+  .galleryContent .imgPreview:nth-child(9),
+  .galleryContent .imgPreview:nth-child(10) {
+    grid-area: auto;
   }
 }
 
 /******************************************
 /* Tablet
 /*******************************************/
-@media (min-width: 580px) and (max-width: 899px) {
+@media (min-width: 580px) and (max-width: 850px) {
+  .gallery {
+    padding: 0;
+  }
+
+  .galleryContent {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    padding: 0;
+  }
+}
+
+/******************************************
+/* Small PC
+/*******************************************/
+@media (min-width: 851px) and (max-width: 1024px) {
+  .galleryContent {
+    padding: 0;
+  }
 }

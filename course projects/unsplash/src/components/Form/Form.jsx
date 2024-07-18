@@ -31,7 +31,7 @@ function Form({ isDarkMode, onSearch }) {
       style={{ backgroundColor: isDarkMode ? "#333" : "#fff" }}>
       <div className="container">
         <div className="formContent">
-          <h1>Unsplash Image Gen</h1>
+          <h1>Unsplash Images</h1>
 
           <form onSubmit={searchImage}>
             <input

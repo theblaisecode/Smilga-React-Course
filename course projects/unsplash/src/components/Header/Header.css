@@ -37,5 +37,17 @@ header {
 /******************************************
 /* Tablet
 /*******************************************/
-@media (min-width: 580px) and (max-width: 899px) {
+@media (min-width: 580px) and (max-width: 850px) {
+  .logo {
+    width: 6%;
+  }
+}
+
+/******************************************
+/* Small PC
+/*******************************************/
+@media (min-width: 851px) and (max-width: 1024px) {
+  .logo {
+    width: 5%;
+  }
 }

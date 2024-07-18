@@ -16,7 +16,7 @@ section.form h1 {
 }
 
 form {
-  width: 40%;
+  width: 45%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -74,5 +74,32 @@ form button {
 /******************************************
 /* Tablet
 /*******************************************/
-@media (min-width: 580px) and (max-width: 899px) {
+@media (min-width: 580px) and (max-width: 850px) {
+  section.form .formContent {
+    padding: 0 2rem 2rem 2rem;
+    gap: 2rem;
+  }
+
+  section.form h1 {
+    font-size: 4rem;
+    line-height: 5rem;
+  }
+
+  form {
+    width: 70%;
+  }
+}
+
+/******************************************
+/* Small PC
+/*******************************************/
+@media (min-width: 851px) and (max-width: 1024px) {
+  section.form h1 {
+    font-size: 4rem;
+    line-height: 5rem;
+  }
+
+  form {
+    width: 70%;
+  }
 }
