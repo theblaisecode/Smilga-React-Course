@@ -7,6 +7,8 @@ function Form({ isDarkMode, onSearch }) {
     searchName: "",
   });
 
+  const [isShowQuery, setShowQuery] = useState("");
+
   function formText(e) {
     setFormInput({ [e.target.name]: e.target.value });
   }
@@ -18,6 +20,7 @@ function Form({ isDarkMode, onSearch }) {
       toast.error("Form can not be empty");
       return;
     }
+    setShowQuery(formInput.searchName);
     onSearch(formInput.searchName);
     setFormInput({ searchName: "" });
   }
@@ -36,13 +39,27 @@ function Form({ isDarkMode, onSearch }) {
               name="searchName"
               value={formInput.searchName}
               id="searchName"
-              placeholder="Possum"
+              placeholder={
+                !formInput.searchName && !isShowQuery
+                  ? "Possum"
+                  : formInput.searchName || isShowQuery
+              }
               onChange={formText}
               style={{ color: isDarkMode ? "#fff" : "#333" }}
             />
 
             <button type="submit">Search</button>
           </form>
+
+          {isShowQuery && (
+            <p>
+              Showing result for:{" "}
+              <i style={{ color: isDarkMode ? "#fff" : "#333" }}>
+                {" "}
+                {isShowQuery}
+              </i>
+            </p>
+          )}
         </div>
       </div>
     </section>
