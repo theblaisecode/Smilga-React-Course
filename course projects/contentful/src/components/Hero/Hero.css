@@ -1,0 +1,40 @@
+#hero {
+  padding: 8rem 0;
+  background: var(--bgAccent);
+}
+
+.heroContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.heroContent .contentTop {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 4rem;
+  width: 50%;
+}
+
+.heroContent .contentTop h1 {
+  font-size: 6rem;
+  line-height: 6rem;
+  letter-spacing: 0.1rem;
+  text-align: left;
+}
+
+.heroContent .contentTop p {
+  font-size: 1.7rem;
+  line-height: 3rem;
+  text-align: left;
+}
+
+.heroContent .contentBottom {
+  width: 25%;
+}
+
+.heroContent img {
+  width: 100%;
+}

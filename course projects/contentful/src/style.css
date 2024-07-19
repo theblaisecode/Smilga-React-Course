@@ -1,5 +1,29 @@
+:root {
+  --bg: #333;
+  --bgAccent: #212425;
+  --textLight: #fff;
+  --textDark: #000;
+  --highlight: #87ae73;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5% /* 1rem = 10px*/;
+}
+
+body {
+  background: var(--bg);
+  color: var(--textLight);
+  font-size: 1.6rem;
+  font-family: "Roboto", sans-serif;
+}
+
+.container {
+  margin: auto;
+  width: 65%;
 }

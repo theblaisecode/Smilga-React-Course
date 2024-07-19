@@ -1,0 +1,51 @@
+#projects {
+  margin: 4rem 0;
+}
+
+.projectsContent,
+.projectsContent .contentTop {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.projectsContent .contentTop {
+  gap: 1rem;
+
+}
+
+.projectsContent .contentTop .underline {
+  content: "";
+  width: 8rem;
+  height: .5rem;
+  background: var(--highlight);
+}
+
+.projectsContent .contentBottom {
+  /* width: 100%; */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4rem;
+}
+
+.projectsContent .contentBottom .card {
+  width: 35rem;
+  height: 30rem;
+  background: var(--bgAccent);
+  border-radius: 1rem;
+}
+
+.projectsContent .contentBottom .card img {
+  object-fit: cover;
+  width: 100%;
+  height: 81%;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+.projectsContent .contentBottom .card p {
+  text-align: center;
+  font-size: 2rem;
+  padding: 1rem;
+}
