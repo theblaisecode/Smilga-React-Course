@@ -1,8 +1,29 @@
-import { projects } from "../../data";
+import { useGetProjects } from "../getProjects";
 import "../getProjects";
 import "./Projects.css";
 
 function Projects() {
+  const { isLoading, projects } = useGetProjects();
+
+  if (isLoading) {
+    return (
+      <section id="projects">
+        <div className="container">
+          <div className="projectsContent">
+            <div className="contentTop">
+              <h2 className="title">Projects</h2>
+              <div className="underline"></div>
+            </div>
+
+            <div className="contentBottom">
+              <h2>Loading...</h2>
+            </div>
+          </div>
+        </div>
+      </section>
+    );
+  }
+
   return (
     <section id="projects">
       <div className="container">
@@ -13,13 +34,18 @@ function Projects() {
           </div>
 
           <div className="contentBottom">
-            {projects.map((item, index) => {
-              const { title, image, url } = item;
+            {projects.map((item) => {
+              const { id, title, imgs, url } = item;
               console.log(item);
 
               return (
-                <a className="card" key={index} href={url}>
-                  <img src={image} alt={title} />
+                <a
+                  className="card"
+                  key={id}
+                  href={url}
+                  target="_blank"
+                  rel="noreferrer">
+                  <img src={imgs} alt={title} />
                   <p>{title}</p>
                 </a>
               );
