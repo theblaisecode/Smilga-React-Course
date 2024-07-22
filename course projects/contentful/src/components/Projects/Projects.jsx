@@ -1,6 +1,5 @@
-import question from "../../img/questions.png";
-import tours from "../../img/tours.png";
 import { projects } from "../../data";
+import "../getProjects";
 import "./Projects.css";
 
 function Projects() {
@@ -16,7 +15,7 @@ function Projects() {
           <div className="contentBottom">
             {projects.map((item, index) => {
               const { title, image, url } = item;
-              console.log(item)
+              console.log(item);
 
               return (
                 <a className="card" key={index} href={url}>
