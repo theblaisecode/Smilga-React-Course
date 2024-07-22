@@ -1,7 +1,3 @@
-// Space ID - 158b8ogzx9gn
-// Content Delivery API - 17SU7joH1oTPhwV647LAXDETuMsaqpjCNHArgmmteVk
-// Content Preview API - CueaD03QxRk4YaznLvhg7gSFtdDL_R6f3WBT-pHusqM
-
 import birthday from "./img/birthday.png";
 import tours from "./img/tours.png";
 import onepiece from "./img/onepiece.png";
