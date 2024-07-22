@@ -10,3 +10,6 @@ cliet
   .getEntries({ content_type: "projects" })
   .then((response) => console.log(response));
 
+const usegetProjects = () => {
+  
+}
