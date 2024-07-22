@@ -1,5 +1,5 @@
 :root {
-  --bgAccent: #333;
+  --bgAccent: #2b2b2b;
   --bg: #212425;
   --textLight: #fff;
   --textDark: #000;
@@ -26,4 +26,11 @@ body {
 .container {
   margin: auto;
   width: 65%;
+}
+
+a {
+  text-decoration: none;
+  text-transform: capitalize;
+  color: var(--textLight);
+  cursor: pointer;
 }

@@ -13,13 +13,12 @@
 
 .projectsContent .contentTop {
   gap: 1rem;
-
 }
 
 .projectsContent .contentTop .underline {
   content: "";
   width: 8rem;
-  height: .5rem;
+  height: 0.5rem;
   background: var(--highlight);
 }
 
@@ -35,6 +34,11 @@
   height: 30rem;
   background: var(--bgAccent);
   border-radius: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.projectsContent .contentBottom .card:hover {
+  transform: scale(1.05);
 }
 
 .projectsContent .contentBottom .card img {
