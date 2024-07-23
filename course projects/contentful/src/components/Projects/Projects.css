@@ -116,6 +116,9 @@
 /* Mobile
 /*******************************************/
 @media screen and (max-width: 579px) and (min-height: 579px) {
+  #projects {
+    margin: 4rem 0 0 0;
+  }
 }
 
 /******************************************
