@@ -15,8 +15,15 @@ function Projects() {
               <div className="underline"></div>
             </div>
 
-            <div className="contentBottom">
-              <h2>Loading...</h2>
+            <div
+              className="contentBottom"
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                margin: "4rem 0"
+              }}>
+              <span className="loader"></span>
             </div>
           </div>
         </div>
