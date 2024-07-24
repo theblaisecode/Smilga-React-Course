@@ -38,6 +38,7 @@ Hands-on React: Create 25+ Projects. Includes Axios, Router 6, Query 5, Redux To
 | 20        |                                                        Customize Comfy Sloth and Setup Airtable                                                     |                                       |
 | 21        |                                                                          Bonus                                                                      |                                       |
 
+
 <br/>
 
 ## 🔶 Course Project
