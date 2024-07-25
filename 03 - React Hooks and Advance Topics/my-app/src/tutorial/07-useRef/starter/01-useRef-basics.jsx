@@ -35,6 +35,7 @@ const UseRefBasics = () => {
           <label htmlFor="name" className="form-label">
             Name
           </label>
+
           <input
             type="text"
             id="name"
@@ -42,11 +43,14 @@ const UseRefBasics = () => {
             ref={refContainer}
           />
         </div>
+
         <button type="submit" className="btn btn-block">
           submit
         </button>
       </form>
+
       <h1>value : {value}</h1>
+      
       <button onClick={() => setValue(value + 1)} className="btn">
         increase
       </button>
