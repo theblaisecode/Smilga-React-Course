@@ -1,10 +1,11 @@
 import { Outlet } from "react-router-dom";
 import "./HomeLayout.css";
+import Navbar from "../../components/Navbar";
 
 function HomeLayout() {
   return (
     <section id="homeLayout">
-      <h1>TheBlaiseCode</h1>
+      <Navbar />
       <Outlet />
     </section>
   );
