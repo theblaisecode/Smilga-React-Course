@@ -18,8 +18,8 @@ const router = createBrowserRouter([
     element: <About />,
   },
   {
-    path: "/landing",
-    element: <Landing />,
+    path: "/cocktail",
+    element: <Cocktail />,
   },
 ]);
 
