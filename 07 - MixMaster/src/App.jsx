@@ -1,9 +1,4 @@
-function App() {
-  return (
-    <>
-      <h1>Olla</h1>
-    </>
-  );
-}
-
+const App = () => {
+  return <h2>mixmaster starter</h2>;
+};
 export default App;
