@@ -1,5 +1,5 @@
 import { useLoaderData } from "react-router-dom";
-import HomeWrapper from "./Landing.jsx";
+import HomeWrapper from "./Landing";
 
 export const loader = async () => {
   return "something";

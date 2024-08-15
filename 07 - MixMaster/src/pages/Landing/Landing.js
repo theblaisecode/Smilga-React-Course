@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const HomeWrapper = styled.secion`
+const HomeWrapper = styled.section`
 
 `
 
