@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import styled from "styled-components";
+import Wrapper from "./Navbar";
 
 function Navbar() {
   return (
@@ -24,9 +24,5 @@ function Navbar() {
     </Wrapper>
   );
 }
-
-const Wrapper = styled.nav`
-  background: red;
-`
 
 export default Navbar;

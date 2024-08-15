@@ -1,4 +1,4 @@
-import "./Newsletter.css";
+import "./Newsletter.js";
 
 function Newsletter() {
   return (
