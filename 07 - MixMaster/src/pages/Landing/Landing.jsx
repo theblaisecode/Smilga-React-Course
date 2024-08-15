@@ -1,10 +1,18 @@
-import "./Landing.js";
+import { useLoaderData } from "react-router-dom";
+import HomeWrapper from "./Landing.jsx";
+
+export const loader = async () => {
+  return "something";
+};
 
 function Landing() {
+  const data = useLoaderData();
+  console.log(data);
+
   return (
-    <section id="landing">
+    <HomeWrapper>
       <h3>Landing</h3>
-    </section>
+    </HomeWrapper>
   );
 }
 
