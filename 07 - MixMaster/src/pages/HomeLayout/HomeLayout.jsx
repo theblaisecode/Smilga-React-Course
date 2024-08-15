@@ -1,13 +1,13 @@
 import { Outlet } from "react-router-dom";
-import "./HomeLayout.js";
 import Navbar from "../../components/Navbar/Navbar.jsx";
+import LayoutWrapper from "./HomeLayout.js";
 
 function HomeLayout() {
   return (
-    <section id="homeLayout">
+    <LayoutWrapper>
       <Navbar />
       <Outlet />
-    </section>
+    </LayoutWrapper>
   );
 }
 
