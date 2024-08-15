@@ -4,7 +4,7 @@ import "./Cocktail.js";
 function Cocktail() {
   return (
     <section id="cocktail">
-      <h1>Cocktail</h1>
+      <h3>Cocktail</h3>
     </section>
   );
 }

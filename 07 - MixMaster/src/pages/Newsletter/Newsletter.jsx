@@ -3,7 +3,7 @@ import "./Newsletter.js";
 function Newsletter() {
   return (
     <section id="newsletter">
-      <h1>Newsletter</h1>
+      <h3>Newsletter</h3>
     </section>
   );
 }

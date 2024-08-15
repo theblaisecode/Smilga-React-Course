@@ -4,10 +4,12 @@ import LayoutWrapper from "./HomeLayout.js";
 
 function HomeLayout() {
   return (
-    <LayoutWrapper>
+    <>
       <Navbar />
-      <Outlet />
-    </LayoutWrapper>
+      <LayoutWrapper>
+        <Outlet />
+      </LayoutWrapper>
+    </>
   );
 }
 

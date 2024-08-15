@@ -3,7 +3,7 @@ import "./Error.js";
 function Error() {
   return (
     <section id="error">
-      <h1>Error</h1>
+      <h3>Error</h3>
     </section>
   );
 }
