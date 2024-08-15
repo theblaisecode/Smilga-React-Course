@@ -1,12 +1,10 @@
-import { Link } from "react-router-dom";
-import "./About.js";
+import AboutWrapper from "./About";
 
 function About() {
   return (
-    <section id="about">
+    <AboutWrapper>
       <h1>About</h1>
-      
-    </section>
+    </AboutWrapper>
   );
 }
 
