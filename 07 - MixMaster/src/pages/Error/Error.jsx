@@ -1,10 +1,12 @@
-import "./Error.js";
+import { Link, useRouteError } from "react-router-dom";
+import img from "../../assets/not-found.svg";
+import ErrorWrapper from "./Error.js";
 
 function Error() {
   return (
-    <section id="error">
+    <ErrorWrapper>
       <h3>Error</h3>
-    </section>
+    </ErrorWrapper>
   );
 }
 
