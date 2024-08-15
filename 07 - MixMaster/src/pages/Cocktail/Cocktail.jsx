@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import "./Cocktail.css";
+import "./Cocktail.js";
 
 function Cocktail() {
   return (
