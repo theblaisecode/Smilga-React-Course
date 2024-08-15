@@ -6,6 +6,11 @@ const AboutWrapper = styled.section`
     color: var(--grey-500);
     margin-top: 2rem;
   }
+
+  .highlight {
+    color: var(--primary-500);
+    font-weight: bold;
+  }
 `;
 
 export default AboutWrapper;
