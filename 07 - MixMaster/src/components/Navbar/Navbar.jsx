@@ -5,7 +5,7 @@ function Navbar() {
   return (
     <Wrapper>
       <div className="nav-center">
-        <span className="logo">Bartender</span>
+        <span className="logo">Tipsy Mix</span>
 
         <div className="nav-links">
           <NavLink to="/" className="nav-link">
