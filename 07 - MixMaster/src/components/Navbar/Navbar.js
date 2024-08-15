@@ -13,7 +13,7 @@ const Wrapper = styled.nav`
   }
 
   .logo {
-    font-size: clamp(1.5rem, 3vw, 3rem);
+    font-size: clamp(1rem, 3.5vw, 2.5rem);
     color: var(--primary-500);
     font-weight: 700;
     letter-spacing: 2px;
