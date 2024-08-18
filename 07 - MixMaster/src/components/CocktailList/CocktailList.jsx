@@ -1,9 +1,17 @@
 import CocktailListWrapper from "./CocktailList";
 
-function CocktailList() {
+function CocktailList({ drinks }) {
+  if (!drinks) {
+    return (
+      <CocktailListWrapper>
+        <h4>No matching cocktails found...</h4>
+      </CocktailListWrapper>
+    );
+  }
+
   return (
     <CocktailListWrapper>
-      <div>CocktailList</div>
+      <h2>CocktailList</h2>
       <p>ll</p>
     </CocktailListWrapper>
   );
