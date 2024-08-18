@@ -1,3 +1,4 @@
+import CocktailCard from "../CocktailCard/CocktailCard.jsx";
 import CocktailListWrapper from "./CocktailList";
 
 function CocktailList({ drinks }) {
@@ -9,10 +10,22 @@ function CocktailList({ drinks }) {
     );
   }
 
+  const formattedDrinks = drinks.map((item) => {
+    const { idDrink, strDrink, strDrinkThumb, strAlchoholic, strGlass } = item;
+    return {
+      id: idDrink,
+      name: strDrink,
+      image: strDrinkThumb,
+      info: strAlchoholic,
+      glass: strGlass,
+    };
+  });
+
   return (
     <CocktailListWrapper>
-      <h2>CocktailList</h2>
-      <p>ll</p>
+      {formattedDrinks.map((item) => {
+        return <CocktailCard key={item.id} {...item} />;
+      })}
     </CocktailListWrapper>
   );
 }
