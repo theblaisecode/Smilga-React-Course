@@ -1,0 +1,26 @@
+import { Link, useRouteError } from "react-router-dom";
+import SingleErrorWrapper from "./SinglePageError";
+
+function SinglePageError() {
+  const error = useRouteError();
+  console.log(error);
+
+  return (
+    <SingleErrorWrapper>
+      <div>
+        <h3>{error.message}</h3>
+
+        <p>Ohh! Something went wrong</p>
+        <Link to="/">Back to Home</Link>
+      </div>
+    </SingleErrorWrapper>
+  );
+
+  return (
+    <SingleErrorWrapper>
+      <h3>Something went wrong</h3>
+    </SingleErrorWrapper>
+  );
+}
+
+export default SinglePageError;
