@@ -37,7 +37,7 @@ const CocktailWrapper = styled.section`
     letter-spacing: var(--letterSpacing);
   }
 
-  .img {
+  .ing {
     display: inline-block;
     margin-right: 0.5rem;
   }

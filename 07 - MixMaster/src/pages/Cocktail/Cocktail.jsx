@@ -1,4 +1,4 @@
-import { Link, useLoaderData } from "react-router-dom";
+import { Link, useLoaderData, Navigate } from "react-router-dom";
 import axios from "axios";
 import CocktailWrapper from "./Cocktail";
 
@@ -15,6 +15,11 @@ export const loader = async ({ params }) => {
 function Cocktail() {
   const { id, data } = useLoaderData();
 
+  // if (!data) {return <h2>Something went wrong...</h2>}
+  if (!data) {
+    return <Navigate to="/" />;
+  }
+
   const singleDrink = data.drinks[0];
 
   const {
@@ -25,6 +30,12 @@ function Cocktail() {
     strGlass: glass,
     strInstructions: instructions,
   } = singleDrink;
+
+  const validIngredients = Object.keys(singleDrink)
+    .filter(
+      (key) => key.startsWith("strIngredient") && singleDrink[key] !== null
+    )
+    .map((key) => singleDrink[key]);
 
   return (
     <CocktailWrapper>
@@ -51,6 +62,18 @@ function Cocktail() {
           </p>
           <p>
             <span className="drink-data">glass:</span> {glass}
+          </p>
+
+          <p>
+            <span className="drink-data">Ingredient:</span>{" "}
+            {validIngredients.map((item, index) => {
+              return (
+                <span className="ing" key={item}>
+                  {item}
+                  {index < validIngredients.length - 1 ? "," : ""}
+                </span>
+              );
+            })}
           </p>
           <p>
             <span className="drink-data">instructions:</span> {instructions}

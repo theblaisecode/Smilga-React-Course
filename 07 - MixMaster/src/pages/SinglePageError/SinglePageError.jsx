@@ -8,10 +8,10 @@ function SinglePageError() {
   return (
     <SingleErrorWrapper>
       <div>
-        <h3>{error.message}</h3>
+        {/* <h3>{error.message}</h3> */}
 
-        <p>Ohh! Something went wrong</p>
-        <Link to="/">Back to Home</Link>
+        <h2>Ohh! Something went wrong</h2>
+        <Link to="/" className="btn">Back to Home</Link>
       </div>
     </SingleErrorWrapper>
   );
