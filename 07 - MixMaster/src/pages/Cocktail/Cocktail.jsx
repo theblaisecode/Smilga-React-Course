@@ -63,7 +63,6 @@ function Cocktail() {
           <p>
             <span className="drink-data">glass:</span> {glass}
           </p>
-
           <p>
             <span className="drink-data">Ingredient:</span>{" "}
             {validIngredients.map((item, index) => {
