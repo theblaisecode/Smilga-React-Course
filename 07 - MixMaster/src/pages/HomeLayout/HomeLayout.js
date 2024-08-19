@@ -1,10 +1,14 @@
 import styled from "styled-components";
 
 const LayoutWrapper = styled.section`
-  width: 65vw;
+  width: 67vw;
   max-width: var(max-width);
   margin: 0 auto;
   padding: 5rem 2rem;
-`
 
-export default LayoutWrapper
+  @media (min-width: 768px) and (max-width: 1439px) {
+    width: 100vw;
+  }
+`;
+
+export default LayoutWrapper;
