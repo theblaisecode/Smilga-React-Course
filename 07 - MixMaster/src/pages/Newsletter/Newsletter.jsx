@@ -10,20 +10,12 @@ export const action = async ({ request }) => {
     const formData = await request.formData();
     const data = Object.fromEntries(formData);
 
-    // Log data to inspect what is being sent
-    console.log("Sending data:", data);
-
     const response = await axios.post(newsletterUrl, data);
 
     // Handle success
     toast.success(response.data.msg);
     return redirect("/");
   } catch (error) {
-    // Handle error
-    console.error(
-      "Error submitting form:",
-      error.response ? error.response.data : error.message
-    );
     toast.error("Something went wrong. Please try again.");
     return null; // Do not redirect on error
   }
@@ -70,7 +62,7 @@ function Newsletter() {
             Email
           </label>
           <input
-            type="email" 
+            type="email"
             className="form-input"
             name="email"
             id="email"

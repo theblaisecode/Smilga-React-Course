@@ -3,7 +3,6 @@ import SingleErrorWrapper from "./SinglePageError";
 
 function SinglePageError() {
   const error = useRouteError();
-  console.log(error);
 
   return (
     <SingleErrorWrapper>
@@ -11,7 +10,9 @@ function SinglePageError() {
         {/* <h3>{error.message}</h3> */}
 
         <h2>Ohh! Something went wrong</h2>
-        <Link to="/" className="btn">Back to Home</Link>
+        <Link to="/" className="btn">
+          Back to Home
+        </Link>
       </div>
     </SingleErrorWrapper>
   );
