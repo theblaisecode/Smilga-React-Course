@@ -4,7 +4,7 @@ function Newsletter() {
   return (
     <NewsletterWrapper>
       <form action="" className="form">
-        <h4>Our Newslette</h4>
+        <h4>Our Newsletter</h4>
 
         <div className="form-row">
           <label htmlFor="name" className="form-label">
@@ -47,6 +47,10 @@ function Newsletter() {
             placeholder="Email Address"
           />
         </div>
+
+        <button type="submit" className="btn btn-lock">
+          Submit
+        </button>
       </form>
     </NewsletterWrapper>
   );
