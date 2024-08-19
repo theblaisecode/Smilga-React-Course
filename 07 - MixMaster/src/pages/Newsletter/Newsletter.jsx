@@ -35,7 +35,6 @@ function Newsletter() {
             className="form-input"
             name="name"
             id="name"
-            // defaultValue="Blaise"
             placeholder="Name"
             required
           />
@@ -50,7 +49,6 @@ function Newsletter() {
             className="form-input"
             name="lastName"
             id="lastName"
-            defaultValue="Nwachukwu"
             placeholder="Last Name"
             required
           />
