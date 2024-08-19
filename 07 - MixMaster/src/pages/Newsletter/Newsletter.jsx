@@ -84,7 +84,7 @@ function Newsletter() {
           Submit
         </button>
 
-        <h5>PS: Only test@test.com address is allowed</h5>
+        <h5>Note: Only test@test.com is allowed</h5>
       </Form>
     </NewsletterWrapper>
   );
