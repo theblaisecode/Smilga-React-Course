@@ -1,9 +1,10 @@
+import { Form } from "react-router-dom";
 import NewsletterWrapper from "./Newsletter.js";
 
 function Newsletter() {
   return (
     <NewsletterWrapper>
-      <form action="" className="form">
+      <Form method="POST" className="form">
         <h4>Our Newsletter</h4>
 
         <div className="form-row">
@@ -51,7 +52,7 @@ function Newsletter() {
         <button type="submit" className="btn btn-lock">
           Submit
         </button>
-      </form>
+      </Form>
     </NewsletterWrapper>
   );
 }
