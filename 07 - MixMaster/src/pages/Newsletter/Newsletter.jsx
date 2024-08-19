@@ -1,14 +1,22 @@
-import { Form } from "react-router-dom";
+import { Form, redirect } from "react-router-dom";
+import axios from "axios";
+import { toast } from "react-toastify";
 import NewsletterWrapper from "./Newsletter.js";
+
+const newsletterUrl = "https://www.course-api.com/cocktails-newsletter";
 
 export const action = async ({ request }) => {
   const formData = await request.formData();
   const data = Object.fromEntries(formData);
+
+  const response = await axios.post(newsletterUrl, data);
+  console.log(response);
   console.log(data);
 
-  return null;
+  toast.success(response.data.msg);
+  return response;
 };
-
+//
 function Newsletter() {
   return (
     <NewsletterWrapper>
@@ -26,6 +34,7 @@ function Newsletter() {
             id="name"
             defaultValue="Blaise"
             placeholder="Name"
+            required
           />
         </div>
 
@@ -40,6 +49,7 @@ function Newsletter() {
             id="lastName"
             defaultValue="Nwachukwu"
             placeholder="Last Name"
+            required
           />
         </div>
 
@@ -54,6 +64,7 @@ function Newsletter() {
             id="email"
             defaultValue="theblaiscode@gmail.com"
             placeholder="Email Address"
+            required
           />
         </div>
 
