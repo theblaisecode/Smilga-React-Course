@@ -6,18 +6,17 @@ import NewsletterWrapper from "./Newsletter.js";
 const newsletterUrl = "https://www.course-api.com/cocktails-newsletter";
 
 export const action = async ({ request }) => {
+  const formData = await request.formData();
+  const data = Object.fromEntries(formData);
+
   try {
-    const formData = await request.formData();
-    const data = Object.fromEntries(formData);
-
     const response = await axios.post(newsletterUrl, data);
-
-    // Handle success
     toast.success(response.data.msg);
     return redirect("/");
   } catch (error) {
-    toast.error("Something went wrong. Please try again.");
-    return null; // Do not redirect on error
+    console.log(error);
+    toast.error(error?.response?.data?.msg);
+    return error;
   }
 };
 
@@ -36,7 +35,7 @@ function Newsletter() {
             className="form-input"
             name="name"
             id="name"
-            defaultValue="Blaise"
+            // defaultValue="Blaise"
             placeholder="Name"
             required
           />

@@ -29,6 +29,7 @@ const NewsletterWrapper = styled.section`
     color: red;
     margin-top: 1rem;
     text-transform: none;
+    font-size: 0.8rem;
   }
 
   @media screen and (max-width: 500px) {
