@@ -25,6 +25,12 @@ const NewsletterWrapper = styled.section`
     border-bottom-left-radius: 0;
   }
 
+  h5 {
+    color: red;
+    margin-top: 1rem;
+    text-transform: none;
+  }
+
   @media screen and (max-width: 500px) {
     .form {
       width: 100%;

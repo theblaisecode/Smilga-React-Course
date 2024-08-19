@@ -1,22 +1,34 @@
 import { Form, redirect } from "react-router-dom";
-import axios from "axios";
 import { toast } from "react-toastify";
+import axios from "axios";
 import NewsletterWrapper from "./Newsletter.js";
 
 const newsletterUrl = "https://www.course-api.com/cocktails-newsletter";
 
 export const action = async ({ request }) => {
-  const formData = await request.formData();
-  const data = Object.fromEntries(formData);
+  try {
+    const formData = await request.formData();
+    const data = Object.fromEntries(formData);
 
-  const response = await axios.post(newsletterUrl, data);
-  console.log(response);
-  console.log(data);
+    // Log data to inspect what is being sent
+    console.log("Sending data:", data);
 
-  toast.success(response.data.msg);
-  return response;
+    const response = await axios.post(newsletterUrl, data);
+
+    // Handle success
+    toast.success(response.data.msg);
+    return redirect("/");
+  } catch (error) {
+    // Handle error
+    console.error(
+      "Error submitting form:",
+      error.response ? error.response.data : error.message
+    );
+    toast.error("Something went wrong. Please try again.");
+    return null; // Do not redirect on error
+  }
 };
-//
+
 function Newsletter() {
   return (
     <NewsletterWrapper>
@@ -25,7 +37,7 @@ function Newsletter() {
 
         <div className="form-row">
           <label htmlFor="name" className="form-label">
-            name
+            Name
           </label>
           <input
             type="text"
@@ -55,14 +67,14 @@ function Newsletter() {
 
         <div className="form-row">
           <label htmlFor="email" className="form-label">
-            email
+            Email
           </label>
           <input
-            type="text"
+            type="email" 
             className="form-input"
             name="email"
             id="email"
-            defaultValue="theblaiscode@gmail.com"
+            defaultValue="test@test.com"
             placeholder="Email Address"
             required
           />
@@ -71,6 +83,8 @@ function Newsletter() {
         <button type="submit" className="btn btn-lock">
           Submit
         </button>
+
+        <h5>PS: Only test@test.com address is allowed</h5>
       </Form>
     </NewsletterWrapper>
   );
