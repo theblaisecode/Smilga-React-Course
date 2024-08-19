@@ -1,6 +1,14 @@
 import { Form } from "react-router-dom";
 import NewsletterWrapper from "./Newsletter.js";
 
+export const action = async ({ request }) => {
+  const formData = await request.formData();
+  const data = Object.fromEntries(formData);
+  console.log(data);
+
+  return null;
+};
+
 function Newsletter() {
   return (
     <NewsletterWrapper>
