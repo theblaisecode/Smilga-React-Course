@@ -10,11 +10,13 @@ const CocktailCardWrapper = styled.section`
   :hover {
     box-shadow: var(--shadow-4);
   }
+
   img {
     height: 15rem;
     border-top-left-radius: var(--borderRadius);
     border-top-right-radius: var(--borderRadius);
   }
+
   .footer {
     padding: 1.5rem;
     h4,
@@ -22,7 +24,11 @@ const CocktailCardWrapper = styled.section`
       margin-bottom: 0.5rem;
     }
     h4 {
+      font-size: 1.5rem;
       font-weight: 700;
+    }
+    h5 {
+      font-size: 1.1rem;
     }
     p {
       margin-bottom: 1rem;

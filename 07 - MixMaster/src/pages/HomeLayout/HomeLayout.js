@@ -4,7 +4,7 @@ const LayoutWrapper = styled.section`
   width: 67vw;
   max-width: var(max-width);
   margin: 0 auto;
-  padding: 5rem 2rem;
+  padding: 1rem 2rem 5rem 2rem;
 
   @media screen and (max-width: 500px){
     width: 90vw;
