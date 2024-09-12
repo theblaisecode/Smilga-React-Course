@@ -31,12 +31,16 @@ Hands-on React: Create 25+ Projects. Includes Axios, Router 6, Query 5, Redux To
 | 13        |                                                              WebDev Portfolio (Tailwind CSS)                                                        |                                       |
 | 14        |                                                                       Redux Toolkit                                                                 |                                       |
 | 15        |                                                   Comfy Store (React Router 6.4+, RTK, Axios, React Query)                                          |                                       |
-| 16        |                                                                         Jobster                                                                     |                                       |
-| 17        |                                                                     Extra Projects                                                                  |                                       |
-| 18        |                                                                      GitHub Users                                                                   |                                       |
-| 19        |                                                                   E-Commerce Project                                                                |                                       |
-| 20        |                                                        Customize Comfy Sloth and Setup Airtable                                                     |                                       |
-| 21        |                                                                          Bonus                                                                      |                                       |
+| 16        |                                                                     Important Info !!!                                                              |                                       |
+| 17        |                                                                  Typescript Fundamentals                                                            |                                       |
+| 18        |                                                                   React with Typescript                                                             |                                       |
+| 19        |                                                            Next.js Tutorial (with Typescript)                                                       |                                       |
+| 20        |                                                                 Next.js - Store Project                                                             |                                       |
+| 21        |                                                                Next.js - Jobify Project                                                             |                                       |
+| 22        |                                                                     Extra Projects                                                                  |                                       |
+| 23        |                                                                         Jobster                                                                     |                                       |
+| 24        |                                                                      GitHub Users                                                                   |                                       |
+| 25        |                                                                          Bonus                                                                      |                                       |
 
 
 <br/>
