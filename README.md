@@ -50,8 +50,9 @@ Hands-on React: Create 25+ Projects Featuring Next.js, TypeScript, Prisma, Zod, 
 <br/>
 
 ## 🔶 Course Project
-- [Digital Business Card](https://theblaisecode.github.io/Digital-Business-Card-Scrimba/)🔗
-- [Travel Journal](https://theblaisecode.github.io/Travel-Journal-Scrimba/)🔗
+- [Birthday Buddy](https://theblaisecode.github.io/React-Birthday-App/)🔗
+- [Tours App](https://theblaisecode.github.io/React-Tours-App/)🔗
+- [One Piece](https://theblaisecode.github.io/One-Piece/)🔗
 
 <br/>
 
