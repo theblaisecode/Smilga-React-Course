@@ -53,11 +53,18 @@ Hands-on React: Create 25+ Projects Featuring Next.js, TypeScript, Prisma, Zod, 
 - [Birthday Buddy](https://theblaisecode.github.io/React-Birthday-App/)🔗
 - [Tours App](https://theblaisecode.github.io/React-Tours-App/)🔗
 - [One Piece](https://theblaisecode.github.io/One-Piece/)🔗
+- [Riddle Me This](https://theblaisecode.github.io/Riddle-Me-This/)🔗
+- [Food Menu App](https://theblaisecode.github.io/React-Food-Menu/)🔗
+- [React Tabs](https://theblaisecode.github.io/React-Tabs/)🔗
+- [Dummy Text Generator](https://theblaisecode.github.io/Dummy-Text-Generator/)🔗
+- [Color Generator](https://theblaisecode.github.io/Spectrum/)🔗
 
 <br/>
 
 ## 🔶 Tech Stack
 - ReactJS
+- TypeScript
+- NextJS
 
 <br/>
 
