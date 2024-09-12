@@ -1,9 +1,13 @@
-# React 18 Tutorial and Projects - John Smilga
-Hands-on React: Create 25+ Projects. Includes Axios, Router 6, Query 5, Redux Toolkit
+# Complete React, Next.js & TypeScript Projects Course 2024 - John Smilga
+Hands-on React: Create 25+ Projects Featuring Next.js, TypeScript, Prisma, Zod, Shadcn, Axios, Router 6, Query 5, Redux Toolkit
 
 
 ## 🔶 Course Coverage:
 - **React Fundamentals:** Understand the core principles of React.
+- **TypeScript Tutorial:** Learn the basics and advanced features of TypeScript.
+- **React with TypeScript:** Master the integration of TypeScript with React to build robust applications.
+- **Next.js with TypeScript:** Comprehensive tutorials on building Next.js applications using TypeScript.
+- **Complex Next.js Projects:** Work on real-world projects that leverage the full potential of Next.js.
 - **Latest Features:** Get hands-on with React 18.
 - **Hooks & State Management:** Deep dive into useState, useEffect, useRef, useReducer, useCallback, useMemo, and custom hooks.
 - **Advanced Concepts:** Learn conditional rendering, prop drilling, context API, and more.
