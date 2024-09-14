@@ -58,6 +58,9 @@ Hands-on React: Create 25+ Projects Featuring Next.js, TypeScript, Prisma, Zod, 
 - [React Tabs](https://theblaisecode.github.io/React-Tabs/)🔗
 - [Dummy Text Generator](https://theblaisecode.github.io/Dummy-Text-Generator/)🔗
 - [Color Generator](https://theblaisecode.github.io/Spectrum/)🔗
+- [Grocery Buddy](https://theblaisecode.github.io/Grocery-Buddy/)🔗
+- [Responsive Navbar](https://theblaisecode.github.io/React-Navbar/)🔗
+- [Sidebar & Modal](https://theblaisecode.github.io/React-Side-Nav-and-Modal/)🔗
 
 <br/>
 
