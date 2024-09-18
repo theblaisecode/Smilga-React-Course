@@ -31,7 +31,7 @@ Hands-on React: Create 25+ Projects Featuring Next.js, TypeScript, Prisma, Zod, 
 | 09        |                                                                        React Query                                                                  |                   Completed                    |
 | 10        |                                                          Unsplash Images Project (with React Query)                                                 |                   Completed                    |
 | 11        |                                                                  Contentful CMS Project                                                             |                   Completed                    |
-| 12        |                                                        MixMaster (React Router 6.4+ and React Query)                                                |                  In Progress                   |
+| 12        |                                                        MixMaster (React Router 6.4+ and React Query)                                                |                   Completed                    |
 | 13        |                                                              WebDev Portfolio (Tailwind CSS)                                                        |                                       |
 | 14        |                                                                       Redux Toolkit                                                                 |                                       |
 | 15        |                                                   Comfy Store (React Router 6.4+, RTK, Axios, React Query)                                          |                                       |
