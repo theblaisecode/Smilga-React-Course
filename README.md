@@ -73,6 +73,7 @@ Hands-on React: Create 25+ Projects Featuring Next.js, TypeScript, Prisma, Zod, 
 - React-Router
 - Styled Components
 - TailwindCSS
+- Redux Toolkit
 - TypeScript
 - NextJS
 
