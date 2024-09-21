@@ -68,6 +68,11 @@ Hands-on React: Create 25+ Projects Featuring Next.js, TypeScript, Prisma, Zod, 
 
 ## 🔶 Tech Stack
 - ReactJS
+- Axios
+- React-Query
+- React-Router
+- Styled Components
+- TailwindCSS
 - TypeScript
 - NextJS
 
