@@ -61,6 +61,8 @@ Hands-on React: Create 25+ Projects Featuring Next.js, TypeScript, Prisma, Zod, 
 - [Grocery Buddy](https://theblaisecode.github.io/Grocery-Buddy/)🔗
 - [Responsive Navbar](https://theblaisecode.github.io/React-Navbar/)🔗
 - [Sidebar & Modal](https://theblaisecode.github.io/React-Side-Nav-and-Modal/)🔗
+- [Strapi SubMenu](https://theblaisecode.github.io/React-Strapi-Submenu/)
+
 
 <br/>
 
