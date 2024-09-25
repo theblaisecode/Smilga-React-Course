@@ -1,9 +1,13 @@
-# React 18 Tutorial and Projects - John Smilga
-Hands-on React: Create 25+ Projects. Includes Axios, Router 6, Query 5, Redux Toolkit
+# Complete React, Next.js & TypeScript Projects Course 2024 - John Smilga
+Hands-on React: Create 25+ Projects Featuring Next.js, TypeScript, Prisma, Zod, Shadcn, Axios, Router 6, Query 5, Redux Toolkit
 
 
 ## 🔶 Course Coverage:
 - **React Fundamentals:** Understand the core principles of React.
+- **TypeScript Tutorial:** Learn the basics and advanced features of TypeScript.
+- **React with TypeScript:** Master the integration of TypeScript with React to build robust applications.
+- **Next.js with TypeScript:** Comprehensive tutorials on building Next.js applications using TypeScript.
+- **Complex Next.js Projects:** Work on real-world projects that leverage the full potential of Next.js.
 - **Latest Features:** Get hands-on with React 18.
 - **Hooks & State Management:** Deep dive into useState, useEffect, useRef, useReducer, useCallback, useMemo, and custom hooks.
 - **Advanced Concepts:** Learn conditional rendering, prop drilling, context API, and more.
@@ -27,28 +31,53 @@ Hands-on React: Create 25+ Projects. Includes Axios, Router 6, Query 5, Redux To
 | 09        |                                                                        React Query                                                                  |                   Completed                    |
 | 10        |                                                          Unsplash Images Project (with React Query)                                                 |                   Completed                    |
 | 11        |                                                                  Contentful CMS Project                                                             |                   Completed                    |
-| 12        |                                                        MixMaster (React Router 6.4+ and React Query)                                                |                  In Progress                   |
+| 12        |                                                        MixMaster (React Router 6.4+ and React Query)                                                |                   Completed                    |
 | 13        |                                                              WebDev Portfolio (Tailwind CSS)                                                        |                                       |
 | 14        |                                                                       Redux Toolkit                                                                 |                                       |
 | 15        |                                                   Comfy Store (React Router 6.4+, RTK, Axios, React Query)                                          |                                       |
-| 16        |                                                                         Jobster                                                                     |                                       |
-| 17        |                                                                     Extra Projects                                                                  |                                       |
-| 18        |                                                                      GitHub Users                                                                   |                                       |
-| 19        |                                                                   E-Commerce Project                                                                |                                       |
-| 20        |                                                        Customize Comfy Sloth and Setup Airtable                                                     |                                       |
-| 21        |                                                                          Bonus                                                                      |                                       |
+| 16        |                                                                     Important Info !!!                                                              |                                       |
+| 17        |                                                                  Typescript Fundamentals                                                            |                                       |
+| 18        |                                                                   React with Typescript                                                             |                                       |
+| 19        |                                                            Next.js Tutorial (with Typescript)                                                       |                                       |
+| 20        |                                                                 Next.js - Store Project                                                             |                                       |
+| 21        |                                                                Next.js - Jobify Project                                                             |                                       |
+| 22        |                                                                     Extra Projects                                                                  |                                       |
+| 23        |                                                                         Jobster                                                                     |                                       |
+| 24        |                                                                      GitHub Users                                                                   |                                       |
+| 25        |                                                                          Bonus                                                                      |                                       |
 
 
 <br/>
 
 ## 🔶 Course Project
-- [Digital Business Card](https://theblaisecode.github.io/Digital-Business-Card-Scrimba/)🔗
-- [Travel Journal](https://theblaisecode.github.io/Travel-Journal-Scrimba/)🔗
+- [Birthday Buddy](https://theblaisecode.github.io/React-Birthday-App/)🔗
+- [Tours App](https://theblaisecode.github.io/React-Tours-App/)🔗
+- [One Piece](https://theblaisecode.github.io/One-Piece/)🔗
+- [Riddle Me This](https://theblaisecode.github.io/Riddle-Me-This/)🔗
+- [Food Menu App](https://theblaisecode.github.io/React-Food-Menu/)🔗
+- [React Tabs](https://theblaisecode.github.io/React-Tabs/)🔗
+- [Dummy Text Generator](https://theblaisecode.github.io/Dummy-Text-Generator/)🔗
+- [Color Generator](https://theblaisecode.github.io/Spectrum/)🔗
+- [Grocery Buddy](https://theblaisecode.github.io/Grocery-Buddy/)🔗
+- [Responsive Navbar](https://theblaisecode.github.io/React-Navbar/)🔗
+- [Sidebar & Modal](https://theblaisecode.github.io/React-Side-Nav-and-Modal/)🔗
+- [Strapi SubMenu](https://theblaisecode.github.io/React-Strapi-Submenu/)🔗
+- [Shopping Cart](https://theblaisecode.github.io/Shopping-Cart/)🔗
+- [Unsplash Images](https://theblaisecode.github.io/Unsplash-Images/)🔗
+
 
 <br/>
 
 ## 🔶 Tech Stack
 - ReactJS
+- Axios
+- React-Query
+- React-Router
+- Styled Components
+- TailwindCSS
+- Redux Toolkit
+- TypeScript
+- NextJS
 
 <br/>
 
