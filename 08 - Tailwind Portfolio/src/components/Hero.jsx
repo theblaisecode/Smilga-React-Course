@@ -18,20 +18,20 @@ function Hero() {
 
           <div className="flex gap-x-4 mt-4">
             <a href="#">
-              <FaGithubSquare className="h-8 w-8 text-slate-500 hover:text-black duration-300" />
+              <FaGithubSquare className="h-8 w-8 text-slate-500 hover:text-emerald-500 duration-300" />
             </a>
 
             <a href="#">
-              <FaLinkedin className="h-8 w-8 text-slate-500 hover:text-black duration-300" />
+              <FaLinkedin className="h-8 w-8 text-slate-500 hover:text-emerald-500 duration-300" />
             </a>
 
             <a href="#">
-              <FaTwitterSquare className="h-8 w-8 text-slate-500 hover:text-black duration-300" />
+              <FaTwitterSquare className="h-8 w-8 text-slate-500 hover:text-emerald-500 duration-300" />
             </a>
           </div>
         </div>
 
-        <div className="contentBottom hidden md:block ">
+        <div className="contentBottom hidden md:flex md:justify-end md:items-center ">
           <img src={heroImg} className="h-80 lg:h-96" />
         </div>
       </div>
