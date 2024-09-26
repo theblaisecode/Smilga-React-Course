@@ -1,5 +1,3 @@
-import { FaGithubSquare, FaLinkedin, FaTwitterSquare } from "react-icons/fa";
-
 function Skills() {
   return (
     <section id="about" className="bg-emerald-100 py-24">
