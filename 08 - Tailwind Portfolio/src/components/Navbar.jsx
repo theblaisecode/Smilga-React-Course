@@ -5,10 +5,10 @@ import { links } from "../data";
 function Navbar() {
   return (
     <header className="bg-emerald-100">
-      <div className="mx-auto max-w-7xl px-8">
-        <div className="headerContent flex flex-col justify-center sm:justify-between sm:flex-row sm:gap-x-16 sm:items-center sm:py-8">
+      <div className="mx-auto max-w-7xl px-8 py-3">
+        <div className="headerContent flex flex-col justify-center items-center gap-y-3 sm:justify-between sm:flex-row sm:gap-x-16 sm:items-center sm:py-4">
           <div className="contentTop">
-            <a href="#home" className="text-4xl font-bold">
+            <a href="#home" className="text-3xl font-bold">
               Web<span className="text-emerald-500">Dev</span>
             </a>
           </div>
