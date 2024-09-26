@@ -33,7 +33,7 @@ const ProjectsCard = ({ url, img, github, title, text }) => {
 
 function Projects() {
   return (
-    <section id="projects" className="bg-white py-10 container">
+    <section id="projects" className="py-10 container">
       <SectionTitle text="web creations" />
 
       <div className="py-16 grid lg:grid-cols-2 xl:grid-cols-3 gap-8">

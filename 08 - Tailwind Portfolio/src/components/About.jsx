@@ -3,8 +3,8 @@ import SectionTitle from "./SectionTitle";
 
 function About() {
   return (
-    <section id="about" className="bg-white py-10">
-      <div className="container grid md:grid-cols-2 items-center gap-16 pt-10 ">
+    <section id="about" className="bg-white py-20">
+      <div className="container grid md:grid-cols-2 items-center gap-16 py-10 ">
         <img src={aboutSvg} className="w-full h-64" />
 
         <div className="aboutText">
