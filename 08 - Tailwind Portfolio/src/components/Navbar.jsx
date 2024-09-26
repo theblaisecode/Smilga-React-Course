@@ -1,5 +1,3 @@
-// import logo from "../"
-
 import { links } from "../data";
 
 function Navbar() {
