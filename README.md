@@ -32,8 +32,8 @@ Hands-on React: Create 25+ Projects Featuring Next.js, TypeScript, Prisma, Zod, 
 | 10        |                                                          Unsplash Images Project (with React Query)                                                 |                   Completed                    |
 | 11        |                                                                  Contentful CMS Project                                                             |                   Completed                    |
 | 12        |                                                        MixMaster (React Router 6.4+ and React Query)                                                |                   Completed                    |
-| 13        |                                                              WebDev Portfolio (Tailwind CSS)                                                        |                                       |
-| 14        |                                                                       Redux Toolkit                                                                 |                                       |
+| 13        |                                                              WebDev Portfolio (Tailwind CSS)                                                        |                   Completed                    |
+| 14        |                                                                       Redux Toolkit                                                                 |                  In Progress                   |
 | 15        |                                                   Comfy Store (React Router 6.4+, RTK, Axios, React Query)                                          |                                       |
 | 16        |                                                                     Important Info !!!                                                              |                                       |
 | 17        |                                                                  Typescript Fundamentals                                                            |                                       |
