@@ -64,6 +64,7 @@ Hands-on React: Create 25+ Projects Featuring Next.js, TypeScript, Prisma, Zod, 
 - [Strapi SubMenu](https://theblaisecode.github.io/React-Strapi-Submenu/)🔗
 - [Shopping Cart](https://theblaisecode.github.io/Shopping-Cart/)🔗
 - [Unsplash Images](https://theblaisecode.github.io/Unsplash-Images/)🔗
+- [Contentful CMS](https://theblaisecode.github.io/ContentfulCMS/)🔗
 
 
 <br/>
