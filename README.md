@@ -1,5 +1,5 @@
 # Complete React, Next.js & TypeScript Projects Course 2024 - John Smilga
-Hands-on React: Create 25+ Projects Featuring Next.js, TypeScript, Prisma, Zod, Shadcn, Axios, Router 6, Query 5, Redux Toolkit
+Hands-on React: Create 25+ Projects Featuring Next.js, TypeScript, Prisma, Zod, Shadcn, Axios, Router 6, Query 5, Redux Toolkit.
 
 
 ## 🔶 Course Coverage:
