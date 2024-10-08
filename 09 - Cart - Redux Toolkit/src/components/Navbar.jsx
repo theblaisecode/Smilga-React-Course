@@ -7,7 +7,8 @@ function Navbar() {
     {cart: {…}}cart: amount: 0cartItems: []length: 0[[Prototype]]: Array(0)isLoading: truetotal: 0[[Prototype]]: Object[[Prototype]]: Object
   */
 
-  // Console logging store returns an object and amount is a property in that obkect
+  // Console logging store returns an object and amount is a property in that obtect from cartSLice.jsx 
+
   const { amount } = useSelector((store) => store.cart);
 
   return (
