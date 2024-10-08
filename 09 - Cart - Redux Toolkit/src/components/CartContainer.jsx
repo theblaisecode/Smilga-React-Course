@@ -27,6 +27,7 @@ const CartContainer = () => {
 
       <footer>
         <hr />
+
         <div className="cart-total">
           <h4>
             total <span>${total}</span>
