@@ -299,15 +299,18 @@ Cart Item
 .amount-btn svg {
   color: var(--clr-primary);
 }
+
 .amount-btn:hover svg {
   color: var(--clr-primary-light);
 }
+
 .amount {
   text-align: center;
   margin-bottom: 0;
   font-size: 1.25rem;
   line-height: 1;
 }
+
 hr {
   background: var(--clr-grey-5);
   border-color: transparent;
@@ -335,14 +338,17 @@ hr {
   padding: 2rem 1rem;
   text-align: center;
 }
+
 .modal h4 {
   margin-bottom: 0;
   line-height: 1.5;
 }
+
 .modal .clear-btn,
 .modal .confirm-btn {
   margin-top: 1rem;
 }
+
 .btn-container {
   display: flex;
   justify-content: space-around;
