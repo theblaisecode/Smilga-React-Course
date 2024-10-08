@@ -2,6 +2,12 @@ import { CartIcon } from "../icons";
 import { useSelector } from "react-redux";
 
 function Navbar() {
+  console.log(useSelector((store) => console.log(store)));
+  /*
+    {cart: {…}}cart: amount: 0cartItems: []length: 0[[Prototype]]: Array(0)isLoading: truetotal: 0[[Prototype]]: Object[[Prototype]]: Object
+  */
+
+  // Console logging store returns an object and amount is a property in that obkect
   const { amount } = useSelector((store) => store.cart);
 
   return (
