@@ -34,7 +34,6 @@ const CartContainer = () => {
         </div>
 
         <button className="btn clear-btn">clear cart</button>
-        <button className="btn clear-btn">clear cart</button>
       </footer>
     </section>
   );
