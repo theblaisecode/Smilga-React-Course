@@ -22,16 +22,24 @@ const cartSlice = createSlice({
         (theItem) => theItem.id !== itemId
       );
     },
-    increase: (state, {payload}) => {
-      const increaseItem = state.cartItems.find((theItem) => theItem.id === payload.id)
-      increaseItem.amount = increaseItem.amount + 1
-    }
+    increase: (state, { payload }) => {
+      const increaseItem = state.cartItems.find(
+        (theItem) => theItem.id === payload.id
+      );
+      increaseItem.amount = increaseItem.amount + 1;
+    },
+    decrease: (state, { payload }) => {
+      const decreaseItem = state.cartItems.find(
+        (theItem) => theItem.id === payload.id
+      );
+      decreaseItem.amount = decreaseItem.amount - 1;
+    },
   },
 });
 
 console.log(cartSlice);
 
-export const { clearCart, removeItem, increase } = cartSlice.actions;
+export const { clearCart, removeItem, increase, decrease } = cartSlice.actions;
 export default cartSlice.reducer;
 // console logging cartSlice returns an object so cartSlice.reducer is used to access only the reducer
 // Same goes for cartSlice.actions
