@@ -9,6 +9,7 @@ const CartContainer = () => {
       <section className="cart">
         <header>
           <h2>Your Bag</h2>
+          
           <h4 className="empty-cart">is currently empty.</h4>
         </header>
       </section>
