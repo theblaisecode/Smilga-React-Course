@@ -16,12 +16,15 @@ const cartSlice = createSlice({
     clearCart: (state) => {
       state.cartItems = [];
     },
+    removeItem: (state, action) => {
+      console.log(state, action);
+    },
   },
 });
 
 console.log(cartSlice);
 
-export const { clearCart } = cartSlice.actions;
+export const { clearCart, removeItem } = cartSlice.actions;
 export default cartSlice.reducer;
 // console logging cartSlice returns an object so cartSlice.reducer is used to access only the reducer
 // Same goes for cartSlice.actions
