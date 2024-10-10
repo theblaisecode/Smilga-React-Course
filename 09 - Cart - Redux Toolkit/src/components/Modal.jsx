@@ -19,6 +19,7 @@ function Modal() {
             }}>
             Confirm
           </div>
+
           <div className="btn clear-btn" onClick={() => dispatch(closeModal())}>
             Cancel
           </div>
