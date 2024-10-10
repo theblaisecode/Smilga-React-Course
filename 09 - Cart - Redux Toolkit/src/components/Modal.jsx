@@ -1,5 +1,5 @@
 import { useDispatch } from "react-redux";
-import { openModal, closeModal } from "../features/modal/modalSlice";
+import { closeModal } from "../features/modal/modalSlice";
 import { clearCart } from "../features/cart/cartSlice";
 
 function Modal() {
@@ -16,8 +16,7 @@ function Modal() {
             onClick={() => dispatch(clearCart())}>
             Confirm
           </div>
-          <div className="btn clear-btn"
-          onClick={() => dispatch(closeModal())}>
+          <div className="btn clear-btn" onClick={() => dispatch(closeModal())}>
             Cancel
           </div>
         </div>
