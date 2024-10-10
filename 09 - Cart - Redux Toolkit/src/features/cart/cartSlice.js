@@ -34,12 +34,24 @@ const cartSlice = createSlice({
       );
       decreaseItem.amount = decreaseItem.amount - 1;
     },
+    calculateTotals: (state) => {
+      let amount = 0;
+      let total = 0;
+      state.cartItems.forEach((theItem) => {
+        amount += theItem.amount;
+        total += theItem.amount * theItem.price;
+      });
+
+      state.amount = amount;
+      state.total = total;
+    },
   },
 });
 
 console.log(cartSlice);
 
-export const { clearCart, removeItem, increase, decrease } = cartSlice.actions;
+export const { clearCart, removeItem, increase, decrease, calculateTotals } =
+  cartSlice.actions;
 export default cartSlice.reducer;
 // console logging cartSlice returns an object so cartSlice.reducer is used to access only the reducer
 // Same goes for cartSlice.actions
