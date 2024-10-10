@@ -13,7 +13,10 @@ function Modal() {
         <div className="btn-container">
           <div
             className="btn confirm-btn"
-            onClick={() => dispatch(clearCart())}>
+            onClick={() => {
+              dispatch(clearCart());
+              dispatch(closeModal());
+            }}>
             Confirm
           </div>
           <div className="btn clear-btn" onClick={() => dispatch(closeModal())}>
