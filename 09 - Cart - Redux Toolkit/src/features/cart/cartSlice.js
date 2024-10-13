@@ -54,4 +54,5 @@ export const { clearCart, removeItem, increase, decrease, calculateTotals } =
   cartSlice.actions;
 export default cartSlice.reducer;
 // console logging cartSlice returns an object so cartSlice.reducer is used to access only the reducer
+
 // Same goes for cartSlice.actions
