@@ -6,8 +6,8 @@ function App() {
     <main>
       <GlobalLayout />
       <BrowserRouter>
-        <Routes>
-          <Route />
+        <Routes path="/" element={<GlobalLayout/>}>
+          <Route index={true} element={<}/>
         </Routes>
       </BrowserRouter>
     </main>
