@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom";
 
 function Navbar() {
   return (
-    <header className="bg-accent-content p-4">
+    <header className="bg-base-200 p-4">
       <div className="container">
         <div className="navbar flex justify-between">
           <div className="logo">Comfy Store</div>
