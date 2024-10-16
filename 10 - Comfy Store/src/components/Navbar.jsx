@@ -9,7 +9,7 @@ function Navbar() {
 
           <nav className="">
             <NavLink
-              to="home"
+              to="/"
               aria-label="Link to Home page"
               className={({ isActive }) => (isActive ? "activeStyle" : null)}>
               Home

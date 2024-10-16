@@ -12,3 +12,13 @@
   margin: auto;
   width: 80%;
 }
+
+.activeStyle {
+  background: #2a323c;
+  padding: 0.5rem 0.8rem;
+  border-radius: 0.5rem;
+}
+
+nav a:hover {
+  background: #494948;
+}
