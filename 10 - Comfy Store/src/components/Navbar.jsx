@@ -7,7 +7,7 @@ function Navbar() {
         <div className="navbar">
           <div className="logo">Comfy Store</div>
 
-          <nav>
+          <nav className="">
             <NavLink
               to="home"
               aria-label="Link to Home page"
