@@ -14,21 +14,21 @@ function Navbar() {
               className={({ isActive }) => (isActive ? "activeStyle" : null)}>
               Home
             </NavLink>
-            
+
             <NavLink
               to="about"
               aria-label="Link to About page"
               className={({ isActive }) => (isActive ? "activeStyle" : null)}>
               About
             </NavLink>
-            
+
             <NavLink
               to="products"
               aria-label="Link to Products page"
               className={({ isActive }) => (isActive ? "activeStyle" : null)}>
               Products
             </NavLink>
-            
+
             <NavLink
               to="cart"
               aria-label="Link to Cart page"
