@@ -1,6 +1,8 @@
 function Orders() {
   return (
-    <div>Orders</div>
-  )
+    <section className="orders px-4">
+      <div className="container">Orders Page</div>
+    </section>
+  );
 }
 export default Orders
