@@ -1,6 +1,8 @@
 function Login() {
   return (
-    <div>Login</div>
-  )
+    <section className="login px-4">
+      <div className="container">Login Page</div>
+    </section>
+  );
 }
 export default Login

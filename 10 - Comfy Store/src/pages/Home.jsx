@@ -1,6 +1,8 @@
 function Home() {
   return (
-    <div>Home</div>
-  )
+    <section className="home px-4">
+      <div className="container">Home Page</div>
+    </section>
+  );
 }
-export default Home
+export default Home;

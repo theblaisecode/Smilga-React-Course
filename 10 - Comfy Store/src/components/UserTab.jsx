@@ -1,4 +1,12 @@
 function UserTab() {
-  return <div className="userTab bg-neutral p-2">UserTab</div>;
+  return (
+    <div className="bg-neutral py-2 px-4">
+      <div className="container">
+        <div className="userTab flex justify-end">
+          Sign in / Guest &nbsp; Create Account
+        </div>
+      </div>
+    </div>
+  );
 }
-export default UserTab
+export default UserTab;

@@ -1,6 +1,8 @@
 function Register() {
   return (
-    <div>Register</div>
-  )
+    <section className="register px-4">
+      <div className="container">Register Page</div>
+    </section>
+  );
 }
 export default Register
