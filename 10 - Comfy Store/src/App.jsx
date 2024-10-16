@@ -1,8 +1,15 @@
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import GlobalLayout from "./layout/GlobalLayout";
+
 function App() {
   return (
     <main>
-      <h1 className="text-3xl font-bold">Olla!</h1>
-      
+      <GlobalLayout />
+      <BrowserRouter>
+        <Routes>
+          <Route />
+        </Routes>
+      </BrowserRouter>
     </main>
   );
 }
