@@ -1,7 +1,7 @@
 function Home() {
   return (
     <section className="home px-4">
-      <div className="container">Home Page</div>
+      <div className="mx-auto w-11/12 lg:w-7/12">Home Page</div>
     </section>
   );
 }

@@ -1,11 +1,14 @@
 import { NavLink } from "react-router-dom";
 import { IoSunnySharp } from "react-icons/io5";
 import { IoMoon } from "react-icons/io5";
+import { FiShoppingCart } from "react-icons/fi";
+
+console.log(window.screen.width);
 
 function Navbar() {
   return (
-    <header className="bg-base-200 p-4">
-      <div className="container">
+    <header className="bg-base-200">
+      <div className="mx-auto w-11/12 lg:w-7/12">
         <div className="navbar flex justify-between">
           <div className="logo">Comfy Store</div>
 
@@ -46,6 +49,14 @@ function Navbar() {
               Cart
             </NavLink>
           </nav>
+
+          <div className="theme">
+            <IoSunnySharp />
+            <IoMoon />
+            <div className="cartIcon">
+              <FiShoppingCart />
+            </div>
+          </div>
         </div>
       </div>
     </header>
