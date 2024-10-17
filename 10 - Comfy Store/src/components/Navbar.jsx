@@ -1,12 +1,20 @@
 import { Link, NavLink } from "react-router-dom";
+import { FaBarsStaggered } from "react-icons/fa6";
 import { IoSunnySharp } from "react-icons/io5";
 import { IoMoon } from "react-icons/io5";
 import { FiShoppingCart } from "react-icons/fi";
 import logo from "../assets/logo.png";
+import { useState } from "react";
 
 console.log(window.screen.width);
 
 function Navbar() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  const monileMenu = () => {
+    setIsMobile((prevIsMobile) => !prevIsMobile);
+  };
+
   return (
     <header className="bg-base-200">
       <div className="mx-auto w-11/12 lg:w-7/12">
