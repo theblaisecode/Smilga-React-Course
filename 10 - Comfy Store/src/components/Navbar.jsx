@@ -1,4 +1,6 @@
 import { NavLink } from "react-router-dom";
+import { IoSunnySharp } from "react-icons/io5";
+import { IoMoon } from "react-icons/io5";
 
 function Navbar() {
   return (
