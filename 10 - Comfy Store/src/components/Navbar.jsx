@@ -2,6 +2,7 @@ import { NavLink } from "react-router-dom";
 import { IoSunnySharp } from "react-icons/io5";
 import { IoMoon } from "react-icons/io5";
 import { FiShoppingCart } from "react-icons/fi";
+import logo from "../assets/logo.png";
 
 console.log(window.screen.width);
 
@@ -10,7 +11,9 @@ function Navbar() {
     <header className="bg-base-200">
       <div className="mx-auto w-11/12 lg:w-7/12">
         <div className="navbar flex justify-between">
-          <div className="logo">Comfy Store</div>
+          <div className="logo">
+            <img src={logo} alt="" className="w-8/12" />
+          </div>
 
           <nav className="flex gap-4">
             <NavLink
