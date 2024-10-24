@@ -24,7 +24,7 @@ function Navbar() {
               <img src={logo} alt="Comfy Stores Logo" className="lg:w-8/12" />
             </Link>
 
-            <nav className="bg-base-200 w-52 top-24 left-0 p-5 fixed flex gap-1 flex-col lg:flex-row lg:gap-4">
+            <nav className="bg-base-200 w-52 h-9 top-24 left-0 p-5 fixed flex gap-1 flex-col lg:flex-row lg:gap-4">
               <NavLink
                 to="/"
                 aria-label="Link to Home page"
