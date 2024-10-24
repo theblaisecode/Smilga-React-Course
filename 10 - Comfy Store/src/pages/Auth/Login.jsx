@@ -1,4 +1,4 @@
-import { Form } from "react-router-dom";
+import { Form, Link } from "react-router-dom";
 
 function Login() {
   return (
@@ -6,10 +6,10 @@ function Login() {
       <div className="mx-auto w-11/12 lg:w-7/12 flex justify-center items-center h-screen	">
         <div className="card bg-base-100 w-96 shadow-xl">
           <Form method="POST" action="login" className="card-body">
-            <h4 className="text-center text-3xl font-bold">Login</h4>
+            <h4 className="text-center text-3xl font-bold mb-6">Login</h4>
             <label
-              htmlFor="email "
-              className="input input-bordered flex items-center gap-2">
+              htmlFor="email"
+              className="input input-bordered flex items-center gap-2 mb-3">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 16 16"
@@ -47,15 +47,27 @@ function Login() {
                 type="password"
                 name="password"
                 id="password"
-                placeholder="password"
+                placeholder="Password"
                 className="grow"
               />
             </label>
 
-            <div className="loginFormButtons flex flex-col justify-center items-center gap-5 mt-6">
-              <div className="btn bg-emerald-500 btn-block">Login</div>
-              <div className="btn bg-purple-500 btn-block">Guest User</div>
+            <div className="loginFormButtons flex flex-col justify-center items-center gap-3 mt-6 text-neutral ">
+              <h4 className="btn bg-emerald-500 btn-block text-neutral uppercase">
+                Login
+              </h4>
+
+              <h4 className="btn bg-purple-400 btn-block text-neutral uppercase">
+                Guest User
+              </h4>
             </div>
+
+            <p className="text-center mt-6 ">
+              Not a member yet?
+              <Link to="register" className="text-purple-400 ml-2">
+                Register
+              </Link>
+            </p>
           </Form>
         </div>
       </div>
