@@ -18,7 +18,7 @@
 .activeStyle,
 nav a:hover {
   background: #2a323c;
-  padding: 0.6rem 1rem;
+  /* padding: 0.6rem 1rem; */
   border-radius: 0.5rem;
 }
 

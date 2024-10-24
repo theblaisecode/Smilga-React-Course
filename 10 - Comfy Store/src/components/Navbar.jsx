@@ -11,7 +11,7 @@ console.log(window.screen.width);
 function Navbar() {
   const [isMobile, setIsMobile] = useState(false);
 
-  const monileMenu = () => {
+  const mobileMenu = () => {
     setIsMobile((prevIsMobile) => !prevIsMobile);
   };
 
@@ -20,16 +20,22 @@ function Navbar() {
       <div className="mx-auto w-11/12 lg:w-7/12">
         <div className="navbar flex justify-between items-center">
           <div className="menu flex justify-between items-center">
-            <Link to="/" className="logo hidden lg:block">
-              <img src={logo} alt="Comfy Stores Logo" className="lg:w-8/12" />
-            </Link>
+            <div className="sum">
+              <div className="lg:hidden">
+                <FaBarsStaggered className="text-xl" />
+              </div>
 
-            <nav className="bg-base-200 w-52 h-9 top-24 left-0 p-5 fixed flex gap-1 flex-col lg:flex-row lg:gap-4">
+              <Link to="/" className="logo hidden lg:block">
+                <img src={logo} alt="Comfy Stores Logo" className="lg:w-8/12" />
+              </Link>
+            </div>
+
+            <nav className="bg-base-200 w-52 h-90vh top-28 left-5 rounded-2xl p-2 fixed flex  flex-col lg:flex-row lg:gap-4">
               <NavLink
                 to="/"
                 aria-label="Link to Home page"
                 className={({ isActive }) =>
-                  isActive ? "activeStyle p-4" : "p-4"
+                  isActive ? "activeStyle py-2 px-4 lg:p-4" : "py-2 px-4 lg:p-4"
                 }>
                 Home
               </NavLink>
@@ -38,7 +44,7 @@ function Navbar() {
                 to="about"
                 aria-label="Link to About page"
                 className={({ isActive }) =>
-                  isActive ? "activeStyle p-4" : "p-4"
+                  isActive ? "activeStyle py-2 px-4 lg:p-4" : "py-2 px-4 lg:p-4"
                 }>
                 About
               </NavLink>
@@ -47,7 +53,7 @@ function Navbar() {
                 to="products"
                 aria-label="Link to Products page"
                 className={({ isActive }) =>
-                  isActive ? "activeStyle p-4" : "p-4"
+                  isActive ? "activeStyle py-2 px-4 lg:p-4" : "py-2 px-4 lg:p-4"
                 }>
                 Products
               </NavLink>
@@ -56,7 +62,7 @@ function Navbar() {
                 to="cart"
                 aria-label="Link to Cart page"
                 className={({ isActive }) =>
-                  isActive ? "activeStyle p-4" : "p-4"
+                  isActive ? "activeStyle py-2 px-4 lg:p-4" : "py-2 px-4 lg:p-4"
                 }>
                 Cart
               </NavLink>
@@ -64,10 +70,10 @@ function Navbar() {
           </div>
 
           <div className="theme">
-            <IoSunnySharp />
-            <IoMoon />
+            <IoSunnySharp className="text-xl" />
+            <IoMoon className="text-xl" />
             <div className="cartIcon">
-              <FiShoppingCart />
+              <FiShoppingCart className="text-xl" />
             </div>
           </div>
         </div>
