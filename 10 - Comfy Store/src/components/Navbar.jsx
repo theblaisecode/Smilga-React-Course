@@ -16,13 +16,13 @@ function Navbar() {
   };
 
   const toggleTheme = () => {
-    const newTheme = isDarkMode ? "light" : "dark";
+    const newTheme = isDarkMode ? "winter" : "dim";
     document.documentElement.setAttribute("data-theme", newTheme);
     setIsDarkMode(!isDarkMode);
   };
 
   return (
-    <header className="bg-base-200">
+    <header className="bg-base-200 py-1">
       <div className="mx-auto w-11/12 lg:w-7/12">
         <div className="navbar flex justify-between items-center">
           <div className="menu flex justify-between items-center">
@@ -38,7 +38,20 @@ function Navbar() {
               </button>
 
               <Link to="/" className="logo hidden lg:block">
-                <img src={logo} alt="Comfy Stores Logo" className="lg:w-8/12" />
+                {isDarkMode ? (
+                  <img
+                    src={logo}
+                    alt="Comfy Stores Logo"
+                    className="lg:w-8/12"
+                  />
+                ) : (
+                  <img
+                    src={logo}
+                    alt="Comfy Stores Logo"
+                    className="lg:w-8/12"
+                    style={{ filter: "brightness(20%)" }}
+                  />
+                )}
               </Link>
             </div>
 
