@@ -7,6 +7,7 @@ function Login() {
         <div className="card bg-base-100 w-96 shadow-xl">
           <Form method="POST" action="login" className="card-body">
             <h4 className="text-center text-3xl font-bold mb-6">Login</h4>
+
             <label
               htmlFor="email"
               className="input input-bordered flex items-center gap-2 mb-3">
@@ -53,18 +54,18 @@ function Login() {
             </label>
 
             <div className="loginFormButtons flex flex-col justify-center items-center gap-3 mt-6 text-neutral ">
-              <h4 className="btn bg-emerald-500 btn-block text-neutral uppercase">
+              <button className="btn bg-accent text-accent-content btn-block uppercase">
                 Login
-              </h4>
+              </button>
 
-              <h4 className="btn bg-purple-400 btn-block text-neutral uppercase">
+              <button className="btn bg-secondary text-secondary-content btn-block uppercase">
                 Guest User
-              </h4>
+              </button>
             </div>
 
             <p className="text-center mt-6 ">
               Not a member yet?
-              <Link to="register" className="text-purple-400 ml-2">
+              <Link to="register" className="text-secondary ml-2">
                 Register
               </Link>
             </p>
