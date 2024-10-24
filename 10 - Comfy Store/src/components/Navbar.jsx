@@ -1,5 +1,6 @@
 import { Link, NavLink } from "react-router-dom";
 import { FaBarsStaggered } from "react-icons/fa6";
+import { IoCloseSharp } from "react-icons/io5";
 import { IoSunnySharp } from "react-icons/io5";
 import { IoMoon } from "react-icons/io5";
 import { FiShoppingCart } from "react-icons/fi";
@@ -21,52 +22,68 @@ function Navbar() {
         <div className="navbar flex justify-between items-center">
           <div className="menu flex justify-between items-center">
             <div className="sum">
-              <div className="lg:hidden">
-                <FaBarsStaggered className="text-xl" />
-              </div>
+              <button
+                className="transition-all duration-500 lg:hidden"
+                onClick={mobileMenu}>
+                {!isMobile ? (
+                  <FaBarsStaggered className="text-xl" />
+                ) : (
+                  <IoCloseSharp className="text-xl" />
+                )}
+              </button>
 
               <Link to="/" className="logo hidden lg:block">
                 <img src={logo} alt="Comfy Stores Logo" className="lg:w-8/12" />
               </Link>
             </div>
 
-            <nav className="bg-base-200 w-52 h-19.5vh top-28 left-5 rounded-2xl p-2 fixed flex  flex-col lg:flex-row lg:gap-4">
-              <NavLink
-                to="/"
-                aria-label="Link to Home page"
-                className={({ isActive }) =>
-                  isActive ? "activeStyle py-2 px-4 lg:p-4" : "py-2 px-4 lg:p-4"
-                }>
-                Home
-              </NavLink>
+            {isMobile && (
+              <nav className="bg-base-200 w-52 h-19.5vh top-28 left-5 rounded-2xl p-2 fixed flex flex-col transition-all duration-500 ease-in-out lg:flex-row lg:gap-4">
+                <NavLink
+                  to="/"
+                  aria-label="Link to Home page"
+                  className={({ isActive }) =>
+                    isActive
+                      ? "activeStyle py-2 px-4 lg:p-4"
+                      : "py-2 px-4 lg:p-4"
+                  }>
+                  Home
+                </NavLink>
 
-              <NavLink
-                to="about"
-                aria-label="Link to About page"
-                className={({ isActive }) =>
-                  isActive ? "activeStyle py-2 px-4 lg:p-4" : "py-2 px-4 lg:p-4"
-                }>
-                About
-              </NavLink>
+                <NavLink
+                  to="about"
+                  aria-label="Link to About page"
+                  className={({ isActive }) =>
+                    isActive
+                      ? "activeStyle py-2 px-4 lg:p-4"
+                      : "py-2 px-4 lg:p-4"
+                  }>
+                  About
+                </NavLink>
 
-              <NavLink
-                to="products"
-                aria-label="Link to Products page"
-                className={({ isActive }) =>
-                  isActive ? "activeStyle py-2 px-4 lg:p-4" : "py-2 px-4 lg:p-4"
-                }>
-                Products
-              </NavLink>
+                <NavLink
+                  to="products"
+                  aria-label="Link to Products page"
+                  className={({ isActive }) =>
+                    isActive
+                      ? "activeStyle py-2 px-4 lg:p-4"
+                      : "py-2 px-4 lg:p-4"
+                  }>
+                  Products
+                </NavLink>
 
-              <NavLink
-                to="cart"
-                aria-label="Link to Cart page"
-                className={({ isActive }) =>
-                  isActive ? "activeStyle py-2 px-4 lg:p-4" : "py-2 px-4 lg:p-4"
-                }>
-                Cart
-              </NavLink>
-            </nav>
+                <NavLink
+                  to="cart"
+                  aria-label="Link to Cart page"
+                  className={({ isActive }) =>
+                    isActive
+                      ? "activeStyle py-2 px-4 lg:p-4"
+                      : "py-2 px-4 lg:p-4"
+                  }>
+                  Cart
+                </NavLink>
+              </nav>
+            )}
           </div>
 
           <div className="theme">
