@@ -30,7 +30,7 @@ function Navbar() {
               </Link>
             </div>
 
-            <nav className="bg-base-200 w-52 h-90vh top-28 left-5 rounded-2xl p-2 fixed flex  flex-col lg:flex-row lg:gap-4">
+            <nav className="bg-base-200 w-52 h-19.5vh top-28 left-5 rounded-2xl p-2 fixed flex  flex-col lg:flex-row lg:gap-4">
               <NavLink
                 to="/"
                 aria-label="Link to Home page"

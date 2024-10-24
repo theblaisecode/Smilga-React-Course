@@ -4,7 +4,7 @@ export default {
   theme: {
     extend: {
       height: {
-        "90vh": "19.5vh", // Custom height for 90% of the viewport height
+        "19.5vh": "19.5vh", // Custom height for 90% of the viewport height
       },
     },
   },
