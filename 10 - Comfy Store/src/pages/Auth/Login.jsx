@@ -54,18 +54,18 @@ function Login() {
             </label>
 
             <div className="loginFormButtons flex flex-col justify-center items-center gap-3 mt-6 text-neutral ">
-              <button className="btn bg-accent text-accent-content btn-block uppercase">
+              <button className="btn bg-primary text-accent-content btn-block uppercase">
                 Login
               </button>
 
-              <button className="btn bg-secondary text-secondary-content btn-block uppercase">
+              <button className="btn bg-accent text-secondary-content btn-block uppercase">
                 Guest User
               </button>
             </div>
 
             <p className="text-center mt-6 ">
               Not a member yet?
-              <Link to="register" className="text-secondary ml-2">
+              <Link to="register" className="text-accent ml-2">
                 Register
               </Link>
             </p>

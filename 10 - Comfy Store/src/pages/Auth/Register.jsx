@@ -74,14 +74,14 @@ function Register() {
               </label>
 
               <div className="registerFormButtons flex flex-col justify-center items-center gap-3 mt-6 text-neutral ">
-                <button className="btn bg-accent text-accent-content btn-block uppercase">
+                <button className="btn bg-primary text-accent-content btn-block uppercase">
                   Register
                 </button>
               </div>
 
               <p className="text-center mt-6 ">
                 Already a member?
-                <Link to="login" className="text-secondary ml-2">
+                <Link to="login" className="text-accent ml-2">
                   Login
                 </Link>
               </p>
