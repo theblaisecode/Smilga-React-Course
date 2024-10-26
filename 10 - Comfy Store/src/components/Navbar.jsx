@@ -25,41 +25,35 @@ function Navbar() {
     <header className="bg-base-200 py-1">
       <div className="mx-auto w-11/12 xl:w-7/12">
         <div className="navbar flex justify-between items-center">
-          <div className="menu flex justify-between items-center lg:flex-[2] lg:flex-row ">
-            <div className="sum">
-              <button
-                className="transition-all duration-500 lg:hidden"
-                onClick={mobileMenu}>
-                {!isMobile ? (
-                  <FaBarsStaggered className="text-xl" />
-                ) : (
-                  <IoCloseSharp className="text-xl" />
-                )}
-              </button>
+          <div className="sum">
+            <button
+              className="transition-all duration-500 lg:hidden"
+              onClick={mobileMenu}>
+              {!isMobile ? (
+                <FaBarsStaggered className="text-xl" />
+              ) : (
+                <IoCloseSharp className="text-xl" />
+              )}
+            </button>
 
-              <Link to="/" className="logo hidden lg:block">
-                {isDarkMode ? (
-                  <img
-                    src={logo}
-                    alt="Comfy Stores Logo"
-                    className="lg:w-8/12"
-                  />
-                ) : (
-                  <img
-                    src={logo}
-                    alt="Comfy Stores Logo"
-                    className="lg:w-8/12"
-                    style={{ filter: "brightness(20%)" }}
-                  />
-                )}
-              </Link>
-            </div>
+            <Link to="/" className="logo hidden lg:block">
+              {isDarkMode ? (
+                <img src={logo} alt="Comfy Stores Logo" className="lg:w-8/12" />
+              ) : (
+                <img
+                  src={logo}
+                  alt="Comfy Stores Logo"
+                  className="lg:w-8/12"
+                  style={{ filter: "brightness(20%)" }}
+                />
+              )}
+            </Link>
+          </div>
 
+          <div className="menu flex justify-between items-center ">
             {!isMobile && (
               <nav
-                className={`bg-base-200 w-52 h-19.5vh rounded-2xl p-2 flex flex-col transition-all duration-500 ease-in-out lg:flex-row lg:h-auto lg:w-auto lg:gap-4 ${
-                  isMobile ? "fixed top-28 left-5" : "static"
-                }`}>
+                className={`bg-base-200 w-52 h-19.5vh rounded-2xl p-2 flex flex-col transition-all duration-500 ease-in-out fixed top-28 left-5 lg:flex-row lg:h-auto lg:w-auto lg:gap-4 lg:static lg:left-auto lg:top-auto `}>
                 <NavLink
                   to="/"
                   aria-label="Link to Home page"
@@ -107,7 +101,7 @@ function Navbar() {
             )}
           </div>
 
-          <div className="lg:flex-1 justify-end">
+          <div className="">
             <div className="theme">
               <label className="swap swap-rotate">
                 {/* this hidden checkbox controls the state */}
