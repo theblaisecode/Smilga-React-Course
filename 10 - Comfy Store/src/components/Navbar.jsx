@@ -25,7 +25,7 @@ function Navbar() {
     <header className="bg-base-200 py-1">
       <div className="mx-auto w-11/12 xl:w-7/12">
         <div className="navbar flex justify-between items-center">
-          <div className="sum">
+          <div className="logoAndMobile">
             <button
               className="transition-all duration-500 lg:hidden"
               onClick={mobileMenu}>
