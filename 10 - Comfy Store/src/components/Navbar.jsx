@@ -23,7 +23,7 @@ function Navbar() {
 
   return (
     <header className="bg-base-200 py-1">
-      <div className="mx-auto w-11/12 xl:w-7/12">
+      <div className="mx-auto max-w-6xl px-8">
         <div className="navbar flex justify-between items-center">
           <div className="logoAndMobile">
             <button

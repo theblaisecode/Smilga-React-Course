@@ -6,8 +6,8 @@ import hero4 from "../assets/hero4.webp";
 
 function Home() {
   return (
-    <section className="align-element px-4 py-20">
-      <div className="mx-auto w-11/12 lg:w-7/12">
+    <section className="">
+      <div className="">
         <div className="homeContent flex lg:flex-cols-2 gap-24 items-center">
           <div className="contentTop flex-1 ">
             <h1 className="max-w-2xl text-4xl font-bold tracking-tight sm:text-6xl">

@@ -2,16 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+  .align-element {
+    @apply mx-auto max-w-6xl px-8;
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-.container {
-  margin: auto;
-  width: 80%;
-}
 
 .activeStyle {
 }

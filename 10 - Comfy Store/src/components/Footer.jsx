@@ -1,7 +1,7 @@
 function Footer() {
   return (
     <footer className="bg-base-200 p-6">
-      <div className="mx-auto w-11/12 lg:w-7/12">Footer</div>
+      <div className="mx-auto max-w-6xl px-8">Footer</div>
     </footer>
   );
 }

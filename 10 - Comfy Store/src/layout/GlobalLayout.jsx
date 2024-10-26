@@ -8,7 +8,9 @@ function GlobalLayout() {
     <>
       <UserTab />
       <Navbar />
-      <Outlet />
+      <section className="align-element py-20">
+        <Outlet />
+      </section>
       <Footer />
     </>
   );

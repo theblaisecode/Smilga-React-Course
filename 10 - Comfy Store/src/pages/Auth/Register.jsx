@@ -4,7 +4,7 @@ function Register() {
   return (
     <section className="register px-4">
       <section className="register px-4">
-        <div className="mx-auto w-11/12 lg:w-7/12 flex justify-center items-center h-screen	">
+        <div className="flex justify-center items-center h-screen	">
           <div className="card bg-base-100 w-96 shadow-xl">
             <Form method="POST" action="register" className="card-body">
               <h4 className="text-center text-3xl font-bold mb-6">Register</h4>
