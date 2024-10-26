@@ -8,11 +8,13 @@ import Login from "./pages/Auth/Login";
 import Register from "./pages/Auth/Register";
 import Checkout from "./pages/Checkout";
 import Orders from "./pages/Orders";
+import Error from "./pages/Error";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <GlobalLayout />,
+    errorElement: <Error />,
     children: [
       {
         index: true,
@@ -43,10 +45,12 @@ const router = createBrowserRouter([
   {
     path: "login",
     element: <Login />,
+    errorElement: <Error />,
   },
   {
     path: "register",
     element: <Register />,
+    errorElement: <Error />,
   },
 ]);
 
