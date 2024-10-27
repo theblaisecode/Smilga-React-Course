@@ -17,7 +17,7 @@ function About() {
           </div>
         </div>
 
-        <p className="mt-6 text-lg leading-8 max-w-2xl mx-auto">
+        <p className="mt-6 text-lg leading-8 max-w-2xl mx-auto lg:max-w-5xl">
           Comfy Store was established in 2002 in Nigeria and targets the best
           quality products to its customers. Comfy Store always presents new
           modern designs developed by its customers taste and brings the best.
@@ -33,7 +33,7 @@ function About() {
         </p>
       </div>
 
-      <div className="contentBottom mt-6 text-lg leading-8 max-w-2xl mx-auto">
+      <div className="contentBottom mt-6 text-lg leading-8 max-w-2xl mx-auto  lg:max-w-5xl">
         <img src={aboutImg} alt="comfy bed" />
       </div>
     </section>
