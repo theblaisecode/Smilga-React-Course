@@ -4,6 +4,8 @@ import hero2 from "../assets/hero2.webp";
 import hero3 from "../assets/hero3.webp";
 import hero4 from "../assets/hero4.webp";
 
+const carousel = [hero1, hero2, hero3, hero4];
+
 function Home() {
   return (
     <section className="">
@@ -29,30 +31,16 @@ function Home() {
           </div>
 
           <div className="hidden flex-1 h-[28rem] lg:carousel carousel-center p-4 space-x-4 bg-neutral rounded-box ">
-            <div className="carousel-item">
-              <img
-                src={hero1}
-                className="rounded-box h-full w-80 object-cover"
-              />
-            </div>
-            <div className="carousel-item">
-              <img
-                src={hero2}
-                className="rounded-box h-full w-80 object-cover"
-              />
-            </div>
-            <div className="carousel-item">
-              <img
-                src={hero3}
-                className="rounded-box h-full w-80 object-cover"
-              />
-            </div>
-            <div className="carousel-item">
-              <img
-                src={hero4}
-                className="rounded-box h-full w-80 object-cover"
-              />
-            </div>
+            {carousel.map((item) => {
+              return (
+                <div key={item} className="carousel-item">
+                  <img
+                    src={item}
+                    className="rounded-box h-full w-80 object-cover"
+                  />
+                </div>
+              );
+            })}
           </div>
         </div>
       </div>
