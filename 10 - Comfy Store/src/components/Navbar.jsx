@@ -51,7 +51,7 @@ function Navbar() {
           </div>
 
           <div className="menu flex justify-between items-center ">
-            {isMobile && (
+            {!isMobile && (
               <nav
                 className={`bg-base-200 w-52 h-19.5vh rounded-2xl p-2 flex flex-col transition-all duration-500 ease-in-out fixed top-28 left-5 lg:flex-row lg:h-auto lg:w-auto lg:gap-4 lg:static lg:left-auto lg:top-auto `}>
                 <NavLink

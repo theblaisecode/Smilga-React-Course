@@ -54,7 +54,9 @@ function Login() {
             </label>
 
             <div className="loginFormButtons flex flex-col justify-center items-center gap-3 mt-6 text-neutral ">
-              <button className="btn bg-primary text-accent-content btn-block uppercase">
+              <button
+                type="submit"
+                className="btn bg-primary text-accent-content btn-block uppercase">
                 Login
               </button>
 
