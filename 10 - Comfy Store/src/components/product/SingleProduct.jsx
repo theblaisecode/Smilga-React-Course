@@ -1,6 +1,8 @@
 import { Link, useLoaderData } from "react-router-dom";
 import { customFetch, formatPrice } from "../../utils";
 import { useState } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { changeColor } from "../../reduxToolkit/productColor";
 
 export const singleProductLoader = async ({ params }) => {
   const res = await customFetch(`products/${params.id}`);
@@ -12,7 +14,9 @@ function SingleProduct() {
   const { image, title, price, description, colors, company } =
     product.attributes;
   const dollarsAmount = formatPrice(price);
-  const [productColor, setProductColor] = useState(colors[0]);
+  const dispatch = useDispatch();
+  const productColor = useSelector((state) => state.color.color) || colors[0];
+
   const [amount, setAmount] = useState(1);
 
   return (
@@ -51,17 +55,16 @@ function SingleProduct() {
             </h4>
 
             <div className="mt-2">
-              {colors.map((color) => {
-                return (
-                  <button
-                    key={color}
-                    type="button"
-                    className={`badge w-6 h-6 mr-2 ${
-                      color === productColor && "border-2 border-secondary"
-                    }`}
-                    style={{ backgroundColor: `${color}` }}></button>
-                );
-              })}
+              {colors.map((color) => (
+                <button
+                  key={color}
+                  type="button"
+                  className={`badge w-6 h-6 mr-2 ${
+                    color === productColor && "border-2 border-secondary"
+                  }`}
+                  style={{ backgroundColor: color }}
+                  onClick={() => dispatch(changeColor(color))}></button>
+              ))}
             </div>
 
             <div className="form-control w-full max-w-xs">
@@ -72,31 +75,20 @@ function SingleProduct() {
               </label>
               <select
                 className="select select-secondary select-bordered select-md"
-                id="amount">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-                <option value="7">7</option>
-                <option value="8">8</option>
-                <option value="9">9</option>
-                <option value="10">10</option>
-                <option value="11">11</option>
-                <option value="12">12</option>
-                <option value="13">13</option>
-                <option value="14">14</option>
-                <option value="15">15</option>
-                <option value="16">16</option>
-                <option value="17">17</option>
-                <option value="18">18</option>
-                <option value="19">19</option>
-                <option value="20">20</option>
+                id="amount"
+                value={amount}
+                onChange={(e) => setAmount(parseInt(e.target.value))}>
+                {[...Array(20).keys()].map((i) => (
+                  <option key={i + 1} value={i + 1}>
+                    {i + 1}
+                  </option>
+                ))}
               </select>
             </div>
             <div className="mt-10">
-              <button className="btn btn-secondary btn-md">Add to bag</button>
+              <button className="btn btn-secondary btn-md uppercase">
+                Add to bag
+              </button>
             </div>
           </div>
         </div>
@@ -104,4 +96,5 @@ function SingleProduct() {
     </>
   );
 }
+
 export default SingleProduct;
