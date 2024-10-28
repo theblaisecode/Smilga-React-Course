@@ -1,7 +1,11 @@
+import { useSelector } from "react-redux";
 import logo from "../assets/logo.png";
 import aboutImg from "../assets/about.webp";
 
 function About() {
+  const { themeMode } = useSelector((state) => state.themeMode);
+  console.log(themeMode);
+
   return (
     <section className="about px-4 flex flex-col gap-9">
       <div className="contentTop">
@@ -12,7 +16,11 @@ function About() {
 
           <div className="stats bg-primary shadow">
             <div className="p-2">
-              <img src={logo} alt="Comfy Stores Logo" className="" />
+              <img
+                src={logo}
+                alt="Comfy Stores Logo"
+                style={{ filter: themeMode ? "brightness(20%)" : "none" }}
+              />
             </div>
           </div>
         </div>
