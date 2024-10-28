@@ -2,7 +2,7 @@ import { Link, useLoaderData } from "react-router-dom";
 import { customFetch, formatPrice } from "../../utils";
 import { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { changeColor } from "../../reduxToolkit/productColor";
+import { changeColor } from "../../reduxToolkit/product/productColor";
 
 export const singleProductLoader = async ({ params }) => {
   const res = await customFetch(`products/${params.id}`);
