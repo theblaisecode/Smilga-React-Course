@@ -9,6 +9,7 @@ import Register from "./pages/Auth/Register";
 import Checkout from "./pages/Checkout";
 import Orders from "./pages/Orders";
 import Error from "./pages/Error";
+import SingleProduct from "./components/product/SingleProduct";
 
 const router = createBrowserRouter([
   {
@@ -27,6 +28,10 @@ const router = createBrowserRouter([
       {
         path: "products",
         element: <Products />,
+      },
+      {
+        path: "products/:id",
+        element: <SingleProduct />,
       },
       {
         path: "cart",
