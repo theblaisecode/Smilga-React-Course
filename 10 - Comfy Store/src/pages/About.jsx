@@ -4,7 +4,6 @@ import aboutImg from "../assets/about.webp";
 
 function About() {
   const { themeMode } = useSelector((state) => state.themeMode);
-  console.log(themeMode);
 
   return (
     <section className="about px-4 flex flex-col gap-9">
