@@ -1,10 +1,9 @@
-// const url = ""
+import ProductGrid from "./ProductGrid";
 
 function AllProducts() {
   return (
     <div>
-      ProductContainer
-      {/* <ProductGrid /> */}
+      <ProductGrid />
     </div>
   );
 }

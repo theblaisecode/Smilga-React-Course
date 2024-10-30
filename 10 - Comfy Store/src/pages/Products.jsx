@@ -5,9 +5,10 @@ import ProductFilter from "../components/product/ProductFilter";
 
 export const productLoader = async () => {
   const res = await customFetch("/products");
-  const allProducts = res.data.data;
-  console.log(allProducts);
-  return { allProducts };
+  const products = res.data.data;
+  const meta = res.data.meta;
+  console.log(products);
+  return { products, meta };
 };
 
 function Products() {
