@@ -5,8 +5,9 @@ function AllProducts() {
   return (
     <div>
       <ProductList />
-      
+
       <ProductGrid />
+      
     </div>
   );
 }
