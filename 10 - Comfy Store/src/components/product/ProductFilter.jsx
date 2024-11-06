@@ -67,7 +67,7 @@ function ProductFilter() {
         search
       </button>
 
-      <Link to="products" className="btn btn-secondary btn-sm">
+      <Link to="." className="btn btn-secondary btn-sm">
         reset
       </Link>
     </Form>
