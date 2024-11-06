@@ -9,10 +9,7 @@ function ProductFilter() {
   const { search, company, category, shipping, order, price } = params;
 
   return (
-    <Form
-      method="GET"
-      action="products"
-      className="bg-base-200 rounded-md px-8 py-4 grid gap-x-4 gap-y-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 items-center">
+    <Form className="bg-base-200 rounded-md px-8 py-4 grid gap-x-4 gap-y-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 items-center">
       {/* Search */}
       <FormInput
         type="search"
@@ -44,7 +41,7 @@ function ProductFilter() {
       <FormSelect
         label="sort by"
         name="order"
-        list={["a - z", "z - a", "high - low", "low - high"]}
+        list={["a-z", "z-a", "high", "low"]}
         size="select-sm"
         defaultValue={order}
       />
