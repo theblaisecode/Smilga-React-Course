@@ -1,6 +1,7 @@
 import { useLoaderData, Form, Link } from "react-router-dom";
 import FormInput from "./FormInput";
 import FormSelect from "./FormSelect";
+import FormRange from "./FormRange";
 
 function ProductFilter() {
   const { meta } = useLoaderData();
@@ -41,6 +42,9 @@ function ProductFilter() {
         list={["a - z", "z - a", "high - low", "low - high"]}
         size="select-sm"
       />
+
+      {/* Price */}
+      <FormRange name="price" label="select price" size="range-sm"  />
 
       {/* Buttons */}
       <button type="submit" className="btn btn-primary btn-sm">
