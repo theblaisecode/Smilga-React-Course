@@ -9,7 +9,7 @@ export const productLoader = async ({ request }) => {
   ]);
   const search = params.get("search");
 
-  const res = await customFetch("/products");
+  const res = await customFetch("/products", { params });
   const products = res.data.data;
   const meta = res.data.meta;
   return { products, meta };
