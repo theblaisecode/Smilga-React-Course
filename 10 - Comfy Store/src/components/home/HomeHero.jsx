@@ -42,4 +42,5 @@ function HomeHero() {
     </div>
   );
 }
+
 export default HomeHero;
