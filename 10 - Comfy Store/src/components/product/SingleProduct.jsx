@@ -27,6 +27,8 @@ function SingleProduct() {
     title,
     price,
     company,
+    color,
+    itemAmount,
   };
 
   const addToCart = () => {
