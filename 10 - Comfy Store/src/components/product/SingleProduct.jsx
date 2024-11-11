@@ -3,6 +3,7 @@ import { customFetch, formatPrice } from "../../utils";
 import { useSelector, useDispatch } from "react-redux";
 import { changeColor } from "../../reduxToolkit/product/productColorSlice";
 import { isItemAmount } from "../../reduxToolkit/product/productItemAmountSlice";
+import { addItem } from "../../reduxToolkit/cart/cartSlice";
 
 // Fetch single product data
 export const singleProductLoader = async ({ params }) => {
@@ -12,12 +13,26 @@ export const singleProductLoader = async ({ params }) => {
 
 function SingleProduct() {
   const { product } = useLoaderData();
-  const { image, title, price, description, colors, company } = product.attributes;
+  const { image, title, price, description, colors, company } =
+    product.attributes;
   const dollarsAmount = formatPrice(price);
 
   // Redux selectors and dispatch
   const { color } = useSelector((state) => state.color) || { color: colors[0] };
   const { itemAmount } = useSelector((state) => state.itemAmount);
+  const cartProduct = {
+    cartID: product.id + color,
+    productID: product.id,
+    image,
+    title,
+    price,
+    company,
+  };
+
+  const addToCart = () => {
+    dispatch(addItem({ product: cartProduct }));
+  };
+
   const dispatch = useDispatch();
 
   return (
@@ -87,7 +102,9 @@ function SingleProduct() {
             </div>
 
             <div className="mt-10">
-              <button className="btn btn-secondary btn-md uppercase">
+              <button
+                className="btn btn-secondary btn-md uppercase"
+                onClick={addToCart}>
                 Add to bag
               </button>
             </div>

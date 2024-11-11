@@ -11,6 +11,6 @@ export const store = configureStore({
     themeMode: themeReducer,
     color: colorReducer,
     itemAmount: itemAmountReducer,
-    cartState: cartReducer,
+    cart: cartReducer,
   },
 });
