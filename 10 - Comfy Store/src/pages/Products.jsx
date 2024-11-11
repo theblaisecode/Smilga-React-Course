@@ -1,8 +1,9 @@
+import Pagination from "../components/Pagination";
 import AllProducts from "../components/product/AllProducts";
-import { customFetch } from "../utils";
-import Pagination from "../components/product/Pagination";
 import ProductFilter from "../components/product/ProductFilter";
+import { customFetch } from "../utils";
 const url = "products";
+
 
 export const productLoader = async ({ request }) => {
   const params = Object.fromEntries([
@@ -21,7 +22,7 @@ function Products() {
       <div className="">
         <ProductFilter />
         <AllProducts />
-        <Pagination />
+        <Pagination/>
       </div>
     </section>
   );
