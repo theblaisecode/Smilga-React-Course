@@ -31,4 +31,5 @@ function FormRange({ label, name, size, price }) {
     </div>
   );
 }
+
 export default FormRange;
