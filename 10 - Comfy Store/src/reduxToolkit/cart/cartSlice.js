@@ -29,7 +29,7 @@ const cartSlice = createSlice({
       if (typeof product.amount === "number") {
         state.numItemsInCart += product.amount;
       } else {
-        state.numItemsInCart += 1; 
+        state.numItemsInCart += 1;
       }
 
       state.cartTotal += product.price * product.amount;
