@@ -1,4 +1,4 @@
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 import { FaBarsStaggered } from "react-icons/fa6";
 import { BsSunFill, BsMoonFill } from "react-icons/bs";
 
@@ -8,20 +8,22 @@ import { useDispatch, useSelector } from "react-redux";
 import { isMobile } from "../reduxToolkit/mobileMenu/mobileMenuSlice";
 import { isDarkMode } from "../reduxToolkit/darkMode/darkModeSlice";
 import logo from "../assets/logo.png";
-
-const navLinks = [
-  { path: "/", label: "Home" },
-  { path: "about", label: "About" },
-  { path: "products", label: "Products" },
-  { path: "cart", label: "Cart" },
-];
+import NavLinks from "./NavLinks";
+import { useEffect } from "react";
 
 function Navbar() {
   const { mobileMenu } = useSelector((state) => state.mobileMenu);
   const { themeMode } = useSelector((state) => state.themeMode);
   const numItemsInCart = useSelector((state) => state.cartState.numItemsInCart);
-  console.log("numItemsInCart:", numItemsInCart);
   const dispatch = useDispatch();
+  const location = useLocation();
+
+  // Close mobile menu on route change
+  useEffect(() => {
+    if (mobileMenu) {
+      dispatch(isMobile());
+    }
+  }, [location.pathname]); // Only run when the path changes
 
   return (
     <header className="bg-base-200 py-1">
@@ -50,22 +52,10 @@ function Navbar() {
 
           <div className="menu flex justify-between items-center">
             <nav
-              className={`bg-base-200 w-52 h-19.5vh rounded-2xl p-2 flex flex-col transition-all duration-500 ease-in-out fixed top-28 left-5 lg:flex-row lg:h-auto lg:w-auto lg:gap-4 lg:static lg:left-auto lg:top-auto ${
+              className={`bg-base-200 w-52 rounded-2xl p-2 flex flex-col transition-all duration-500 ease-in-out fixed top-28 left-5 lg:flex-row lg:h-auto lg:w-auto lg:gap-4 lg:static lg:left-auto lg:top-auto ${
                 mobileMenu ? "block" : "hidden"
               } lg:block`}>
-              {navLinks.map(({ path, label }) => (
-                <NavLink
-                  key={path}
-                  to={path}
-                  aria-label={`Link to ${label} page`}
-                  className={({ isActive }) =>
-                    isActive
-                      ? "activeStyle py-2 px-4 lg:p-4 capitalize"
-                      : "py-2 px-4 lg:p-4 capitalize"
-                  }>
-                  {label}
-                </NavLink>
-              ))}
+              <NavLinks />
             </nav>
           </div>
 
