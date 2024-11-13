@@ -28,7 +28,7 @@ function SingleProduct() {
     price,
     company,
     color,
-    itemAmount,
+    amount: itemAmount,
   };
 
   const addToCart = () => {
