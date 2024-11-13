@@ -43,10 +43,13 @@ const cartSlice = createSlice({
       toast.success("Item added to cart");
     },
     clearCart: (state) => {
-      console.log("lol");
+      localStorage.setItem("cart", JSON.stringify(initialState));
+      return initialState;
     },
     removeItem: (state, action) => {
-      console.log("lol");
+      const { cartID } = action.payload;
+      const product = state.cartItems.find((i) => i.cartID === cartID);
+      state.cartItems = state.cartItems.filter((i) => i.cartID !== cartID);
     },
     editItem: (state, action) => {
       console.log("lol");
