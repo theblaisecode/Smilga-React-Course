@@ -14,17 +14,20 @@
   box-sizing: border-box;
 }
 
-
 .activeStyle {
 }
 
 .activeStyle,
 nav a:hover {
   background: #2a323c;
-  /* padding: 0.6rem 1rem; */
   border-radius: 0.5rem;
 }
 
-nav a:hover {
-  background: #494948;
+/* Add these new rules */
+[data-theme="winter"] .activeStyle {
+  color: white;
+}
+
+[data-theme="winter"] nav a:hover {
+  color: white;
 }

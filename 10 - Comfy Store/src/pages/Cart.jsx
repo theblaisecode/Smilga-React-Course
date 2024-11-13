@@ -22,6 +22,15 @@ function Cart() {
 
         <div className="lg:col-span-4">
           <CartTotals />
+          {user ? (
+            <Link to="/checkout" className="btn btn-primary btn-block mt-8">
+              Proceed to checkout
+            </Link>
+          ) : (
+            <Link to="/login" className="btn btn-primary btn-block mt-8">
+              Please login
+            </Link>
+          )}
         </div>
       </div>
     </section>
