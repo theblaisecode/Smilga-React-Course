@@ -18,7 +18,7 @@ function UserTab() {
     <div className="bg-neutral py-3 px-4 text-neutral-content">
       <div className="mx-auto max-w-6xl px-8">
         {user ? (
-          <div className="userTab flex justify-center gap-5 text-sm md:justify-end flex gap-x-2 sm:gap-x-8 items-center">
+          <div className="userTab justify-center gap-5 text-sm md:justify-end flex gap-x-2 sm:gap-x-8 items-center">
             <p className="text-sm sm:text-sm">Hello, {user.username}</p>
 
             <button

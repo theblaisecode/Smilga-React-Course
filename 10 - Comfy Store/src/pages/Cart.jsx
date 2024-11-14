@@ -5,7 +5,8 @@ import Heading from "../components/Heading";
 import { Link } from "react-router-dom";
 
 function Cart() {
-  const user = null;
+  const user = useSelector((state) => state.userState.user);
+
   const numItemsInCart = useSelector((state) => state.cartState.numItemsInCart);
 
   if (numItemsInCart === 0) {

@@ -1,4 +1,4 @@
-// import { useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
 
 const navLinks = [
@@ -11,22 +11,28 @@ const navLinks = [
 ];
 
 const NavLinks = () => {
-  // const user = useSelector((state) => state.userState.user);
+  const user = useSelector((state) => state.userState.user);
+
   return (
     <>
-      {navLinks.map(({ id, url, text }) => (
-        <NavLink
-          key={id}
-          to={url}
-          aria-label={`Link to ${text} page`}
-          className={({ isActive }) =>
-            isActive
-              ? "activeStyle py-2 px-4 lg:p-4 capitalize"
-              : "py-2 px-4 lg:p-4 capitalize"
-          }>
-          {text}
-        </NavLink>
-      ))}
+      {navLinks.map((item) => {
+        const { id, url, text } = item;
+        if (url === "checkout" || (url === "orders" && !user)) return null;
+
+        return (
+          <NavLink
+            key={id}
+            to={url}
+            aria-label={`Link to ${text} page`}
+            className={({ isActive }) =>
+              isActive
+                ? "activeStyle py-2 px-4 lg:p-4 capitalize"
+                : "py-2 px-4 lg:p-4 capitalize"
+            }>
+            {text}
+          </NavLink>
+        );
+      })}
     </>
   );
 };
