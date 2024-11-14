@@ -1,15 +1,40 @@
-import { Form, Link } from "react-router-dom";
+import { Form, Link, redirect, useNavigate } from "react-router-dom";
+import { customFetch } from "../../utils";
+import { toast } from "react-toastify";
+import { useDispatch } from "react-redux";
+import { loginUser } from "../../reduxToolkit/user/userSlice";
+
+export const loginAction =
+  (store) =>
+  async ({ request }) => {
+    const formData = await request.formData();
+    const data = Object.fromEntries(formData);
+
+    try {
+      const response = await customFetch.post("/auth/local", data);
+
+      store.dispatch(loginUser(response.data))
+      toast.success("Logged in successfully");
+      return redirect("/");
+    } catch (error) {
+      const errorMessage =
+        error?.response?.data?.error?.message ||
+        "Please double check your credentials";
+      toast.error(errorMessage);
+      return null;
+    }
+  };
 
 function Login() {
   return (
     <section className="login px-4">
-      <div className="flex justify-center items-center h-screen	">
+      <div className="flex justify-center items-center h-screen">
         <div className="card bg-base-100 w-96 shadow-xl">
-          <Form method="POST" action="login" className="card-body">
+          <Form method="POST" action="/login" className="card-body">
             <h4 className="text-center text-3xl font-bold mb-6">Login</h4>
 
             <label
-              htmlFor="email"
+              htmlFor="identifier"
               className="input input-bordered flex items-center gap-2 mb-3">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -22,8 +47,8 @@ function Login() {
 
               <input
                 type="email"
-                name="email"
-                id="email"
+                name="identifier"
+                id="identifier"
                 placeholder="Email"
                 className="grow"
               />
@@ -53,7 +78,7 @@ function Login() {
               />
             </label>
 
-            <div className="loginFormButtons flex flex-col justify-center items-center gap-3 mt-6 text-neutral ">
+            <div className="loginFormButtons flex flex-col justify-center items-center gap-3 mt-6 text-neutral">
               <button
                 type="submit"
                 className="btn bg-primary text-accent-content btn-block uppercase">
@@ -65,7 +90,7 @@ function Login() {
               </button>
             </div>
 
-            <p className="text-center mt-6 ">
+            <p className="text-center mt-6">
               Not a member yet?
               <Link to="/register" className="text-accent ml-2">
                 Register
@@ -77,4 +102,5 @@ function Login() {
     </section>
   );
 }
+
 export default Login;

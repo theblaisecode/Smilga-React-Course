@@ -4,7 +4,7 @@ import Home, { homeLoader } from "./pages/Home";
 import About from "./pages/About";
 import Products from "./pages/Products";
 import Cart from "./pages/Cart";
-import Login from "./pages/Auth/Login";
+import Login, { loginAction } from "./pages/Auth/Login";
 import Register, { registerAction } from "./pages/Auth/Register";
 import Checkout from "./pages/Checkout";
 import Orders from "./pages/Orders";
@@ -13,6 +13,8 @@ import SingleProduct, {
   singleProductLoader,
 } from "./components/product/SingleProduct";
 import { productLoader } from "./pages/Products";
+
+import { store } from "./reduxToolkit/store.js";
 
 const router = createBrowserRouter([
   {
@@ -57,6 +59,7 @@ const router = createBrowserRouter([
     path: "/login",
     element: <Login />,
     errorElement: <Error />,
+    action: loginAction(store),
   },
   {
     path: "/register",
