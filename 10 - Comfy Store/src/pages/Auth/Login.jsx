@@ -67,7 +67,7 @@ function Login() {
 
             <p className="text-center mt-6 ">
               Not a member yet?
-              <Link to="register" className="text-accent ml-2">
+              <Link to="/register" className="text-accent ml-2">
                 Register
               </Link>
             </p>
