@@ -1,4 +1,23 @@
-import { Form, Link } from "react-router-dom";
+import { Form, Link, redirect } from "react-router-dom";
+import { customFetch } from "../../utils";
+import { toast } from "react-toastify";
+
+export const registerAction = async ({ request }) => {
+  const formData = await request.formData();
+  const data = Object.fromEntries(formData);
+
+  try {
+    const response = await customFetch.post("/auth/local/register", data);
+    toast.success("Account created successfully");
+    return redirect("/login");
+  } catch (error) {
+    const errorMessage =
+      error?.response?.data?.error?.message ||
+      "Please double check your credentials";
+    toast.error(errorMessage);
+    return null;
+  }
+};
 
 function Register() {
   return (
@@ -6,7 +25,7 @@ function Register() {
       <section className="register px-4">
         <div className="flex justify-center items-center h-screen	">
           <div className="card bg-base-100 w-96 shadow-xl">
-            <Form method="POST" action="register" className="card-body">
+            <Form method="POST" action="/register" className="card-body">
               <h4 className="text-center text-3xl font-bold mb-6">Register</h4>
               <label
                 htmlFor="username"
@@ -81,7 +100,7 @@ function Register() {
 
               <p className="text-center mt-6 ">
                 Already a member?
-                <Link to="login" className="text-accent ml-2">
+                <Link to="/login" className="text-accent ml-2">
                   Login
                 </Link>
               </p>

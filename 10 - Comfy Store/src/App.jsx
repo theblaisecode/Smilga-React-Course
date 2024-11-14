@@ -5,7 +5,7 @@ import About from "./pages/About";
 import Products from "./pages/Products";
 import Cart from "./pages/Cart";
 import Login from "./pages/Auth/Login";
-import Register from "./pages/Auth/Register";
+import Register, { registerAction } from "./pages/Auth/Register";
 import Checkout from "./pages/Checkout";
 import Orders from "./pages/Orders";
 import Error from "./pages/Error";
@@ -54,14 +54,15 @@ const router = createBrowserRouter([
     ],
   },
   {
-    path: "login",
+    path: "/login",
     element: <Login />,
     errorElement: <Error />,
   },
   {
-    path: "register",
+    path: "/register",
     element: <Register />,
     errorElement: <Error />,
+    action: registerAction,
   },
 ]);
 
