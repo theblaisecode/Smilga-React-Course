@@ -6,7 +6,7 @@ import Products from "./pages/Products";
 import Cart from "./pages/Cart";
 import Login, { loginAction } from "./pages/Auth/Login";
 import Register, { registerAction } from "./pages/Auth/Register";
-import Checkout from "./pages/Checkout";
+import Checkout, { checkoutLoader } from "./pages/Checkout";
 import Orders from "./pages/Orders";
 import Error from "./pages/Error";
 import SingleProduct, {
@@ -48,6 +48,7 @@ const router = createBrowserRouter([
       {
         path: "checkout",
         element: <Checkout />,
+        loader: checkoutLoader(store),
       },
       {
         path: "order",
