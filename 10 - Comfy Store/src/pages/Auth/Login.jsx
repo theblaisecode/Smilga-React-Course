@@ -13,7 +13,7 @@ export const loginAction =
     try {
       const response = await customFetch.post("/auth/local", data);
 
-      store.dispatch(loginUser(response.data))
+      store.dispatch(loginUser(response.data));
       toast.success("Logged in successfully");
       return redirect("/");
     } catch (error) {
@@ -26,6 +26,24 @@ export const loginAction =
   };
 
 function Login() {
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+  const loginAsGuest = async () => {
+    try {
+      const response = await customFetch.post("/auth/local", {
+        identifier: "test@test.com",
+        password: "secret",
+      });
+      dispatch(loginUser(response.data));
+      toast.success("Welcome Guest User");
+      navigate("/");
+    } catch (error) {
+      console.log(error)
+      toast.error("Guest User login error, please try again");
+    }
+  };
+
   return (
     <section className="login px-4">
       <div className="flex justify-center items-center h-screen">
@@ -85,7 +103,9 @@ function Login() {
                 Login
               </button>
 
-              <button className="btn bg-accent text-secondary-content btn-block uppercase">
+              <button
+                className="btn bg-accent text-secondary-content btn-block uppercase"
+                onClick={loginAsGuest}>
                 Guest User
               </button>
             </div>
@@ -96,6 +116,22 @@ function Login() {
                 Register
               </Link>
             </p>
+
+            <div className="mt-3 flex gap-3">
+              <p className="text-center">
+                Email:
+                <Link to="/register" className="ml-2">
+                  test@test.com
+                </Link>
+              </p>
+
+              <p className="text-center">
+                Password:
+                <Link to="/register" className="ml-2">
+                  secret
+                </Link>
+              </p>
+            </div>
           </Form>
         </div>
       </div>
