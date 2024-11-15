@@ -15,6 +15,7 @@ import SingleProduct, {
 import { productLoader } from "./pages/Products";
 
 import { store } from "./reduxToolkit/store.js";
+import { checkoutFormAction } from "./components/checkout/CheckoutForm.jsx";
 
 const router = createBrowserRouter([
   {
@@ -49,6 +50,7 @@ const router = createBrowserRouter([
         path: "checkout",
         element: <Checkout />,
         loader: checkoutLoader(store),
+        action: checkoutFormAction(store)
       },
       {
         path: "order",
