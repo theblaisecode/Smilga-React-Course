@@ -7,7 +7,7 @@ import Cart from "./pages/Cart";
 import Login, { loginAction } from "./pages/Auth/Login";
 import Register, { registerAction } from "./pages/Auth/Register";
 import Checkout, { checkoutLoader } from "./pages/Checkout";
-import Orders from "./pages/Orders";
+import Orders, { orderLoader } from "./pages/Orders";
 import Error from "./pages/Error";
 import SingleProduct, {
   singleProductLoader,
@@ -50,11 +50,12 @@ const router = createBrowserRouter([
         path: "checkout",
         element: <Checkout />,
         loader: checkoutLoader(store),
-        action: checkoutFormAction(store)
+        action: checkoutFormAction(store),
       },
       {
         path: "order",
         element: <Orders />,
+        loader: orderLoader,
       },
     ],
   },
