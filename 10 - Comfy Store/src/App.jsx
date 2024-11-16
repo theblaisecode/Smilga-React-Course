@@ -53,7 +53,7 @@ const router = createBrowserRouter([
         action: checkoutFormAction(store),
       },
       {
-        path: "order",
+        path: "orders",
         element: <Orders />,
         loader: orderLoader(store),
       },
