@@ -3,9 +3,7 @@ import { useLoaderData, useLocation, useNavigate } from "react-router-dom";
 function ComplexPagination() {
   const { meta } = useLoaderData();
   const { pageCount, page } = meta.pagination;
-
   const { search, pathname } = useLocation();
-
   const navigate = useNavigate();
 
   const pageChange = (pageNumber) => {
@@ -21,11 +19,7 @@ function ComplexPagination() {
         className={`btn btn-xs sm:btn-md border-none join-item ${
           activeClass ? "bg-base-300 border-base-300" : ""
         }`}
-        onClick={() => {
-          let nextPage = page + 1;
-          if (nextPage > pageCount) nextPage = 1;
-          pageChange(nextPage);
-        }}>
+        onClick={() => pageChange(pageNumber)}>
         {pageNumber}
       </button>
     );
@@ -33,6 +27,38 @@ function ComplexPagination() {
 
   const renderPageButtons = () => {
     const pageButtons = [];
+
+    // first button
+    pageButtons.push(addPageButton({ pageNumber: 1, activeClass: page === 1 }));
+
+    // dots
+    if (page > 2) {
+      pageButtons.push(
+        <button key="dots-1" className="join-item btn btn-xs sm:btn-md">
+          ...
+        </button>
+      );
+    }
+
+    // active/current page
+    if (page !== 1 && page !== pageCount) {
+      pageButtons.push(addPageButton({ pageNumber: page, activeClass: true }));
+    }
+
+    // dots
+    if (page < pageCount - 1) {
+      pageButtons.push(
+        <button key="dots-2" className="join-item btn btn-xs sm:btn-md">
+          ...
+        </button>
+      );
+    }
+
+    // last button
+    pageButtons.push(
+      addPageButton({ pageNumber: pageCount, activeClass: page === pageCount })
+    );
+
     return pageButtons;
   };
 
@@ -58,7 +84,9 @@ function ComplexPagination() {
         <button
           className="btn btn-xs sm:btn-md join-item"
           onClick={() => {
-            pageChange("next");
+            let nextPage = page + 1;
+            if (nextPage > pageCount) nextPage = 1;
+            pageChange(nextPage);
           }}>
           Next
         </button>
