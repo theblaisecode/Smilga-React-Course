@@ -4,9 +4,12 @@ import { customFetch } from "../utils";
 import Heading from "../components/Heading";
 import Pagination from "../components/Pagination";
 
-export const orderLoader = (store) => async({request}) => {
-  return null
-} 
+export const orderLoader =
+  (store) =>
+  async ({ request }) => {
+    console.log(store);
+    return null;
+  };
 
 function Orders() {
   return (
