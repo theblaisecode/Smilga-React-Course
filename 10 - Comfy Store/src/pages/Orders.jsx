@@ -2,8 +2,8 @@ import { redirect, useLoaderData } from "react-router-dom";
 import { toast } from "react-toastify";
 import { customFetch } from "../utils";
 import Heading from "../components/Heading";
-import Pagination from "../components/Pagination";
 import OrderList from "../components/orders/OrderList";
+import ComplexPagination from "../components/ComplexPagination";
 
 export const orderLoader =
   (store) =>
@@ -50,7 +50,7 @@ function Orders() {
     <section className="orders px-4">
       <Heading text="Your Orders" />
       <OrderList />
-      <Pagination />
+      <ComplexPagination />
     </section>
   );
 }
