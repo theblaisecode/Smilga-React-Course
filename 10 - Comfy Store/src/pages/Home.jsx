@@ -6,10 +6,9 @@ import ProductGrid from "../components/product/ProductGrid";
 
 const url = "/products?featured=true";
 
-export const homeLoader = async () => {
+export const homeLoader = (queryCLient) => async () => {
   const res = await customFetch(url);
   const products = res.data.data;
-  // console.log({ data });
   return { products };
 };
 

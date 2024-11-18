@@ -5,7 +5,7 @@ import { customFetch } from "../utils";
 const url = "products";
 
 
-export const productLoader = async ({ request }) => {
+export const productLoader = (queryCLient) => async ({ request }) => {
   const params = Object.fromEntries([
     ...new URL(request.url).searchParams.entries(),
   ]);

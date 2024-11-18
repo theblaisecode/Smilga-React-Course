@@ -6,10 +6,12 @@ import { isItemAmount } from "../../reduxToolkit/product/productItemAmountSlice"
 import { addItem } from "../../reduxToolkit/cart/cartSlice";
 
 // Fetch single product data
-export const singleProductLoader = async ({ params }) => {
-  const res = await customFetch(`products/${params.id}`);
-  return { product: res.data.data };
-};
+export const singleProductLoader =
+  (queryCLient) =>
+  async ({ params }) => {
+    const res = await customFetch(`products/${params.id}`);
+    return { product: res.data.data };
+  };
 
 function SingleProduct() {
   const { product } = useLoaderData();

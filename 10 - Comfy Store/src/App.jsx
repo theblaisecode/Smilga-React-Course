@@ -17,7 +17,7 @@ import { productLoader } from "./pages/Products";
 import { store } from "./reduxToolkit/store.js";
 import { checkoutFormAction } from "./components/checkout/CheckoutForm.jsx";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { ReactQueryDevTools } from "@tanstack/react-query-devtools";
+import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -87,7 +87,7 @@ function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <RouterProvider router={router} />
-      <ReactQueryDevTools initialIsOpen={false} />
+      <ReactQueryDevtools initialIsOpen={false} />
     </QueryClientProvider>
   );
 }
