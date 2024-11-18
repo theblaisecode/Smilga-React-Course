@@ -5,7 +5,7 @@ import { clearCart } from "../../reduxToolkit/cart/cartSlice";
 import { toast } from "react-toastify";
 
 export const checkoutFormAction =
-  (store) =>
+  (store, queryClient) =>
   async ({ request }) => {
     const formData = await request.formData();
     const { name, address } = Object.fromEntries(formData);
@@ -33,6 +33,7 @@ export const checkoutFormAction =
           },
         }
       );
+      queryClient.removeQueries(["orders"]);
       store.dispatch(clearCart());
       toast.success("order placed successfully");
       return redirect("/orders");
