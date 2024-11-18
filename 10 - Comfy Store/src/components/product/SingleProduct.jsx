@@ -5,11 +5,18 @@ import { changeColor } from "../../reduxToolkit/product/productColorSlice";
 import { isItemAmount } from "../../reduxToolkit/product/productItemAmountSlice";
 import { addItem } from "../../reduxToolkit/cart/cartSlice";
 
+const singleProductQuery = (id) => {
+  return {
+    queryKey: ["singleProduct", id],
+    queryFn: () => customFetch(`products/${id}`),
+  };
+};
+
 // Fetch single product data
 export const singleProductLoader =
-  (queryCLient) =>
+  (queryCient) =>
   async ({ params }) => {
-    const res = await customFetch(`products/${params.id}`);
+    const res = await queryCient.ensureQueryData(singleProductQuery(params.id));
     return { product: res.data.data };
   };
 

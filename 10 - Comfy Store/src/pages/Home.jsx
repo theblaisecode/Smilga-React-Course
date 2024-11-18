@@ -10,8 +10,8 @@ const featuredProductsQuery = {
   queryFn: () => customFetch(url),
 };
 
-export const homeLoader = (queryCLient) => async () => {
-  const res = await queryCLient.ensureQueryData(featuredProductsQuery);
+export const homeLoader = (queryClient) => async () => {
+  const res = await queryClient.ensureQueryData(featuredProductsQuery);
   const products = res.data.data;
   return { products };
 };

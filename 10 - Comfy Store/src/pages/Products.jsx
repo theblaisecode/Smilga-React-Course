@@ -5,16 +5,18 @@ import { customFetch } from "../utils";
 const url = "products";
 
 
-export const productLoader = (queryCLient) => async ({ request }) => {
-  const params = Object.fromEntries([
-    ...new URL(request.url).searchParams.entries(),
-  ]);
+export const productLoader =
+  (queryClient) =>
+  async ({ request }) => {
+    const params = Object.fromEntries([
+      ...new URL(request.url).searchParams.entries(),
+    ]);
 
-  const res = await customFetch(url, { params });
-  const products = res.data.data;
-  const meta = res.data.meta;
-  return { products, meta, params };
-};
+    const res = await customFetch(url, { params });
+    const products = res.data.data;
+    const meta = res.data.meta;
+    return { products, meta, params };
+  };
 
 function Products() {
   return (
