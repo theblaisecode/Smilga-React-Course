@@ -42,11 +42,7 @@ function Pagination() {
               className={`btn btn-xs sm:btn-md border-none join-item ${
                 pageNumber === page ? "bg-base-300 border-base-300" : ""
               }`}
-              onClick={() => {
-                let nextPage = page + 1;
-                if (nextPage > pageCount) nextPage = 1;
-                pageChange(nextPage);
-              }}>
+              onClick={() => pageChange(pageNumber)}>
               {pageNumber}
             </button>
           );
@@ -55,7 +51,9 @@ function Pagination() {
         <button
           className="btn btn-xs sm:btn-md join-item"
           onClick={() => {
-            pageChange("next");
+            let nextPage = page + 1;
+            if (nextPage > pageCount) nextPage = 1;
+            pageChange(nextPage);
           }}>
           Next
         </button>
@@ -63,4 +61,5 @@ function Pagination() {
     </div>
   );
 }
+
 export default Pagination;

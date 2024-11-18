@@ -1,4 +1,3 @@
-
 import Heading from "../components/Heading";
 import HomeHero from "../components/home/HomeHero";
 import { customFetch } from "../utils";
@@ -6,14 +5,18 @@ import ProductGrid from "../components/product/ProductGrid";
 
 const url = "/products?featured=true";
 
+const featuredProductsQuery = {
+  queryKey: ["featuredProducts"],
+  queryFn: () => customFetch(url),
+};
+
 export const homeLoader = (queryCLient) => async () => {
-  const res = await customFetch(url);
+  const res = await queryCLient.ensureQueryData(featuredProductsQuery);
   const products = res.data.data;
   return { products };
 };
 
 function Home() {
-
   return (
     <section className="">
       <div className="">
@@ -22,7 +25,7 @@ function Home() {
         <div className="featuredProducts pt-24">
           <Heading text="Featured Products" />
 
-          <ProductGrid/>
+          <ProductGrid />
         </div>
       </div>
     </section>
