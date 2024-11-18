@@ -5,8 +5,25 @@ import Heading from "../components/Heading";
 import OrderList from "../components/orders/OrderList";
 import ComplexPagination from "../components/ComplexPagination";
 
+const ordersQuery = (params, user) => {
+  return {
+    queryKey: [
+      "orders",
+      user.username,
+      params.page ? parseInt(params.page) : 1,
+    ],
+    queryFn: () =>
+      customFetch.get("/orders", {
+        params,
+        headers: {
+          Authorization: `Bearer ${user.token}`,
+        },
+      }),
+  };
+};
+
 export const orderLoader =
-  (store) =>
+  (store, queryClient) =>
   async ({ request }) => {
     const user = store.getState().userState.user;
 
@@ -20,21 +37,17 @@ export const orderLoader =
     ]);
 
     try {
-      const response = await customFetch.get("/orders", {
-        params,
-        headers: {
-          Authorization: `Bearer ${user.token}`,
-        },
-      });
-      console.log(response);
+      const response = await queryClient.ensureQueryData(
+        ordersQuery(params, user)
+      );
+
       return { orders: response.data.data, meta: response.data.meta };
     } catch (error) {
-      console.log(error);
       const errorMessage =
         error?.response?.data?.error?.message ||
         "there was an error placing your order";
       toast.error(errorMessage);
-      if (error.response.status === 401 || error.response.status === 403)
+      if (error?.response?.status === 401 || error?.response?.status === 403)
         return redirect("/login");
       return null;
     }
