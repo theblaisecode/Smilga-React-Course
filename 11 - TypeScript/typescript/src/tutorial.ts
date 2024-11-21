@@ -21,13 +21,13 @@ let sampleObject: someValue = {
 console.log(sampleObject);
 
 // 1. String
-const greeting: string = "Hello everyone!";
+let greeting: string = "Hello everyone!";
 console.log(greeting.toUpperCase());
 
 // 2. Number
-const age: number = 12;
+let age: number = 12;
 console.log(age + 8);
 
 // 3. Boolean
-const isFemale: boolean = true;
+let isFemale: boolean = true;
 console.log(isFemale ? "Yay! she's female" : "She isn't female");
