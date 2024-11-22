@@ -50,18 +50,13 @@
 // ------------------------
 // Array | Object
 // ------------------------
+// let temperatures: number[] = [45, -90, "60"];
+// console.log(temperatures);
 
-/**
- * 
- * - Create an array temperatures of type number[] and assign it some values. Then, try to add a string value to it.
-- Create an array colors of type string[] and assign it some values. Then, try to add a boolean value to it.
-- Create an array mixedArray of type (number | string)[] and assign it some values. Then, try to add a boolean value to it.
- */
+// let colors: string[] = ["teal", "sage green"];
+// colors.push(true);
 
-let temperatures: number[] = [45, -90, "60"];
-console.log(temperatures);
+// let mixedArray: (string | boolean)[] = [true, 23, "apple", false];
 
-let colors: string[] = ["teal", "sage green"];
-colors.push(true);
-
-let mixedArray: (string | boolean)[] = [true, 23, "apple", false];
+let car: { brand: string; year: number } = { brand: "Zepher", year: 3045 };
+console.log(car);
