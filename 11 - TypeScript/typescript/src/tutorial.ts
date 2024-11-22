@@ -79,9 +79,9 @@ console.log(car);
 
 // console.log(laptop, laptop2);
 
-// let candy = { title: "Lemon Plus", price: 10 };
-// let protein = { title: "Chicken", price: 5500 };
-// let bedding = { title: "Pillow", };
+let candy = { title: "Lemon Plus", price: 10 };
+let protein = { title: "Chicken", price: 5500 };
+let bedding = { title: "Pillow", };
 
-let products: {title: string; price: number}[] = [candy, protein, bedding]
+let products: {title: string; price?: number}[] = [candy, protein, bedding]
 console.log(products)
