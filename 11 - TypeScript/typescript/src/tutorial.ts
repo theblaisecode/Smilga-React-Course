@@ -36,13 +36,32 @@
 // Union | any
 // ------------------------
 
-let orderStatus: "processing" | "shipped" | "delivered" = "processing";
-orderStatus = "shipped";
-orderStatus = "delivered";
+// let orderStatus: "processing" | "shipped" | "delivered" = "processing";
+// orderStatus = "shipped";
+// orderStatus = "delivered";
 
-console.log(orderStatus);
+// console.log(orderStatus);
 
-let discount: number | string = 20;
-discount = "20%";
+// let discount: number | string = 20;
+// discount = "20%";
 
-console.log(discount);
+// console.log(discount);
+
+// ------------------------
+// Array | Object
+// ------------------------
+
+/**
+ * 
+ * - Create an array temperatures of type number[] and assign it some values. Then, try to add a string value to it.
+- Create an array colors of type string[] and assign it some values. Then, try to add a boolean value to it.
+- Create an array mixedArray of type (number | string)[] and assign it some values. Then, try to add a boolean value to it.
+ */
+
+let temperatures: number[] = [45, -90, "60"];
+console.log(temperatures);
+
+let colors: string[] = ["teal", "sage green"];
+colors.push(true);
+
+let mixedArray: (string | boolean)[] = [true, 23, "apple", false];
