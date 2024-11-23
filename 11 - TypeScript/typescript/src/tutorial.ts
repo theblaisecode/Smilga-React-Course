@@ -92,11 +92,22 @@
 
 let arrOfNames: string[] = ["Blaise", "Teddy", "JGrand", "Dubby", "Obaino"];
 
-function checkName(name: string): boolean {
-  return arrOfNames.includes(name) ? true : false;
+// function checkName(name: string): boolean {
+//   return arrOfNames.includes(name) ? true : false;
+// }
+
+// console.log(checkName("Teddy"));
+// console.log(checkName("Alice"));
+
+function checkName2(name: string): boolean {
+  return arrOfNames.includes(name);
 }
 
-console.log(checkName("Teddy"));
-console.log(checkName("Alice"));
-console.log(checkName("Jonathan"));
-console.log(checkName("Henry"));
+let nameToCheck = "Alexandra";
+nameToCheck = "Blaise";
+
+if (checkName2(nameToCheck)) {
+  console.log(`${nameToCheck} is in the List`);
+} else {
+  console.log(`${nameToCheck} is not the List`);
+}
