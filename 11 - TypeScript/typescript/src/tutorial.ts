@@ -115,7 +115,10 @@
 function processInput(someInput: string | number):void {
   if (typeof someInput === 'number') {
     console.log(someInput * 2)
-  } else (typeof someInput === 'string') {
+  } else if (typeof someInput === 'string') {
     console.log(someInput.toUpperCase())
   }
 }
+
+processInput(7)
+processInput('alili m')
