@@ -112,13 +112,13 @@
 //   console.log(`${nameToCheck} is not the List`);
 // }
 
-function processInput(someInput: string | number):void {
-  if (typeof someInput === 'number') {
-    console.log(someInput * 2)
-  } else if (typeof someInput === 'string') {
-    console.log(someInput.toUpperCase())
+function processInput(someInput: string | number): void {
+  if (typeof someInput === "number") {
+    console.log(someInput * 2);
+  } else if (typeof someInput === "string") {
+    console.log(someInput.toUpperCase());
   }
 }
 
-processInput(7)
-processInput('alili m')
+processInput(7);
+processInput("alili m");
