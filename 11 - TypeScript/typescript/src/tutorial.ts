@@ -121,4 +121,5 @@ function processInput(someInput: string | number): void {
 }
 
 processInput(7);
+
 processInput("alili m");
