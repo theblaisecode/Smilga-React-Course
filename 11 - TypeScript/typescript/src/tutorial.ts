@@ -179,7 +179,7 @@ type Employee = { id: number; name: string; department: string };
 type Manager = { id: number; name: string; employees: Employee[] };
 type Staff = Employee | Manager;
 
-function printStaffDetails(staff: Staff) {
+function printStaffDetails(staff: Staff): void {
   "employees" in staff
     ? console.log(
         `${staff.name} is a manager and has ${staff.employees.length} employees`
