@@ -130,3 +130,15 @@ processInput("alili m");
 // ------------------------
 // Objects as parameters | Excess property checks
 // ------------------------
+function processData(
+  input: string | number,
+  config: { reverse: boolean } = { reverse: false }
+): string | number {
+  if (typeof input === "number") {
+    return Math.sqrt(input);
+  } else {
+    return config.reverse
+      ? input.toUpperCase().split("").reverse().join("")
+      : input.toUpperCase();
+  }
+}
