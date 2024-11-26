@@ -149,6 +149,32 @@ function processData(
   }
 }
 
-console.log(processData(10))
-console.log(processData('Yadayar'))
-console.log(processData('Blaise', {reverse: true}))
+console.log(processData(10));
+console.log(processData("Yadayar"));
+console.log(processData("Blaise", { reverse: true }));
+
+// ------------------------
+// Type Alias | Intersection Type
+// ------------------------
+
+const john: { id: number; name: string; isActive: boolean } = {
+  id: 1,
+  name: "john",
+  isActive: true,
+};
+
+const susan: { id: number; name: string; isActive: boolean } = {
+  id: 1,
+  name: "susan",
+  isActive: false,
+};
+
+function createUser(user: { id: number; name: string; isActive: boolean }): {
+  id: number;
+  name: string;
+  isActive: boolean;
+} {
+  console.log(`Hello there ${user.name.toUpperCase()} !!!`);
+
+  return user;
+}
