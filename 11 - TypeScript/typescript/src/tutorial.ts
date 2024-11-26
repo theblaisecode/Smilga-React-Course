@@ -174,3 +174,24 @@
 //   console.log(`Hello there ${user.name.toUpperCase()} !!!`);
 //   return user;
 // }
+
+type Employee = { id: number; name: string; department: string };
+type Manager = { id: number; name: string; employees: Employee[] };
+type Staff = Employee | Manager;
+
+function printStaffDetails(staff: Staff) {
+  "employees" in staff
+    ? console.log(
+        `${staff.name} is a manager and has ${staff.employees.length} employees`
+      )
+    : console.log(
+        `${staff.name} is an employee in ${staff.department} department`
+      );
+}
+
+const tobe: Employee = { id: 10, name: "Tobechukwu", department: "Design" };
+const dubem: Employee = { id: 10, name: "Chidubem", department: "Artiste" };
+const amaka: Manager = { id: 20, name: "Chiamaka", employees: [tobe, dubem] };
+
+printStaffDetails(tobe);
+printStaffDetails(amaka);
