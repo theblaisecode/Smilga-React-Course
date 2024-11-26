@@ -135,10 +135,20 @@ function processData(
   config: { reverse: boolean } = { reverse: false }
 ): string | number {
   if (typeof input === "number") {
+    console.log(Math.sqrt(input));
     return Math.sqrt(input);
   } else {
+    console.log(
+      config.reverse
+        ? input.toUpperCase().split("").reverse().join("")
+        : input.toUpperCase()
+    );
     return config.reverse
       ? input.toUpperCase().split("").reverse().join("")
       : input.toUpperCase();
   }
 }
+
+console.log(processData(10))
+console.log(processData('Yadayar'))
+console.log(processData('Blaise', {reverse: true}))
