@@ -115,62 +115,62 @@
 // ------------------------
 // Optional default | Rest Parameters
 // ------------------------
-function processInput(someInput: string | number): void {
-  if (typeof someInput === "number") {
-    console.log(someInput * 2);
-  } else if (typeof someInput === "string") {
-    console.log(someInput.toUpperCase());
-  }
-}
+// function processInput(someInput: string | number): void {
+//   if (typeof someInput === "number") {
+//     console.log(someInput * 2);
+//   } else if (typeof someInput === "string") {
+//     console.log(someInput.toUpperCase());
+//   }
+// }
 
-processInput(7);
+// processInput(7);
 
-processInput("alili m");
+// processInput("alili m");
 
 // ------------------------
 // Objects as parameters | Excess property checks
 // ------------------------
-function processData(
-  input: string | number,
-  config: { reverse: boolean } = { reverse: false }
-): string | number {
-  if (typeof input === "number") {
-    console.log(Math.sqrt(input));
-    return Math.sqrt(input);
-  } else {
-    console.log(
-      config.reverse
-        ? input.toUpperCase().split("").reverse().join("")
-        : input.toUpperCase()
-    );
-    return config.reverse
-      ? input.toUpperCase().split("").reverse().join("")
-      : input.toUpperCase();
-  }
-}
+// function processData(
+//   input: string | number,
+//   config: { reverse: boolean } = { reverse: false }
+// ): string | number {
+//   if (typeof input === "number") {
+//     console.log(Math.sqrt(input));
+//     return Math.sqrt(input);
+//   } else {
+//     console.log(
+//       config.reverse
+//         ? input.toUpperCase().split("").reverse().join("")
+//         : input.toUpperCase()
+//     );
+//     return config.reverse
+//       ? input.toUpperCase().split("").reverse().join("")
+//       : input.toUpperCase();
+//   }
+// }
 
-console.log(processData(10));
-console.log(processData("Yadayar"));
-console.log(processData("Blaise", { reverse: true }));
+// console.log(processData(10));
+// console.log(processData("Yadayar"));
+// console.log(processData("Blaise", { reverse: true }));
 
 // ------------------------
 // Type Alias | Intersection Type
 // ------------------------
-type User = { id: number; name: string; isActive: boolean };
+// type User = { id: number; name: string; isActive: boolean };
 
-const john: User = {
-  id: 1,
-  name: "john",
-  isActive: true,
-};
+// const john: User = {
+//   id: 1,
+//   name: "john",
+//   isActive: true,
+// };
 
-const susan: User = {
-  id: 1,
-  name: "susan",
-  isActive: false,
-};
+// const susan: User = {
+//   id: 1,
+//   name: "susan",
+//   isActive: false,
+// };
 
-function createUser(user: User): User {
-  console.log(`Hello there ${user.name.toUpperCase()} !!!`);
-  return user;
-}
+// function createUser(user: User): User {
+//   console.log(`Hello there ${user.name.toUpperCase()} !!!`);
+//   return user;
+// }
