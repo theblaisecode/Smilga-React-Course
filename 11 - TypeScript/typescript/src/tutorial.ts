@@ -325,3 +325,28 @@
 // ------------------------
 // Tuples and Eumns
 // ------------------------
+enum UserRole {
+  Admin,
+  Manager,
+  Employee,
+}
+
+type User = {
+  id: number;
+  name: string;
+  role: UserRole;
+  contact: [string, string];
+};
+
+function createUser(userObj: User): User {
+  return userObj;
+}
+
+const newUser: User = createUser({
+  id: 123,
+  name: "Blaise",
+  role: UserRole.Admin,
+  contact: ["theblaisecode@gmail.com", "9348484893"],
+});
+
+console.log(newUser);
