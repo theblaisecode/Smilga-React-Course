@@ -199,3 +199,48 @@
 // ------------------------
 // Interface Fundamentals
 // ------------------------
+
+// interface Book {
+//   isbn: number;
+//   title: string;
+//   author: string;
+//   genre?: string;
+//   printBook(): void;
+//   printNote(message1: string, message2: string): string;
+//   printSomething: (someValue: number) => number;
+// }
+
+// const novel: Book = {
+//   isbn: 123,
+//   title: "Throne of Glass",
+//   author: "Sarah J. Maas",
+//   genre: "Fanasy-fiction",
+//   printBook() {
+//     console.log(this.author);
+//   },
+//   printNote(message1, message2) {
+//     return `${message1} ${this.title} ${message2}`;
+//   },
+//   // first option
+//   // printSomething: function (someValue) {
+//   //   return someValue;
+//   // },
+//   // second option
+//   printSomething: (someValue) => {
+//     // "this" gotcha
+//     console.log(novel.author);
+//     return someValue;
+//   },
+//   // third option
+//   // printSomething(someValue) {
+//   //   return someValue;
+//   // },
+//   // alternative
+//   // printAuthor: () => {
+//   //   console.log(deepWork.author);
+//   // },
+// };
+
+// novel.printBook();
+// const result = novel.printNote("This is Book 1 in the", "series");
+// console.log(result);
