@@ -345,7 +345,7 @@ function createUser(userObj: User): User {
 const newUser: User = createUser({
   id: 123,
   name: "Blaise",
-  role: UserRole.Admin,
+  role: UserRole.Manager,
   contact: ["theblaisecode@gmail.com", "9348484893"],
 });
 
