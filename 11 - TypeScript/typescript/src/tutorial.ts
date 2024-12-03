@@ -245,22 +245,22 @@
 // const result = novel.printNote("This is Book 1 in the", "series");
 // console.log(result);
 
-interface Computer {
-  readonly id: number;
-  brand: string;
-  ram: number;
-  storage?: number;
-  upgradeRam(increaseRam: number): number;
-}
+// interface Computer {
+//   readonly id: number;
+//   brand: string;
+//   ram: number;
+//   storage?: number;
+//   upgradeRam(increaseRam: number): number;
+// }
 
-const device: Computer = {
-  id: 853379,
-  brand: "Asus",
-  ram: 16,
-  upgradeRam(increaseRam: number) {
-    return this.ram + increaseRam;
-  },
-};
+// const device: Computer = {
+//   id: 853379,
+//   brand: "Asus",
+//   ram: 16,
+//   upgradeRam(increaseRam: number) {
+//     return this.ram + increaseRam;
+//   },
+// };
 
-console.log(device.upgradeRam(8));
-console.log(device);
+// console.log(device.upgradeRam(8));
+// console.log(device);
