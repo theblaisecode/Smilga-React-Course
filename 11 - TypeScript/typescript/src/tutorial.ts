@@ -264,3 +264,49 @@
 
 // console.log(device.upgradeRam(8));
 // console.log(device);
+
+// ------------------------
+// Interface Advanced
+// ------------------------
+
+interface Person {
+  name: string;
+}
+
+interface DogOwner extends Person {
+  dogName: string;
+}
+
+interface Manager extends Person {
+  managePeople(): void;
+  delegateTask(): void;
+}
+
+function getEmployee(): Person | DogOwner | Manager {
+  let randomNumber: number = Math.random();
+  console.log(randomNumber);
+
+  if (randomNumber <= 0.33) {
+    return {
+      name: "Blaise",
+    };
+  } else if (randomNumber <= 0.66) {
+    return {
+      name: "Blaise",
+      dogName: "Fey fey",
+    };
+  } else {
+    return {
+      name: "Blaise",
+      managePeople() {
+        console.log(`Manager ${this.name} is managing people...`);
+      },
+      delegateTask() {
+        console.log(`Manager ${this.name} is delegating a couple of tasks...`);
+      },
+    };
+  }
+}
+
+const employee: Person | DogOwner | Manager = getEmployee();
+console.log(employee)
