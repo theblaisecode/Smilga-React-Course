@@ -307,3 +307,17 @@ function getEmployee(): Person | DogOwner | Manager {
 
 const employee: Person | DogOwner | Manager = getEmployee();
 console.log(employee);
+
+// function isManager(obj: Person | DogOwner | Manager): boolean {
+//   return "managePeople" in obj;
+// }
+
+// console.log(isManager(employee));
+
+function isManager(obj: Person | DogOwner | Manager): obj is Manager {
+  return "managePeople" in obj;
+}
+
+if (isManager(employee)) {
+  employee.delegateTask();
+}
