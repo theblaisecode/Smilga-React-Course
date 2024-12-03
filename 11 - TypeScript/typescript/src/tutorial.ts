@@ -321,3 +321,7 @@
 // if (isManager(employee)) {
 //   employee.delegateTask();
 // }
+
+// ------------------------
+// Tuples and Eumns
+// ------------------------
