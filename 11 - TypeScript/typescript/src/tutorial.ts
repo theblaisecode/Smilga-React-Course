@@ -325,7 +325,6 @@
 // ------------------------
 // Tuples and Eumns
 // ------------------------
-
 enum UserRole {
   Admin,
   Manager,
