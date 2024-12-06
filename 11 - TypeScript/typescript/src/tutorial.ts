@@ -355,39 +355,39 @@
 // TYpe Assertion, Type Unknown and Type Never
 // ------------------------
 
-let someValue: any = "this is a string";
-let strLenght: number = (someValue as string).length;
+// let someValue: any = "this is a string";
+// let strLenght: number = (someValue as string).length;
 
-type Bird = {
-  name: string;
-};
+// type Bird = {
+//   name: string;
+// };
 
-let birdString = '{"name": "Eagle"}';
-let dogString = '{"breed": "Poodle"}';
+// let birdString = '{"name": "Eagle"}';
+// let dogString = '{"breed": "Poodle"}';
 
-let birdObject = JSON.parse(birdString);
-let dogObject = JSON.parse(dogString);
+// let birdObject = JSON.parse(birdString);
+// let dogObject = JSON.parse(dogString);
 
-let bird = birdObject as Bird;
-let dog = dogObject as Bird;
+// let bird = birdObject as Bird;
+// let dog = dogObject as Bird;
 
-console.log(bird.name);
-console.log(dog.name);
+// console.log(bird.name);
+// console.log(dog.name);
 
-enum Status {
-  Pending = "pending",
-  Declined = "declined",
-}
+// enum Status {
+//   Pending = "pending",
+//   Declined = "declined",
+// }
 
-type User = {
-  name: string;
-  status: Status;
-};
+// type User = {
+//   name: string;
+//   status: Status;
+// };
 
-// save Status.Pending in the DB as a string
-// retrieve string from the DB
+// // save Status.Pending in the DB as a string
+// // retrieve string from the DB
 
-const statusVaue = "pending";
-const user: User = { name: "Blaise", status: statusVaue as Status };
+// const statusVaue = "pending";
+// const user: User = { name: "Blaise", status: statusVaue as Status };
 
 // Type Unknown
