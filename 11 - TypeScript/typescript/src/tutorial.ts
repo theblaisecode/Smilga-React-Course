@@ -422,3 +422,42 @@
 // }
 
 // Type Never
+// let someValue: never = 0;
+
+type Theme = "light" | "dark";
+
+function checkTheme(theme: Theme): void {
+  if (theme === "light") {
+    console.log("light theme");
+    return;
+  }
+
+  if (theme === "dark") {
+    console.log("dark theme");
+    return;
+  }
+
+  // will have a type of never
+  theme;
+}
+
+enum Color {
+  Green,
+  Yellow,
+  Orange,
+}
+
+function getColorName(color: Color) {
+  switch (color) {
+    case Color.Green:
+      return "Green";
+    case Color.Yellow:
+      return "Yellow";
+    default:
+      throw new Error(`Unexpected color value : ${color}`);
+  }
+}
+
+console.log(getColorName(Color.Green));
+console.log(getColorName(Color.Yellow));
+console.log(getColorName(Color.Orange));
