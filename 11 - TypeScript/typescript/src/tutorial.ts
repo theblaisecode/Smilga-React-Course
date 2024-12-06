@@ -454,6 +454,10 @@ function getColorName(color: Color) {
     case Color.Yellow:
       return "Yellow";
     default:
+      // At build time
+      let unexpectedColor: never = color;
+
+      // At runtime
       throw new Error(`Unexpected color value : ${color}`);
   }
 }
