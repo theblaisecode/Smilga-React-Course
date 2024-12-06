@@ -424,44 +424,48 @@
 // Type Never
 // let someValue: never = 0;
 
-type Theme = "light" | "dark";
+// type Theme = "light" | "dark";
 
-function checkTheme(theme: Theme): void {
-  if (theme === "light") {
-    console.log("light theme");
-    return;
-  }
+// function checkTheme(theme: Theme): void {
+//   if (theme === "light") {
+//     console.log("light theme");
+//     return;
+//   }
 
-  if (theme === "dark") {
-    console.log("dark theme");
-    return;
-  }
+//   if (theme === "dark") {
+//     console.log("dark theme");
+//     return;
+//   }
 
-  // will have a type of never
-  theme;
-}
+//   // will have a type of never
+//   theme;
+// }
 
-enum Color {
-  Green,
-  Yellow,
-  Orange,
-}
+// enum Color {
+//   Green,
+//   Yellow,
+//   Orange,
+// }
 
-function getColorName(color: Color) {
-  switch (color) {
-    case Color.Green:
-      return "Green";
-    case Color.Yellow:
-      return "Yellow";
-    default:
-      // At build time
-      let unexpectedColor: never = color;
+// function getColorName(color: Color) {
+//   switch (color) {
+//     case Color.Green:
+//       return "Green";
+//     case Color.Yellow:
+//       return "Yellow";
+//     default:
+//       // At build time
+//       let unexpectedColor: never = color;
 
-      // At runtime
-      throw new Error(`Unexpected color value : ${color}`);
-  }
-}
+//       // At runtime
+//       throw new Error(`Unexpected color value : ${color}`);
+//   }
+// }
 
-console.log(getColorName(Color.Green));
-console.log(getColorName(Color.Yellow));
-console.log(getColorName(Color.Orange));
+// console.log(getColorName(Color.Green));
+// console.log(getColorName(Color.Yellow));
+// console.log(getColorName(Color.Orange));
+
+// ------------------------
+// ES6 Modules
+// ------------------------
