@@ -563,6 +563,17 @@ printLength(null);
 printLength(undefined);
 
 // Type Guard 4 - instanceof
+try {
+  // Some code that may throw an error
+  throw new Error("This is an error");
+} catch (error) {
+  if (error instanceof Error) {
+    console.log("Caught an Error object: " + error.message);
+  } else {
+    console.log("Caught an unknown error");
+  }
+}
+
 function checkInput(input: Date | string) {
   if (input instanceof Date) {
     return input.getFullYear().toString();
