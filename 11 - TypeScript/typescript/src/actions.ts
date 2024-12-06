@@ -8,7 +8,7 @@ export function sayHello(name: string): void {
 
 export let person = "Blaise";
 
-type Student = {
+export type Student = {
   name: string;
   age: number;
 };
