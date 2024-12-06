@@ -473,15 +473,19 @@
 
 // const blaise = "Blaise";
 
-import newStudent, { sayHello, person, type Student } from "./actions";
+// import newStudent, { sayHello, person, type Student } from "./actions";
 
-sayHello("Blaise");
-console.log(newStudent);
-console.log(person);
+// sayHello("Blaise");
+// console.log(newStudent);
+// console.log(person);
 
-const anodaStudent: Student = {
-  name: "Charles",
-  age: 28,
-};
+// const anodaStudent: Student = {
+//   name: "Charles",
+//   age: 28,
+// };
 
-console.log(anodaStudent);
+// console.log(anodaStudent);
+
+// ------------------------
+// TYpe Guarding
+// ------------------------
