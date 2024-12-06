@@ -558,6 +558,21 @@ function printLength(str: string | null | undefined): void {
   }
 }
 
-printLength("Bie"); 
-printLength(null); 
+printLength("Bie");
+printLength(null);
 printLength(undefined);
+
+// Type Guard 4 - instanceof
+function checkInput(input: Date | string) {
+  if (input instanceof Date) {
+    return input.getFullYear().toString();
+  } else {
+    return input;
+  }
+}
+
+const thisYear = checkInput(new Date());
+const someStr = checkInput("15-04-1452");
+
+console.log(thisYear);
+console.log(someStr);
