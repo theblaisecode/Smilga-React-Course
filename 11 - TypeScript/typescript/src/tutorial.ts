@@ -469,6 +469,12 @@
 // ------------------------
 // ES6 Modules
 // ------------------------
-import { job } from "./actions";
+// import { job } from "./actions";
 
-const blaise = "Blaise";
+// const blaise = "Blaise";
+
+import newStudent, { sayHello, person } from "./actions";
+
+sayHello("Blaise");
+console.log(newStudent);
+console.log(person);
