@@ -550,3 +550,14 @@ function makeSound2(animal: Animal) {
 }
 
 // Type Guard 3 - Truthy / Falsy
+function printLength(str: string | null | undefined): void {
+  if (str) {
+    console.log(str.length);
+  } else {
+    console.log("No sstring provided");
+  }
+}
+
+printLength("Bie"); 
+printLength(null); 
+printLength(undefined);
