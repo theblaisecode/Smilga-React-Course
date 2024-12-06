@@ -554,7 +554,7 @@ function printLength(str: string | null | undefined): void {
   if (str) {
     console.log(str.length);
   } else {
-    console.log("No sstring provided");
+    console.log("No string provided");
   }
 }
 
