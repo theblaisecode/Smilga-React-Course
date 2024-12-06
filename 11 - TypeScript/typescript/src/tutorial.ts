@@ -489,3 +489,25 @@
 // ------------------------
 // TYpe Guarding
 // ------------------------
+
+type ValueType = string | number | boolean;
+
+let value: ValueType;
+const random = Math.random();
+value = random < 0.33 ? "Hello" : random < 0.66 ? 123.456 : true;
+
+function checkValue(param: ValueType) {
+  if (typeof param === "string") {
+    console.log(param.toLowerCase());
+    return;
+  }
+
+  if (typeof param === "number") {
+    console.log(param.toFixed(2));
+    return;
+  }
+
+  console.log(`Boolean: ${param} `);
+}
+
+checkValue(value)
