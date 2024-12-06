@@ -489,14 +489,14 @@
 // ------------------------
 // TYpe Guarding
 // ------------------------
-
+//Type Guard 1 - typeof
 type ValueType = string | number | boolean;
 
 let value: ValueType;
 const random = Math.random();
 value = random < 0.33 ? "Hello" : random < 0.66 ? 123.456 : true;
 
-function checkValue(param: ValueType) {
+function checkValue(param: ValueType): void {
   if (typeof param === "string") {
     console.log(param.toLowerCase());
     return;
@@ -510,4 +510,43 @@ function checkValue(param: ValueType) {
   console.log(`Boolean: ${param} `);
 }
 
-checkValue(value)
+checkValue(value);
+
+// Type Guard 2 - Equality Narrowing
+type Dog = { type: "dog"; name: string; bark: () => void };
+type Cat = { type: "cat"; name: string; meow: () => void };
+type Animal = Dog | Cat;
+
+function makeSound(animal: Animal) {
+  if (animal.type === "dog") {
+    animal.bark();
+  } else {
+    animal.meow();
+  }
+}
+
+const myCat: Cat = {
+  type: "cat",
+  name: "Whiskers",
+  meow: () => console.log("Meow!"),
+};
+
+const myDog: Dog = {
+  type: "dog",
+  name: "Whiskers",
+  bark: () => console.log("Woof Woof!"),
+};
+
+makeSound(myCat);
+makeSound(myDog);
+
+// Type Guard 3 - check for property
+function makeSound2(animal: Animal) {
+  if ("bark" in animal) {
+    animal.bark();
+  } else {
+    animal.meow();
+  }
+}
+
+// Type Guard 3 - Truthy / Falsy
