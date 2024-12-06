@@ -325,28 +325,69 @@
 // ------------------------
 // Tuples and Eumns
 // ------------------------
-enum UserRole {
-  Admin,
-  Manager,
-  Employee,
+// enum UserRole {
+//   Admin,
+//   Manager,
+//   Employee,
+// }
+
+// type User = {
+//   id: number;
+//   name: string;
+//   role: UserRole;
+//   contact: [string, string];
+// };
+
+// function createUser(userObj: User): User {
+//   return userObj;
+// }
+
+// const newUser: User = createUser({
+//   id: 123,
+//   name: "Blaise",
+//   role: UserRole.Manager,
+//   contact: ["theblaisecode@gmail.com", "9348484893"],
+// });
+
+// console.log(newUser);
+
+// ------------------------
+// TYpe Assertion, Type Unknown and Type Never
+// ------------------------
+
+let someValue: any = "this is a string";
+let strLenght: number = (someValue as string).length;
+
+type Bird = {
+  name: string;
+};
+
+let birdString = '{"name": "Eagle"}';
+let dogString = '{"breed": "Poodle"}';
+
+let birdObject = JSON.parse(birdString);
+let dogObject = JSON.parse(dogString);
+
+let bird = birdObject as Bird;
+let dog = dogObject as Bird;
+
+console.log(bird.name);
+console.log(dog.name);
+
+enum Status {
+  Pending = "pending",
+  Declined = "declined",
 }
 
 type User = {
-  id: number;
   name: string;
-  role: UserRole;
-  contact: [string, string];
+  status: Status;
 };
 
-function createUser(userObj: User): User {
-  return userObj;
-}
+// save Status.Pending in the DB as a string
+// retrieve string from the DB
 
-const newUser: User = createUser({
-  id: 123,
-  name: "Blaise",
-  role: UserRole.Manager,
-  contact: ["theblaisecode@gmail.com", "9348484893"],
-});
+const statusVaue = "pending";
+const user: User = { name: "Blaise", status: statusVaue as Status };
 
-console.log(newUser);
+// Type Unknown
