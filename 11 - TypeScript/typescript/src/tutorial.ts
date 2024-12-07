@@ -587,3 +587,5 @@
 
 // console.log(thisYear);
 // console.log(someStr);
+
+// Type Predicate
