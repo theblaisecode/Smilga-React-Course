@@ -669,4 +669,31 @@
 // let array2: Array<number> = [1, 2, 3];
 // let array3: Array<boolean> = [true, false, true];
 
-console.log(array1, array2, array3);
+// console.log(array1, array2, array3);
+
+function genericFunction<T>(arg: T): T {
+  return arg;
+}
+
+const someStringValue = genericFunction<string>("Hello world");
+const someNumberValue = genericFunction<number>(123);
+const someBooleanValue = genericFunction<boolean>(false);
+
+console.log(someStringValue);
+console.log(someNumberValue);
+console.log(someBooleanValue);
+
+interface GenericInterface<T> {
+  value: T;
+  getValue: () => T;
+}
+
+const genericString: GenericInterface<string> = {
+  value: "Shinanigans",
+  getValue() {
+    return `${this.value}...`;
+  },
+};
+
+console.log(genericString.value);
+console.log(genericString.getValue());
