@@ -697,3 +697,10 @@ const genericString: GenericInterface<string> = {
 
 console.log(genericString.value);
 console.log(genericString.getValue());
+
+async function someFunction(): Promise<string> {
+  return "This is Blaise";
+}
+
+const result = someFunction();
+console.log(result);
