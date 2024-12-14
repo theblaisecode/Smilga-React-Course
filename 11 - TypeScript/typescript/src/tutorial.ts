@@ -671,36 +671,38 @@
 
 // console.log(array1, array2, array3);
 
-function genericFunction<T>(arg: T): T {
-  return arg;
-}
+// function genericFunction<T>(arg: T): T {
+//   return arg;
+// }
 
-const someStringValue = genericFunction<string>("Hello world");
-const someNumberValue = genericFunction<number>(123);
-const someBooleanValue = genericFunction<boolean>(false);
+// const someStringValue = genericFunction<string>("Hello world");
+// const someNumberValue = genericFunction<number>(123);
+// const someBooleanValue = genericFunction<boolean>(false);
 
-console.log(someStringValue);
-console.log(someNumberValue);
-console.log(someBooleanValue);
+// console.log(someStringValue);
+// console.log(someNumberValue);
+// console.log(someBooleanValue);
 
-interface GenericInterface<T> {
-  value: T;
-  getValue: () => T;
-}
+// interface GenericInterface<T> {
+//   value: T;
+//   getValue: () => T;
+// }
 
-const genericString: GenericInterface<string> = {
-  value: "Shinanigans",
-  getValue() {
-    return `${this.value}...`;
-  },
-};
+// const genericString: GenericInterface<string> = {
+//   value: "Shinanigans",
+//   getValue() {
+//     return `${this.value}...`;
+//   },
+// };
 
-console.log(genericString.value);
-console.log(genericString.getValue());
+// console.log(genericString.value);
+// console.log(genericString.getValue());
 
-async function someFunction(): Promise<string> {
-  return "This is Blaise";
-}
+// async function someFunction(): Promise<string> {
+//   return "This is Blaise";
+// }
 
-const result = someFunction();
-console.log(result);
+// const result = someFunction();
+// console.log(result);
+
+// Challendge
