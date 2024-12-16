@@ -716,3 +716,17 @@ function generateStringArr(length: number, value: string): string[] {
 }
 
 console.log(generateStringArr(7, "Blaise"));
+
+function createArr<T>(length: number, value: T): Array<T> {
+  let res: T[] = [];
+  res = Array(length).fill(value);
+  return res;
+}
+
+const arrString = createArr<string>(4, "tired");
+const arrNumber = createArr<number>(4, 23);
+const arrBoolean = createArr<boolean>(4, false);
+
+console.log(arrString);
+console.log(arrNumber);
+console.log(arrBoolean);
