@@ -732,18 +732,18 @@
 // console.log(arrBoolean);
 
 // Multiple types/params
-function newPair<T, U, V>(param1: T, param2: U, param3: V): [T, U, V] {
-  return [param1, param2, param3];
-}
+// function newPair<T, U, V>(param1: T, param2: U, param3: V): [T, U, V] {
+//   return [param1, param2, param3];
+// }
 
-let result = newPair<number, string, boolean>(7, "Blaise", false);
-console.log(result);
+// let result = newPair<number, string, boolean>(7, "Blaise", false);
+// console.log(result);
 
-function newFunc<T extends string | number | boolean>(value: T): T {
-  console.log(value);
-  return value;
-}
+// function newFunc<T extends string | number | boolean>(value: T): T {
+//   console.log(value);
+//   return value;
+// }
 
-newFunc("Olla, Blaise");
-newFunc(34);
-newFunc(false);
+// newFunc("Olla, Blaise");
+// newFunc(34);
+// newFunc(false);
