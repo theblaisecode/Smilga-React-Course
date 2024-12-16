@@ -709,24 +709,32 @@
 // createArray<string>(3, "hello"); // ['hello', ['hello', ['hello']
 // createArray<number>(4, 100); // [100, 100, 100, 100]
 
-function generateStringArr(length: number, value: string): string[] {
-  let res: string[] = [];
-  res = Array(length).fill(value);
-  return res;
+// function generateStringArr(length: number, value: string): string[] {
+//   let res: string[] = [];
+//   res = Array(length).fill(value);
+//   return res;
+// }
+
+// console.log(generateStringArr(7, "Blaise"));
+
+// function createArr<T>(length: number, value: T): Array<T> {
+//   let res: T[] = [];
+//   res = Array(length).fill(value);
+//   return res;
+// }
+
+// const arrString = createArr<string>(4, "tired");
+// const arrNumber = createArr<number>(4, 23);
+// const arrBoolean = createArr<boolean>(4, false);
+
+// console.log(arrString);
+// console.log(arrNumber);
+// console.log(arrBoolean);
+
+// Multiple types/params
+function newPair<T, U, V>(param1: T, param2: U, param3: V): [T, U, V] {
+  return [param1, param2, param3];
 }
 
-console.log(generateStringArr(7, "Blaise"));
-
-function createArr<T>(length: number, value: T): Array<T> {
-  let res: T[] = [];
-  res = Array(length).fill(value);
-  return res;
-}
-
-const arrString = createArr<string>(4, "tired");
-const arrNumber = createArr<number>(4, 23);
-const arrBoolean = createArr<boolean>(4, false);
-
-console.log(arrString);
-console.log(arrNumber);
-console.log(arrBoolean);
+let result = newPair<number, string, boolean>(7, "Blaise", false);
+console.log(result);
