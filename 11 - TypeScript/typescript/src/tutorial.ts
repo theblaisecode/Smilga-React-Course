@@ -738,3 +738,12 @@ function newPair<T, U, V>(param1: T, param2: U, param3: V): [T, U, V] {
 
 let result = newPair<number, string, boolean>(7, "Blaise", false);
 console.log(result);
+
+function newFunc<T extends string | number | boolean>(value: T): T {
+  console.log(value);
+  return value;
+}
+
+newFunc("Olla, Blaise");
+newFunc(34);
+newFunc(false);
