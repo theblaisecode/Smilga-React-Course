@@ -706,4 +706,13 @@
 // console.log(result);
 
 // Challenge
-//  start
+// createArray<string>(3, "hello"); // ['hello', ['hello', ['hello']
+// createArray<number>(4, 100); // [100, 100, 100, 100]
+
+function generateStringArr(length: number, value: string): string[] {
+  let res: string[] = [];
+  res = Array(length).fill(value);
+  return res;
+}
+
+console.log(generateStringArr(7, "Blaise"));
