@@ -854,7 +854,7 @@
 // const url = "https://www.course-api.com/react-tours-project";
 
 // type Tour = {
-//   id: number;
+//   id: string;
 //   name: string;
 //   info: string;
 //   image: string;
@@ -890,7 +890,7 @@ import { z } from "zod";
 const url = "https://www.course-api.com/react-tours-project";
 
 type Tour = {
-  id: number;
+  id: string;
   name: string;
   info: string;
   image: string;
