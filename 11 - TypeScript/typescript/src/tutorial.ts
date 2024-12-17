@@ -885,37 +885,49 @@
 // });
 
 // ZOD Library
-import { z } from "zod";
+// import { z } from "zod";
 
-const url = "https://www.course-api.com/react-tours-project";
+// const url = "https://www.course-api.com/react-tours-project";
 
-const tourSchema = z.object({
-  id: z.string(),
-  name: z.string(),
-  info: z.string(),
-  image: z.string(),
-  price: z.string(),
-});
+// const tourSchema = z.object({
+//   id: z.string(),
+//   name: z.string(),
+//   info: z.string(),
+//   image: z.string(),
+//   price: z.string(),
+//   // something: z.number(),
+// });
 
-async function fetchData(url: string): Promise<Tour[]> {
-  try {
-    const res = await fetch(url);
+// type Tour = z.infer<typeof tourSchema>;
 
-    if (!res.ok) {
-      throw new Error(`HTTP error status: ${res.status}`);
-    }
+// async function fetchData(url: string): Promise<Tour[]> {
+//   try {
+//     const res = await fetch(url);
 
-    const data: Tour[] = await res.json();
-    console.log(data);
-    return data;
-  } catch (error) {
-    const errorMessage =
-      error instanceof Error ? error.message : "ther was an error...";
-    console.log(errorMessage);
-  }
-}
+//     if (!res.ok) {
+//       throw new Error(`HTTP error status: ${res.status}`);
+//     }
 
-const tours = await fetchData(url);
-tours.map((tour: any) => {
-  console.log(tour);
-});
+//     const rawData: Tour[] = await res.json();
+//     console.log(rawData);
+
+//     const result = tourSchema.array().safeParse(rawData);
+//     console.log(result);
+
+//     if (!result.success) {
+//       throw new Error(`Invalid data: ${result.error}`);
+//     }
+
+//     return result.data;
+//   } catch (error) {
+//     const errorMessage =
+//       error instanceof Error ? error.message : "ther was an error...";
+//     console.log(errorMessage);
+//   }
+// }
+
+// const tours = await fetchData(url);
+// tours.map((tour: any) => {
+//   console.log(tour.name);
+// });
+
