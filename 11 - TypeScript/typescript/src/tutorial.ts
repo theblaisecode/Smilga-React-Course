@@ -889,13 +889,13 @@ import { z } from "zod";
 
 const url = "https://www.course-api.com/react-tours-project";
 
-type Tour = {
-  id: string;
-  name: string;
-  info: string;
-  image: string;
-  price: string;
-};
+const tourSchema = z.object({
+  id: z.string(),
+  name: z.string(),
+  info: z.string(),
+  image: z.string(),
+  price: z.string(),
+});
 
 async function fetchData(url: string): Promise<Tour[]> {
   try {
