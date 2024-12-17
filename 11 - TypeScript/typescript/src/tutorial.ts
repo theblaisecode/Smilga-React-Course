@@ -932,3 +932,4 @@
 // });
 
 // Typescript Declaration File
+import { Random } from "./types";
