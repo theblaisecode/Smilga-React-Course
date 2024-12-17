@@ -933,3 +933,4 @@
 
 // Typescript Declaration File
 import { Random } from "./types";
+import bcryptjs from "bcryptjs";
