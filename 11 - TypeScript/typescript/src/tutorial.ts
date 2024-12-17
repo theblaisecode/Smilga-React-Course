@@ -824,9 +824,44 @@
 // Fetch Data and Declaration Files
 // ------------------------
 
+// const url = "https://www.course-api.com/react-tours-project";
+
+// async function fetchData(url: string) {
+//   try {
+//     const res = await fetch(url);
+
+//     if (!res.ok) {
+//       throw new Error(`HTTP error status: ${res.status}`);
+//     }
+
+//     const data = res.json();
+//     return data;
+//   } catch (error) {
+//     const errorMessage =
+//       error instanceof Error ? error.message : "there was an error...";
+
+//     console.log(errorMessage);
+//     return [];
+//   }
+// }
+
+// const tours = await fetchData(url);
+// tours.map((tour: any) => {
+//   console.log(tour.name);
+// });
+
+// Challenge
 const url = "https://www.course-api.com/react-tours-project";
 
-async function fetchData(url: string) {
+type Tour = {
+  id: number;
+  name: string;
+  info: string;
+  image: string;
+  price: string;
+};
+
+async function fetchData(url: string): Promise<Tour[]> {
   try {
     const res = await fetch(url);
 
@@ -834,18 +869,17 @@ async function fetchData(url: string) {
       throw new Error(`HTTP error status: ${res.status}`);
     }
 
-    const data = res.json();
+    const data: Tour[] = await res.json();
+    console.log(data);
     return data;
   } catch (error) {
     const errorMessage =
-      error instanceof Error ? error.message : "there was an error...";
-
+      error instanceof Error ? error.message : "ther was an error...";
     console.log(errorMessage);
-    return [];
   }
 }
 
 const tours = await fetchData(url);
 tours.map((tour: any) => {
-  console.log(tour.name);
+  console.log(tour);
 });
