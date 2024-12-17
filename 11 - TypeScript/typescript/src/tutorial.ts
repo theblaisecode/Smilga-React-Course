@@ -883,3 +883,6 @@ const tours = await fetchData(url);
 tours.map((tour: any) => {
   console.log(tour);
 });
+
+
+// ZOD Library
