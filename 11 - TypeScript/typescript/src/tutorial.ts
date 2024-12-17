@@ -801,8 +801,6 @@
 // console.log(storeNumbers);
 // console.log(randomStuff);
 
-
-
 // const { data } = axios.get(someUrl);
 
 // axios.get<{ name: string }[]>(someUrl);
@@ -826,3 +824,28 @@
 // Fetch Data and Declaration Files
 // ------------------------
 
+const url = "https://www.course-api.com/react-tours-project";
+
+async function fetchData(url: string) {
+  try {
+    const res = await fetch(url);
+
+    if (!res.ok) {
+      throw new Error(`HTTP error status: ${res.status}`);
+    }
+
+    const data = res.json();
+    return data;
+  } catch (error) {
+    const errorMessage =
+      error instanceof Error ? error.message : "there was an error...";
+
+    console.log(errorMessage);
+    return [];
+  }
+}
+
+const tours = await fetchData(url);
+tours.map((tour: any) => {
+  console.log(tour.name);
+});
