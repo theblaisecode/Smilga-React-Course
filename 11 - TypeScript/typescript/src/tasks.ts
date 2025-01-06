@@ -8,6 +8,12 @@ type Task = {
 };
 
 const tasks: Task[] = [];
+
+function loadTasks():Task[] {
+  const storedTasks = localStorage.getItem('tasks')
+  return storedTasks? JSON.parse(storedTasks)
+}
+
 taskForm?.addEventListener("submit", (event) => {
   event.preventDefault();
   const taskDescription = formInput?.value;
@@ -25,6 +31,8 @@ taskForm?.addEventListener("submit", (event) => {
     renderTask(task);
 
     //update local storage
+    updateStorage()
+
     formInput.value = "";
     return;
   }
@@ -40,4 +48,8 @@ function renderTask(task: Task): void {
   const taskElement = document.createElement("li");
   taskElement.textContent = task.description;
   taskListElement?.appendChild(taskElement);
+}
+
+function updateStorage():void {
+  localStorage.setItem('tasks', JSON.stringify(tasks))
 }
