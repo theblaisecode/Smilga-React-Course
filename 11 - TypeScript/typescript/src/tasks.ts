@@ -9,7 +9,7 @@ type Task = {
 
 const tasks: Task[] = loadTasks();
 
-tasks.forEach(renderTask)
+tasks.forEach(renderTask);
 
 function loadTasks(): Task[] {
   const storedTasks = localStorage.getItem("tasks");
@@ -26,13 +26,13 @@ taskForm?.addEventListener("submit", (event) => {
       isCompleted: false,
     };
 
-    //add task
+    // add task
     addTask(task);
 
-    //render task
+    // render task
     renderTask(task);
 
-    //update local storage
+    // update local storage
     updateStorage();
 
     formInput.value = "";
@@ -49,6 +49,12 @@ function addTask(task: Task): void {
 function renderTask(task: Task): void {
   const taskElement = document.createElement("li");
   taskElement.textContent = task.description;
+
+  // checkbox
+  const taskCheckbox = document.createElement("input");
+  taskCheckbox.type = "checkbox";
+  taskCheckbox.checked = task.isCompleted;
+
   taskListElement?.appendChild(taskElement);
 }
 
