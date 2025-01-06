@@ -1,7 +1,6 @@
 const taskForm = document.querySelector<HTMLFormElement>(".form");
 const formInput = document.querySelector<HTMLInputElement>(".form-input");
 const taskListElement = document.querySelector<HTMLUListElement>(".list");
-console.log(taskForm, formInput);
 
 type Task = {
   description: string;
@@ -20,10 +19,10 @@ taskForm?.addEventListener("submit", (event) => {
     };
 
     //add task
-    addTask(task)
+    addTask(task);
 
     //render task
-    renderTask(task)
+    renderTask(task);
 
     //update local storage
     formInput.value = "";
@@ -37,8 +36,8 @@ function addTask(task: Task): void {
   tasks.push(task);
 }
 
-function renderTask(task:Task): void{
-  const taskElement = document.createElement('li')
-  taskElement.textContent = task.description
-  taskListElement?.appendChild(taskElement)
+function renderTask(task: Task): void {
+  const taskElement = document.createElement("li");
+  taskElement.textContent = task.description;
+  taskListElement?.appendChild(taskElement);
 }
