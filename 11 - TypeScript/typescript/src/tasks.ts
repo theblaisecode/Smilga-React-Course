@@ -7,7 +7,9 @@ type Task = {
   isCompleted: boolean;
 };
 
-const tasks: Task[] = [];
+const tasks: Task[] = loadTasks();
+
+tasks.forEach(renderTask)
 
 function loadTasks(): Task[] {
   const storedTasks = localStorage.getItem("tasks");
