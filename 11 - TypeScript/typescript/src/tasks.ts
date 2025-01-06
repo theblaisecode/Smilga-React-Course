@@ -9,3 +9,14 @@ type Task = {
 };
 
 const tasks: Task[] = [];
+taskForm?.addEventListener("submit", (event) => {
+  event.preventDefault();
+  const taskDescription = formInput?.value;
+
+  if (taskDescription) {
+    formInput.value = "";
+    return;
+  }
+
+  alert("Please enter a task description");
+});
