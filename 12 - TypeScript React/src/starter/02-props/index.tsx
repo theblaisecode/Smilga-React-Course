@@ -1,8 +1,8 @@
-function Component() {
+function Component({ name, id }: { name: string; id: number }):JSX.Element {
   return (
     <div>
-      <h2>React & Typescript</h2>
-      <h2>Props</h2>
+      <h2>Name: {name}</h2>
+      <h2>ID: {id} </h2>
     </div>
   );
 }
