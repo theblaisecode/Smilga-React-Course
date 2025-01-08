@@ -8,7 +8,7 @@
 // }
 // export default Component;
 
-// OR
+// OR //
 
 // type ComponentProp = {
 //   name: string;
