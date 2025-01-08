@@ -13,16 +13,18 @@
 type ComponentProp = {
   name: string;
   id: number;
-  childern?: React.ReactNode;
+
+  // Handling children props
+  children?: React.ReactNode;
 };
 
-function Component({ name, id,childern }: ComponentProp): JSX.Element {
-// function Component(props: ComponentProp): JSX.Element {
+// function Component({ name, id, children }: ComponentProp): JSX.Element {
+function Component(props: ComponentProp): JSX.Element {
   return (
     <div>
-      <h2>Name: {name}</h2>
-      <h2>ID: {id} </h2>
-      {childern}
+      <h2>Name: {props.name}</h2>
+      <h2>ID: {props.id} </h2>
+      {props.children}
     </div>
   );
 }
