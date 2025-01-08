@@ -10,14 +10,19 @@
 
 // OR
 
-type ComponentProp = { name: string; id: number };
+type ComponentProp = {
+  name: string;
+  id: number;
+  childern?: React.ReactNode;
+};
 
-// function Component({ name, id }: ComponentProp): JSX.Element {
-function Component(props: ComponentProp): JSX.Element {
+function Component({ name, id,childern }: ComponentProp): JSX.Element {
+// function Component(props: ComponentProp): JSX.Element {
   return (
     <div>
-      <h2>Name: {props.name}</h2>
-      <h2>ID: {props.id} </h2>
+      <h2>Name: {name}</h2>
+      <h2>ID: {id} </h2>
+      {childern}
     </div>
   );
 }
