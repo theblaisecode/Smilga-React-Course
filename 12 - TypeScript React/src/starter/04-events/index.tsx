@@ -1,9 +1,44 @@
+import { useState } from "react";
+
 function Component() {
+  const [text, setText] = useState("");
+  const [email, setEmail] = useState("");
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    console.log(e.target.value);
+    setEmail(e.target.value);
+  };
+
   return (
-    <div>
+    <section>
       <h2>React & Typescript</h2>
-      <h2>Events</h2>
-    </div>
+      <h2>Events Example</h2>
+      <form className="form" action="">
+        <div>
+          <label htmlFor="text">Text</label>
+          <input
+            type="text"
+            className="form-input mb-1"
+            value={text}
+            onChange={(e) => setText(e.target.value)}
+          />
+        </div>
+
+        <div>
+          <label htmlFor="email">Email</label>
+          <input
+            type="email"
+            className="form-input mb-1"
+            value={email}
+            onChange={handleChange}
+          />
+        </div>
+
+        <button type="submit" className="btn btn-center">
+          Submit
+        </button>
+      </form>
+    </section>
   );
 }
 export default Component;
