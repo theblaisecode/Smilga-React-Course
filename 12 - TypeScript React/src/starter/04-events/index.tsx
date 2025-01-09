@@ -4,6 +4,10 @@ function Component() {
   const [text, setText] = useState("");
   const [email, setEmail] = useState("");
 
+  type Person = {
+    name: string;
+  };
+
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setEmail(e.target.value);
   };
@@ -14,6 +18,9 @@ function Component() {
     // const formData = new FormData(e.target as HTMLFormElement)
     const data = Object.fromEntries(formData);
     console.log(data);
+    const text = formData.get("text") as string;
+    const person: Person = { name: text };
+    console.log(person)
   }
 
   return (
