@@ -18,6 +18,7 @@ function Component() {
           <label htmlFor="text">Text</label>
           <input
             type="text"
+            name="text"
             className="form-input mb-1"
             value={text}
             onChange={(e) => setText(e.target.value)}
@@ -28,6 +29,7 @@ function Component() {
           <label htmlFor="email">Email</label>
           <input
             type="email"
+            name="email"
             className="form-input mb-1"
             value={email}
             onChange={handleChange}
