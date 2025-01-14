@@ -1,8 +1,15 @@
-type cardType = {
-  type: "basic" | "advanced";
+type Basic = {
+  type: "basic";
+  name: string;
+};
+
+type Advanced = {
+  type: "advanced";
   name: string;
   email: string;
 };
+
+type cardType = Basic | Advanced;
 
 function Component(props: cardType) {
   const { type, name, email } = props;
