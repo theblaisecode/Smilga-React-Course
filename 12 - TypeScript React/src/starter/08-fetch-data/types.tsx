@@ -6,7 +6,7 @@
 //   info: z.string(),
 //   image: z.string(),
 //   price: z.string(),
-//   something: z.string(),
+//  //  something: z.string(),
 // });
 
 // export type Tour = z.infer<typeof tourSchema>;
@@ -25,7 +25,7 @@ export const tourSchema = z.object({
   info: z.string(),
   image: z.string(),
   price: z.string(),
-  something: z.string(),
+  // something: z.string(),
 });
 
 export type Tour = z.infer<typeof tourSchema>;
