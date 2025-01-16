@@ -64,7 +64,17 @@
 // }
 // export default Component;
 
-
 //////////////////////////////////////////////
 // Data fetching for axios  //////////////////
 //////////////////////////////////////////////
+import { fetchTours } from "./types";
+import { useQuery } from "@tanstack/react-query";
+
+function Component() {
+  const { isPending, isError, error, data } = useQuery({
+    queryKey: ["tours"],
+    queryFn: fetchTours,
+  });
+}
+
+export default Component;
