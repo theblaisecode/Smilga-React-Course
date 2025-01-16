@@ -17,15 +17,15 @@ function Component(props: cardType) {
   if (type === "basic") {
     return (
       <div className="alert alert-success">
-        <h3>User : {name}</h3>
+        <h3>User: {name}</h3>
       </div>
     );
   }
-  
+
   return (
     <div className="alert alert-danger">
-      <h3>User : {name}</h3>
-      <h3>Email : {props.email}</h3>
+      <h3>User: {name}</h3>
+      <h3>Email: {props.email}</h3>
     </div>
   );
 }
