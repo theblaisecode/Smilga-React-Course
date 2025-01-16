@@ -50,6 +50,15 @@ function Component() {
     <div>
       <h2>React & Typescript</h2>
       <h2>Fetch Data</h2>
+
+      <div>
+        <h2 className="mb-1">Tours</h2>
+        {tours.map((tour) => {
+          return <p key={tour.id} className="mb-1">
+            {tour.name}
+          </p>
+        })}
+      </div>
     </div>
   );
 }
